@@ -1,35 +1,42 @@
 import Typewriter from "typewriter-effect";
 import {
     AiFillGithub,
-    AiOutlineMail,
+    AiFillMail,
     AiFillLinkedin,
-    AiOutlineFilePdf
-    } from 'react-icons/ai'
+    AiFillFilePdf,
+    AiFillPhone
+} from 'react-icons/ai'
 export default function Home() {
     const links = [
         {
-            id : 1,
-            name : 'github',
-            icon : <AiFillGithub />,
-            link : 'https://github.com/villAsh'
+            id: 1,
+            name: 'github',
+            icon: <AiFillGithub />,
+            link: 'https://github.com/villAsh'
         },
         {
             id: 2,
-            name : 'mail',
-            icon : <AiOutlineMail />,
-            link : 'chavhanvilas02@gmail.com'
+            name: 'mail',
+            icon: <AiFillMail />,
+            link: 'mailto:chavhanvilas02@gmail.com'
         },
         {
-            id : 3,
-            name : 'linkedIn',
-            icon : <AiFillLinkedin />,
-            link : 'https://www.linkedin.com/in/vilas-chauvhan-4609391aa'
+            id: 3,
+            name: 'linkedIn',
+            icon: <AiFillLinkedin />,
+            link: 'https://www.linkedin.com/in/vilas-chauvhan-4609391aa'
         },
         {
-            id : 4,
-            name : 'resume',
-            icon : <AiOutlineFilePdf />,
-            link : 'https://drive.google.com/file/d/1JvKRrfCS5DSDI-PUnt6vPDSgR6-jgp9t/view?usp=share_link',
+            id: 4,
+            name: 'resume',
+            icon: <AiFillFilePdf />,
+            link: 'https://drive.google.com/file/d/1JvKRrfCS5DSDI-PUnt6vPDSgR6-jgp9t/view?usp=share_link',
+        },
+        {
+            id: 5,
+            name: "call",
+            icon: <AiFillPhone />,
+            link: 'tel:9724752946'
         }
     ]
     return (
@@ -51,15 +58,11 @@ export default function Home() {
             </p>
             <ul className="flex items-center md:space-x-5 my-5  text-3xl">
                 {links.map((item) => <li className="relative group hover:cursor-pointer hover:text-light-primary" key={item.id}>
-                        {
-                        item.name === 'mail' ? (
-                            <a href="mailto:chavhanvilas02@gmail.com" className="transition-all" target="_blank" rel="noreferrer">{item.icon}</a>
-                        ) : (<a href={`${item.link}`} className="transition-all" target="_blank" rel="noreferrer">{item.icon}</a>)
-                        }
-                        {/* <span className="transition-all">{item.icon}</span> */}
-                        <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-light-primary transition-all group-hover:w-full"></span>
-                    </li>
-                    )}
+                    <a href={`${item.link}`} className="transition-all" target="_blank" rel="noreferrer">{item.icon}</a>
+                    {/* <span className="transition-all">{item.icon}</span> */}
+                    <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-light-primary transition-all group-hover:w-full"></span>
+                </li>
+                )}
             </ul>
         </div>
     );
