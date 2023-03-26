@@ -2,7 +2,8 @@ import Typewriter from "typewriter-effect";
 import {
     AiFillGithub,
     AiOutlineMail,
-    AiFillLinkedin
+    AiFillLinkedin,
+    AiOutlineFilePdf
     } from 'react-icons/ai'
 export default function Home() {
     const links = [
@@ -24,6 +25,12 @@ export default function Home() {
             icon : <AiFillLinkedin />,
             link : 'https://www.linkedin.com/in/vilas-chauvhan-4609391aa'
         },
+        {
+            id : 4,
+            name : 'resume',
+            icon : <AiOutlineFilePdf />,
+            link : 'https://drive.google.com/file/d/1JvKRrfCS5DSDI-PUnt6vPDSgR6-jgp9t/view?usp=share_link',
+        }
     ]
     return (
         <div className="h-[80vh] md:h-[70vh] flex flex-col items-center justify-center font-poppins">
