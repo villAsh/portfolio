@@ -46,8 +46,8 @@ export default function Home() {
                 {links.map((item) => <li className="relative group hover:cursor-pointer hover:text-light-primary" key={item.id}>
                         {
                         item.name === 'mail' ? (
-                            <a href="mailto:chavhanvilas02@gmail.com" className="transition-all">{item.icon}</a>
-                        ) : (<a href={`${item.link}`} className="transition-all" target="_blank">{item.icon}</a>)
+                            <a href="mailto:chavhanvilas02@gmail.com" className="transition-all" target="_blank" rel="noreferrer">{item.icon}</a>
+                        ) : (<a href={`${item.link}`} className="transition-all" target="_blank" rel="noreferrer">{item.icon}</a>)
                         }
                         {/* <span className="transition-all">{item.icon}</span> */}
                         <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-light-primary transition-all group-hover:w-full"></span>
