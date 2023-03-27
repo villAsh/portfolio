@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
+import {FaLessThan,FaGreaterThan} from 'react-icons/fa'
 export default function Navbar(){
     const [darkMode,setDarkMode] = useState(true);
     const toggleDarkMode = (checked) =>{
@@ -20,7 +21,7 @@ export default function Navbar(){
     return(
         <div className="p-10 flex flex-row justify-between items-center bg-light-bg font-poppins">
             <div>
-                <h1 className="text-3xl font-poppins text-light-primary">Vilas Chavhan</h1>
+                <h1 className="text-3xl font-poppins text-light-primary flex"><FaLessThan /> Vilas /<FaGreaterThan /></h1>
             </div>
             <div className="hidden sm:flex">
                 <ul className="sm:flex sm:justify-evenly sm:space-x-6 text-light-fg">

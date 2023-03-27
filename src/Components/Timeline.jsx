@@ -9,12 +9,13 @@ export default function Timeline() {
     return (
         <div className="font-poppins flex flex-col items-center sm:mt-20">
             <motion.h1
-                initial={{ x: -500 }}
-                animate={{ x: 0 }}
+                initial={{ scale : 0 }}
+                animate={{ scale : 1 }}
                 transition={{ duration: 0.5 }}
                 className="text-xl md:text-3xl text-center text-light-fg mb-10">My <span className="text-light-primary">Timeline</span></motion.h1>
-            <VerticalTimeline lineColor="#555">
+            <VerticalTimeline lineColor="#555" >
                 <VerticalTimelineElement
+                    
                     className="text-light-primary vertical-timeline-element--work"
                     contentStyle={{ background: '#fcfcfc', color: '#2978b5', boxShadow: '2px 5px 9px rgba(0,0,0,0.8)' }}
                     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: 'black' }}
