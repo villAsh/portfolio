@@ -3,7 +3,7 @@ import { AiFillHtml5, AiFillGithub } from 'react-icons/ai'
 import { IoLogoCss3, IoLogoJavascript, IoLogoReact, } from 'react-icons/io5'
 import { BsFillBootstrapFill } from 'react-icons/bs'
 import { SiTailwindcss, SiDjango } from 'react-icons/si'
-import { TbBrandCpp } from 'react-icons/tb'
+import { TbBrandCpp,TbBrandRedux } from 'react-icons/tb'
 export default function Skills() {
     return (
         <div className="font-poppins mt-10">
@@ -14,7 +14,11 @@ export default function Skills() {
                 className="text-xl md:text-3xl text-center text-light-fg mb-10 uppercase">
                 My <span className="text-light-primary">Skills</span>
             </motion.h1>
-            <div className=" text-8xl sm:py-5 sm:px-10 grid gap-y-10 justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+            <motion.div
+            initial={{opacity : 0}}
+            animate={{opacity : 1}}
+            transition={{duration : 1}}
+            className=" text-8xl sm:py-5 sm:px-10 grid gap-y-10 justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
                 <motion.div
                     drag
                     dragConstraints={{
@@ -137,8 +141,19 @@ export default function Skills() {
                     className="hover:cursor-grab">
                     <TbBrandCpp />
                 </motion.div>
+                <motion.div
+                    drag
+                    dragConstraints={{
+                        top: 0, right: 0, bottom: 0, left: 0
+                    }}
+                    dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                    dragElastic={0.5}
+                    whileTap={{ cursor: "grabbing" }}
+                    className="hover:cursor-grab">
+                    <TbBrandRedux color="#7E57C2" />
+                </motion.div>
 
-            </div>
+            </motion.div>
         </div>
     );
 }
