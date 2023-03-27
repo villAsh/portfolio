@@ -8,7 +8,7 @@ export default function About() {
             initial={{scale : 0}} 
             animate={{scale : 1}} 
             transition={{duration : 1}} 
-            className="text-xl md:text-3xl text-center text-light-fg mb-10">About <span className="text-light-primary">Me</span></motion.h1>
+            className="text-xl md:text-3xl text-center text-light-fg mb-10 uppercase">About <span className="text-light-primary">Me</span></motion.h1>
             <div className='flex flex-col sm:flex-row sm:items-center sm:justify-around pt-10'>
                 <motion.img
                 initial={{scale : 0}}

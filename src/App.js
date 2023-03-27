@@ -3,6 +3,7 @@ import './App.css';
 import About from './Components/About';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
+import Skills from './Components/Skills';
 import Timeline from './Components/Timeline';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Home />
       <About />
       <Timeline />
+      <Skills />
     </div>
   );
 }

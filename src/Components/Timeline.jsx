@@ -12,7 +12,7 @@ export default function Timeline() {
                 initial={{ scale : 0 }}
                 animate={{ scale : 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-xl md:text-3xl text-center text-light-fg mb-10">My <span className="text-light-primary">Timeline</span></motion.h1>
+                className="text-xl md:text-3xl text-center text-light-fg mb-10 uppercase">My <span className="text-light-primary">Timeline</span></motion.h1>
             <VerticalTimeline lineColor="#555" >
                 <VerticalTimelineElement
                     
