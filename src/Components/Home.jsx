@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import {
     AiFillGithub,
-    AiFillMail,
+    AiOutlineMail,
     AiFillLinkedin,
     AiFillFilePdf,
     AiFillPhone
@@ -18,25 +18,25 @@ export default function Home() {
         {
             id: 2,
             name: 'mail',
-            icon: <AiFillMail />,
+            icon: <AiOutlineMail fill="#CA3737"/>,
             link: 'mailto:chavhanvilas02@gmail.com'
         },
         {
             id: 3,
             name: 'linkedIn',
-            icon: <AiFillLinkedin />,
+            icon: <AiFillLinkedin fill="#0288D1"/>,
             link: 'https://www.linkedin.com/in/vilas-chauvhan-4609391aa'
         },
         {
             id: 4,
             name: 'resume',
-            icon: <AiFillFilePdf />,
+            icon: <AiFillFilePdf fill="#FF5722"/>,
             link: 'https://drive.google.com/file/d/1JvKRrfCS5DSDI-PUnt6vPDSgR6-jgp9t/view?usp=share_link',
         },
         {
             id: 5,
             name: "call",
-            icon: <AiFillPhone />,
+            icon: <AiFillPhone fill="#2196F3"/>,
             link: 'tel:9724752946'
         }
     ]
@@ -59,7 +59,7 @@ export default function Home() {
                 During my College journey i have Learnt various <span className="text-light-primary">Tools</span> and <span className="text-light-primary">Technologies</span>.
             </p>
             <ul className="flex flex-col space-y-5 sm:space-y-0 sm:flex-row sm:items-center sm:space-x-5 my-5  text-3xl">
-                {links.map((item) => <li className="relative group hover:cursor-pointer hover:text-light-primary" key={item.id}>
+                {links.map((item) => <li className={`relative group hover:cursor-pointer`} key={item.id}>
                     <a href={`${item.link}`} className="transition-all" target="_blank" rel="noreferrer">{item.icon}</a>
                     {/* <span className="transition-all">{item.icon}</span> */}
                     <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-light-primary transition-all group-hover:w-full"></span>

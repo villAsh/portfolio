@@ -16,6 +16,8 @@ export default function Navbar(){
         <DarkModeSwitch
         onChange={toggleDarkMode}
         checked={darkMode}
+        className="text-light-fg"
+        fill="black"
     />
     ];
     return(
