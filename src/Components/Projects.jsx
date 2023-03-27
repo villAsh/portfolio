@@ -23,7 +23,7 @@ export default function Projects() {
                 <motion.div
                     initial={{x : -200}}
                     animate={{x : 0}}
-                    transition={{duration : 2}}
+                    transition={{duration : 1}}
                 className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
                         <img src={movie_app} alt="projectg 1" className="w-[30vw]" />
@@ -53,7 +53,7 @@ export default function Projects() {
                 <motion.div
                     initial={{x : -200}}
                     animate={{x : 0}}
-                    transition={{duration : 2}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
+                    transition={{duration : 1.3}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
                         <img src={rtk_shop} alt="projectg 1" className="w-[30vw]" />
                     </div>
@@ -84,7 +84,7 @@ export default function Projects() {
                 <motion.div
                     initial={{x : -200}}
                     animate={{x : 0}}
-                    transition={{duration : 2}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
+                    transition={{duration : 1.6}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
                         <img src={weather_buddy} alt="projectg 1" className="w-[30vw]" />
                     </div>
@@ -114,7 +114,7 @@ export default function Projects() {
                 <motion.div
                     initial={{x : -200}}
                     animate={{x : 0}}
-                    transition={{duration : 2}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
+                    transition={{duration : 1.9}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
                         <img src={poke_card} alt="projectg 1" className="w-[30vw]" />
                     </div>

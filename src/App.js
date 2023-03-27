@@ -2,6 +2,7 @@
 import './App.css';
 import About from './Components/About';
 import Home from './Components/Home';
+import InTouch from './Components/InTouch';
 import Navbar from './Components/Navbar';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
@@ -16,6 +17,7 @@ function App() {
       <Timeline />
       <Skills />
       <Projects />
+      <InTouch />
     </div>
   );
 }
