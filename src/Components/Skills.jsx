@@ -15,9 +15,9 @@ export default function Skills() {
                 My <span className="text-light-primary">Skills</span>
             </motion.h1>
             <motion.div
-            initial={{opacity : 0}}
-            animate={{opacity : 1}}
-            transition={{duration : 1}}
+            initial={{x : -200}}
+            animate={{x : 0}}
+            transition={{duration : 2}}
             className=" text-8xl sm:py-5 sm:px-10 grid gap-y-10 justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
                 <motion.div
                     drag

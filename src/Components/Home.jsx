@@ -49,7 +49,7 @@ export default function Home() {
                         strings: ['A Frontend Developer', 'A Web Developer', 'A Fitness Enthusiast', 'A Hardcore Gamer'],
                         autoStart: true,
                         loop: true,
-                        delay: 50,
+                        delay: 110,
                         pauseFor : 1000,
                     }}
                 />
