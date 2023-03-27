@@ -21,7 +21,7 @@ export default function Projects() {
             </motion.h1>
             <div className="p-10 space-y-3">
                 <motion.div
-                    initial={{x : -200}}
+                    initial={{x : -300}}
                     animate={{x : 0}}
                     transition={{duration : 1}}
                 className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
@@ -51,7 +51,7 @@ export default function Projects() {
                     </div>
                 </motion.div>
                 <motion.div
-                    initial={{x : -200}}
+                    initial={{x : -400}}
                     animate={{x : 0}}
                     transition={{duration : 1.3}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
@@ -82,7 +82,7 @@ export default function Projects() {
                     </div>
                 </motion.div>
                 <motion.div
-                    initial={{x : -200}}
+                    initial={{x : -500}}
                     animate={{x : 0}}
                     transition={{duration : 1.6}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
@@ -112,7 +112,7 @@ export default function Projects() {
                     </div>
                 </motion.div>
                 <motion.div
-                    initial={{x : -200}}
+                    initial={{x : -600}}
                     animate={{x : 0}}
                     transition={{duration : 1.9}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
