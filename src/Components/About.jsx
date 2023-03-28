@@ -9,7 +9,7 @@ export default function About() {
             animate={{scale : 1}} 
             transition={{duration : 1}} 
             className="text-xl md:text-3xl text-center text-light-fg mb-10 uppercase">About <span className="text-light-primary">Me</span></motion.h1>
-            <div className='flex flex-col sm:flex-row sm:items-center sm:justify-around pt-10'>
+            <div className='grid grid-cols-1 sm:grid-cols-3 justify-items-center pt-10'>
                 <motion.img
                 initial={{scale : 0}}
                 animate={{scale : 1}}
@@ -20,9 +20,9 @@ export default function About() {
                 initial={{scale : 0}}
                 animate={{scale : 1}}
                 transition={{duration : 1}}
-
+                className="col-span-2"
                 >
-                    <p className='text-base sm:text-xl sm:mt-0 mt-10 mx-10 text-light-fg text-justify '>
+                    <p className='text-base sm:text-xl sm:mt-0 mt-10 text-light-fg text-justify '>
                         Hi Everyone, I am Vilas Chavhan from Ahmedabad, Gujarat.I am a <span className='text-light-primary'>React Frontend Developer </span>
                         who is eager to learn New Technologies.I am a <span className='text-light-primary'>Bacholers Of Computer Application</span> Final Year student from <span className='text-light-primary'>Lokmanya College of Computer Application</span>(Gujarat University).
                     </p>
