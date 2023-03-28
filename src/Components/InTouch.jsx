@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiOutlineMail,AiOutlineInstagram } from "react-icons/ai";
 
 export default function InTouch(){
     return(
@@ -15,6 +15,7 @@ export default function InTouch(){
                 <motion.a  whileHover={{scale : 1.2}} href="https://www.linkedin.com/in/vilas-chauvhan-4609391aa"><AiFillLinkedin fill="#0288D1"/></motion.a>
                 <motion.a  whileHover={{scale : 1.2}} href="https://github.com/villAsh"><AiFillGithub /></motion.a>
                 <motion.a whileHover={{scale : 1.2}} href="mailto:chavhanvilas02@gmail.com"><AiOutlineMail fill="#CA3737" /></motion.a>
+                <motion.a whileHover={{scale : 1.2}} href="https://www.instagram.com/ig__vilas/"><AiOutlineInstagram fill="#F50057" /></motion.a>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 
 import './App.css';
 import About from './Components/About';
+import Footer from './Components/Footer';
 import Home from './Components/Home';
 import InTouch from './Components/InTouch';
 import Navbar from './Components/Navbar';
@@ -18,6 +19,7 @@ function App() {
       <Skills />
       <Projects />
       <InTouch />
+      <Footer />
     </div>
   );
 }
