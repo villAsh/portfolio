@@ -3,7 +3,7 @@ import avatar from '../Assets/avatar.jfif'
 import { AiFillRightCircle } from 'react-icons/ai'
 export default function About() {
     return (
-        <div className=" font-poppins">
+        <div className=" font-poppins mt-10">
             <motion.h1 
             initial={{scale : 0}} 
             animate={{scale : 1}} 

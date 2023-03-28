@@ -59,10 +59,10 @@ export default function Home() {
                 During my College journey i have Learnt various <span className="text-light-primary">Tools</span> and <span className="text-light-primary">Technologies</span>.
             </p>
             <ul className="flex flex-col space-y-5 sm:space-y-0 sm:flex-row sm:items-center sm:space-x-5 my-5  text-3xl">
-                {links.map((item) => <li className={`relative group hover:cursor-pointer`} key={item.id}>
+                {links.map((item) => <li className={`relative group sm:hover:cursor-pointer`} key={item.id}>
                     <a href={`${item.link}`} className="transition-all" target="_blank" rel="noreferrer">{item.icon}</a>
                     {/* <span className="transition-all">{item.icon}</span> */}
-                    <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-light-primary transition-all group-hover:w-full"></span>
+                    <span className="absolute -bottom-2 left-0 w-0 h-[3px] bg-light-primary transition-all sm:group-hover:w-full"></span>
                 </li>
                 )}
             </ul>
