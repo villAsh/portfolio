@@ -7,15 +7,15 @@ export default function Navbar() {
     const toggleDarkMode = (checked) => {
         setDarkMode(checked)
     }
-    const nav = [
-        'Home',
-        'About',
-        'Skills',
-        'Project',
-        'Contact',
-        'Resume',
+    // const nav = [
+    //     'Home',
+    //     'About',
+    //     'Skills',
+    //     'Project',
+    //     'Contact',
+    //     'Resume',
       
-    ];
+    // ];
     return (
         <div className="p-10 flex flex-row justify-between items-center bg-light-bg font-poppins">
             <div>

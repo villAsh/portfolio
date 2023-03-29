@@ -6,9 +6,8 @@ module.exports = {
     extend: {},
     colors : {
       'light' : {
-        'bg' : '#fcfcfc',
         'fg' : 'black',
-        'primary' : '#2978b5'
+        'primary' : '		#08a4a7',//#2978b5'
       }
     },
     fontFamily : {
