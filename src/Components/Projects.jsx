@@ -38,12 +38,12 @@ export default function Projects() {
                         </div>
                         <div className="flex flex-col sm:flex-row items-center justify-start space-x-5 mt-5">
                             <button className="border border-light-primary px-8 py-1 rounded-lg bg-light-primary
-                                hover:bg-light-bg hover:text-light-primary hover:border-light-fg mb-5 sm:mb-0
+                                hover:bg-light-bg hover:text-light-text mb-5 sm:mb-0
                             ">
                                 <a href="https://movie-app-villash.vercel.app/" >Live Demo</a>
                             </button>
                             <button className="border border-light-primary px-8 py-1 rounded-lg bg-light-primary
-                                hover:bg-light-bg hover:text-light-primary hover:border-light-fg
+                                hover:bg-light-bg hover:text-light-text
                             ">
                                 <a href="https://github.com/villAsh/Movie_app">Source Code</a>
                             </button>
@@ -69,12 +69,12 @@ export default function Projects() {
                         </div>
                         <div className="flex flex-col sm:flex-row items-center justify-start space-x-5 mt-5">
                             <button className="border border-light-primary px-8 py-1 rounded-lg bg-light-primary
-                                hover:bg-light-bg hover:text-light-primary hover:border-light-fg mb-5 sm:mb-0
+                                hover:bg-light-bg hover:text-light-text mb-5 sm:mb-0
                             ">
                                 <a href="https://vilas-rtk-shop.netlify.app/" >Live Demo</a>
                             </button>
                             <button className="border border-light-primary px-8 py-1 rounded-lg bg-light-primary
-                                hover:bg-light-bg hover:text-light-primary hover:border-light-fg
+                                hover:bg-light-bg hover:text-light-text
                             ">
                                 <a href="https://github.com/villAsh/RTK-shop">Source Code</a>
                             </button>
@@ -99,12 +99,12 @@ export default function Projects() {
                         </div>
                         <div className="flex flex-col sm:flex-row items-center justify-start space-x-5 mt-5">
                             <button className="border border-light-primary px-8 py-1 rounded-lg bg-light-primary
-                                hover:bg-light-bg hover:text-light-primary hover:border-light-fg mb-5 sm:mb-0
+                                hover:bg-light-bg hover:text-light-text mb-5 sm:mb-0
                             ">
                                 <a href="https://vilas-weatherbuddy.netlify.app/" >Live Demo</a>
                             </button>
                             <button className="border border-light-primary px-8 py-1 rounded-lg bg-light-primary
-                                hover:bg-light-bg hover:text-light-primary hover:border-light-fg
+                                hover:bg-light-bg hover:text-light-text
                             ">
                                 <a href="https://github.com/villAsh/Weather-Buddy">Source Code</a>
                             </button>
@@ -131,12 +131,12 @@ export default function Projects() {
                         </div>
                         <div className="flex flex-col sm:flex-row items-center justify-start space-x-5 mt-5">
                             <button className="border border-light-primary px-8 py-1 rounded-lg bg-light-primary
-                                hover:bg-light-bg hover:text-light-primary hover:border-light-fg mb-5 sm:mb-0
+                                hover:bg-light-bg hover:text-light-text mb-5 sm:mb-0
                             ">
                                 <a href="https://villash.github.io/Poke_card/" >Live Demo</a>
                             </button>
                             <button className="border border-light-primary px-8 py-1 rounded-lg bg-light-primary
-                                hover:bg-light-bg hover:text-light-primary hover:border-light-fg
+                                hover:bg-light-bg hover:text-light-text
                             ">
                                 <a href="https://github.com/villAsh/Poke_card">Source Code</a>
                             </button>
