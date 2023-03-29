@@ -16,7 +16,7 @@ export default function Projects() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1 }}
-                className="text-xl md:text-3xl text-center text-light-fg mb-10 uppercase">
+                className="text-xl md:text-3xl text-center text-light-fg dark:text-light-text mb-10 uppercase">
                 My <span className="text-light-primary">Projects</span>
             </motion.h1>
             <div className="p-10 space-y-3">
