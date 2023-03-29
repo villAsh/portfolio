@@ -11,7 +11,7 @@ import Contact from './Components/Contact';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark:bg-dark-bg">
       <Navbar />
       <Routes>
         <Route path='' element={<HomePage />} />

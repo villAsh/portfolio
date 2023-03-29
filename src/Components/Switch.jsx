@@ -10,11 +10,14 @@ export default function Switch(){
     }
 
     return(
-        <DarkModeSwitch
+        <>
+           <DarkModeSwitch
         onChange={toggleDark}
         checked={dark}
         sunColor="black"
-        moonColor="black"
+        moonColor="white"
     />
+        </>
+     
     );
 }

@@ -18,7 +18,7 @@ export default function Navbar() {
                 <h1 className="text-3xl font-poppins text-light-primary flex"><FaLessThan /> Vilas /<FaGreaterThan /></h1>
             </div>
             <div className="hidden sm:flex">
-                <ul className="sm:flex sm:justify-evenly sm:space-x-6 text-light-fg dark:text-light-text">
+                <ul className="sm:flex items-center justify-around sm:space-x-3 md:space-x-6  text-light-fg dark:text-light-text">
                     <Link to=''>
                         <li className="text-lg relative group hover:cursor-pointer  hover:text-light-primary dark:">
                             <span className="transition-all">Home</span>
