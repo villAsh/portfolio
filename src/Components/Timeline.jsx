@@ -7,12 +7,12 @@ import { FaReact } from 'react-icons/fa'
 import { AiFillPlayCircle } from 'react-icons/ai'
 export default function Timeline() {
     return (
-        <div className="font-poppins flex flex-col items-center sm:mt-20">
+        <div className="font-poppins flex flex-col items-center sm:pt-20 dark:bg-dark-bg">
             <motion.h1
                 initial={{ scale : 0 }}
                 animate={{ scale : 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-xl md:text-3xl text-center text-light-fg mb-10 uppercase">My <span className="text-light-primary">Timeline</span></motion.h1>
+                className="text-xl md:text-3xl text-center text-light-fg dark:text-light-text mb-10 uppercase">My <span className="text-light-primary">Timeline</span></motion.h1>
             <VerticalTimeline lineColor="#555" animate={false} >
                 <VerticalTimelineElement
                     
@@ -21,7 +21,7 @@ export default function Timeline() {
                     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: 'black' }}
                     iconStyle={{ background: '#fff', color: '#2978b5', boxShadow: '2px 5px 9px rgba(0,0,0,0.8)' }}
                     date="2020-2023"
-                    icon={<IoSchool className="text-5xl" />}
+                    icon={<IoSchool className="text-5xl dark:text-dark-bg" />}
                 >
                     <h1 className="vertical-timeline-element-title">Bachelor of Computer Application</h1>
                     <p className="vertical-timeline-element-subtitle text-light-fg">
@@ -34,7 +34,7 @@ export default function Timeline() {
                     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: 'black' }}
                     iconStyle={{ background: '#fff', color: '#2978b5', boxShadow: '2px 5px 9px rgba(0,0,0,0.8)' }}
                     date="2022-2023"
-                    icon={<FaReact className="text-5xl" />}
+                    icon={<FaReact className="text-5xl  dark:text-dark-bg" />}
                 >
                     <h1 className="vertical-timeline-element-title">Learnt ReactJS</h1>
                     <p className="vertical-timeline-element-subtitle text-light-fg">
@@ -48,7 +48,7 @@ export default function Timeline() {
                     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: 'black' }}
                     iconStyle={{ background: '#fff', color: '#2978b5', boxShadow: '2px 5px 9px rgba(0,0,0,0.8)' }}
                     date="july/2020 - 2022"
-                    icon={<HiCodeBracket className="text-5xl" />}
+                    icon={<HiCodeBracket className="text-5xl  dark:text-dark-bg" />}
                 >
                     <h1 className="vertical-timeline-element-title">Learnt Web Developement</h1>
                     <p className="vertical-timeline-element-subtitle text-light-fg">
@@ -62,7 +62,7 @@ export default function Timeline() {
                     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: 'black' }}
                     iconStyle={{ background: '#fff', color: '#2978b5', boxShadow: '2px 5px 9px rgba(0,0,0,0.8)' }}
                     date="April/2020"
-                    icon={<HiCodeBracket className="text-5xl" />}
+                    icon={<HiCodeBracket className="text-5xl  dark:text-dark-bg" />}
                 >
                     <h1 className="vertical-timeline-element-title text">First Bootcamp</h1>
                     <p className="vertical-timeline-element-subtitle text-light-fg">
@@ -77,7 +77,7 @@ export default function Timeline() {
                     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)', color: 'black' }}
                     iconStyle={{ background: '#fff', color: '#2978b5', boxShadow: '2px 5px 9px rgba(0,0,0,0.8)' }}
                     date="2018-2020"
-                    icon={<IoSchool className="text-5xl" />}
+                    icon={<IoSchool className="text-5xl  dark:text-dark-bg" />}
                 >
                     <h1 className="vertical-timeline-element-title">Completed Higher Secondary - Commerce</h1>
                     <p className="vertical-timeline-element-subtitle text-light-fg">
@@ -88,7 +88,7 @@ export default function Timeline() {
 
                     className="text-light-primary vertical-timeline-element--work"
                     iconStyle={{ background: '#fff', color: '#2978b5', boxShadow: '2px 5px 9px rgba(0,0,0,0.8)' }}
-                    icon={<AiFillPlayCircle className="text-5xl" />}
+                    icon={<AiFillPlayCircle className="text-5xl  dark:text-dark-bg" />}
                 >
                 </VerticalTimelineElement>
 

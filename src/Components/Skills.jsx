@@ -6,12 +6,12 @@ import { SiTailwindcss, SiDjango } from 'react-icons/si'
 import { TbBrandCpp,TbBrandRedux } from 'react-icons/tb'
 export default function Skills() {
     return (
-        <div className="font-poppins mt-10">
+        <div className="font-poppins pt-10 dark:bg-dark-bg">
             <motion.h1
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1 }}
-                className="text-xl md:text-3xl text-center text-light-fg mb-10 uppercase">
+                className="text-xl md:text-3xl text-center text-light-fg dark:text-light-text mb-10 uppercase">
                 My <span className="text-light-primary">Skills</span>
             </motion.h1>
             <motion.div
@@ -128,7 +128,7 @@ export default function Skills() {
                     dragElastic={0.5}
                     whileTap={{ cursor: "grabbing" }}
                     className="hover:cursor-grab">
-                    <AiFillGithub />
+                    <AiFillGithub className="dark:text-light-text"/>
                 </motion.div>
                 <motion.div
                     drag
@@ -139,7 +139,7 @@ export default function Skills() {
                     dragElastic={0.5}
                     whileTap={{ cursor: "grabbing" }}
                     className="hover:cursor-grab">
-                    <TbBrandCpp />
+                    <TbBrandCpp className="dark:text-light-text" />
                 </motion.div>
                 <motion.div
                     drag

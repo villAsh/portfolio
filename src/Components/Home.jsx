@@ -12,7 +12,7 @@ export default function Home() {
         {
             id: 1,
             name: 'github',
-            icon: <AiFillGithub />,
+            icon: <AiFillGithub className="dark:text-light-text text-dark-bg"/>,
             link: 'https://github.com/villAsh'
         },
         {
@@ -41,9 +41,9 @@ export default function Home() {
         }
     ]
     return (
-        <motion.div initial={{scale : 0}} animate={{scale : 1}} transition={{duration : 1}} className=" h-[70vh] flex flex-col items-center justify-center font-poppins">
-            <h1 className="text-4xl md:text-7xl text-light-fg my-5 text-center">Hi , I am <span className="text-light-primary">Vilas Chavhan</span></h1>
-            <h1 className="text-3xl md:text-5xl text-light-fg my-5 text-center">
+        <motion.div initial={{scale : 0}} animate={{scale : 1}} transition={{duration : 1}} className=" h-[70vh] flex flex-col items-center justify-center font-poppins dark:bg-dark-bg">
+            <h1 className="text-4xl md:text-7xl text-light-fg dark:text-light-text my-5 text-center">Hi , I am <span className="text-light-primary">Vilas Chavhan</span></h1>
+            <h1 className="text-3xl md:text-5xl text-light-fg dark:text-light-text my-5 text-center">
                 <Typewriter
                     options={{
                         strings: ['A Frontend Developer', 'A Web Developer', 'A Fitness Enthusiast', 'A Hardcore Gamer'],
@@ -54,7 +54,7 @@ export default function Home() {
                     }}
                 />
             </h1>
-            <p className="text-left text-xl text-light-fg sm:w-[70vw]">
+            <p className="text-left text-xl text-light-fg dark:text-light-text sm:w-[70vw]">
                 A self Taught Frontend Developer Who loves building <span className="text-light-primary">Web Apps</span> and <span className="text-light-primary">Solving Problems</span>.
                 During my College journey i have Learnt various <span className="text-light-primary">Tools</span> and <span className="text-light-primary">Technologies</span>.
             </p>

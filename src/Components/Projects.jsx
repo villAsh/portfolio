@@ -11,7 +11,7 @@ import { BsFillBootstrapFill } from "react-icons/bs";
 
 export default function Projects() {
     return (
-        <div className="font-poppins mt-10">
+        <div className="font-poppins pt-10 dark:bg-dark-bg">
             <motion.h1
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -24,7 +24,7 @@ export default function Projects() {
                     initial={{x : -300}}
                     animate={{x : 0}}
                     transition={{duration : 1}}
-                className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
+                className="border-4 border-light-primary rounded-lg dark:bg-dark-fg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
                         <img src={movie_app} alt="projectg 1" className="sm:w-[30vw] sm:h-[30vh]" />
                     </div>
@@ -53,7 +53,7 @@ export default function Projects() {
                 <motion.div
                     initial={{x : -400}}
                     animate={{x : 0}}
-                    transition={{duration : 1.3}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
+                    transition={{duration : 1.3}} className="border-4 border-light-primary rounded-lg  dark:bg-dark-fg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
                         <img src={rtk_shop} alt="projectg 1" className="sm:w-[30vw] sm:h-[30vh]" />
                     </div>
@@ -84,7 +84,7 @@ export default function Projects() {
                 <motion.div
                     initial={{x : -500}}
                     animate={{x : 0}}
-                    transition={{duration : 1.6}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
+                    transition={{duration : 1.6}} className="dark:bg-dark-fg border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
                         <img src={weather_buddy} alt="projectg 1" className="sm:w-[30vw]" />
                     </div>
@@ -114,7 +114,7 @@ export default function Projects() {
                 <motion.div
                     initial={{x : -600}}
                     animate={{x : 0}}
-                    transition={{duration : 1.9}} className="border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
+                    transition={{duration : 1.9}} className="dark:bg-dark-fg border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
                         <img src={poke_card} alt="projectg 1" className="sm:w-[30vw]" />
                     </div>
