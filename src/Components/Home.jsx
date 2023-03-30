@@ -41,7 +41,7 @@ export default function Home() {
         }
     ]
     return (
-        <motion.div initial={{scale : 0}} animate={{scale : 1}} transition={{duration : 1}} className=" h-[70vh] flex flex-col items-center justify-center font-poppins dark:bg-dark-bg">
+        <motion.div initial={{scale : 0}} animate={{scale : 1}} transition={{duration : 1}} className=" h-screen flex flex-col items-center justify-center font-poppins dark:bg-dark-bg">
             <h1 className="text-4xl md:text-7xl text-light-fg dark:text-light-text my-5 text-center">Hi , I am <span className="text-light-primary">Vilas Chavhan</span></h1>
             <h1 className="text-3xl md:text-5xl text-light-fg dark:text-light-text my-5 text-center">
                 <Typewriter

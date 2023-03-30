@@ -3,13 +3,13 @@ import avatar from '../Assets/avatar.jfif'
 import { AiFillRightCircle } from 'react-icons/ai'
 export default function About() {
     return (
-        <div className=" font-poppins mt-24 sm:mt-0 dark:bg-dark-bg">
+        <div className=" font-poppins sm:mt-0 dark:bg-dark-bg">
             <motion.h1 
             initial={{scale : 0}} 
             animate={{scale : 1}} 
             transition={{duration : 1}} 
             className="text-xl md:text-3xl text-center text-light-fg dark:text-light-text mb-10 uppercase">About <span className="text-light-primary">Me</span></motion.h1>
-            <div className='grid grid-cols-1 sm:grid-cols-3 justify-items-center pt-10'>
+            <div className='h-screen grid grid-cols-1 sm:grid-cols-3 place-content-center '>
                 <motion.img
                 initial={{scale : 0}}
                 animate={{scale : 1}}
