@@ -17,8 +17,8 @@ export default function Navbar() {
             <div>
                 <h1 className="text-3xl font-poppins text-light-primary flex"><FaLessThan /> Vilas /<FaGreaterThan /></h1>
             </div>
-            <div className="hidden sm:flex">
-                <ul className="sm:flex items-center justify-around sm:space-x-3 md:space-x-6  text-light-fg dark:text-light-text">
+            <div className="sm:flex sm:space-x-3 md:space-x-6">
+                <ul className="hidden sm:flex items-center justify-around sm:space-x-3 md:space-x-6  text-light-fg dark:text-light-text">
                     <Link to=''>
                         <li className="text-lg relative group hover:cursor-pointer  hover:text-light-primary dark:">
                             <span className="transition-all">Home</span>
@@ -55,12 +55,13 @@ export default function Navbar() {
                             <span className="absolute -bottom-0 left-0 w-0 h-[2px] bg-light-primary transition-all group-hover:w-full"></span>
                         </li>
                     </Link>
-                    <Switch />
+
                     {/* <DarkModeSwitch
                     onChange={toggleDarkMode}
                     checked={darkMode}
                 /> */}
                 </ul>
+                <Switch />
             </div>
         </div>
     );
