@@ -26,7 +26,7 @@ export default function Projects() {
                     transition={{duration : 1}}
                 className="border-4 border-light-primary rounded-lg dark:bg-dark-fg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
-                        <img src={movie_app} alt="projectg 1" className="sm:w-[30vw] sm:h-[30vh]" />
+                        <img src={movie_app} alt="projectg 1" className="object-contain" />
                     </div>
                     <div className="flex flex-col p-5 space-y-5 col-span-2">
                         <h1 className="text-xl sm:text-4xl text-light-primary">Movie App</h1>
@@ -55,7 +55,7 @@ export default function Projects() {
                     animate={{x : 0}}
                     transition={{duration : 1.3}} className="border-4 border-light-primary rounded-lg  dark:bg-dark-fg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
-                        <img src={rtk_shop} alt="projectg 1" className="sm:w-[30vw] sm:h-[30vh]" />
+                        <img src={rtk_shop} alt="projectg 1" className="object-contain" />
                     </div>
                     <div className="flex flex-col p-5 space-y-5 col-span-2">
                         <h1 className="text-xl sm:text-4xl text-light-primary">RTK Shop</h1>
@@ -86,7 +86,7 @@ export default function Projects() {
                     animate={{x : 0}}
                     transition={{duration : 1.6}} className="dark:bg-dark-fg border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
-                        <img src={weather_buddy} alt="projectg 1" className="sm:w-[30vw]" />
+                        <img src={weather_buddy} alt="projectg 1" className="object-contain" />
                     </div>
                     <div className="flex flex-col p-5 space-y-5 col-span-2">
                         <h1 className="text-xl sm:text-4xl text-light-primary">Weather Buddy</h1>
@@ -116,7 +116,7 @@ export default function Projects() {
                     animate={{x : 0}}
                     transition={{duration : 1.9}} className="dark:bg-dark-fg border-4 border-light-primary rounded-lg grid grid-cols-1 sm:grid-cols-3 items-center justify-around p-10">
                     <div>
-                        <img src={poke_card} alt="projectg 1" className="sm:w-[30vw]" />
+                        <img src={poke_card} alt="projectg 1" className="object-contain" />
                     </div>
                     <div className="flex flex-col p-5 space-y-5 col-span-2">
                         <h1 className="text-xl sm:text-4xl text-light-primary">Poke Card</h1>

@@ -8,11 +8,13 @@ import Skills from './Components/Skills';
 import Timeline from './Components/Timeline';
 import HomePage from './Pages/HomePage';
 import Contact from './Components/Contact';
-
+import ScrollToTop from 'react-scroll-to-top'
+import {MdArrowUpward} from 'react-icons/md'
 function App() {
   return (
     <div className="App dark:bg-dark-bg">
       <Navbar />
+      <ScrollToTop smooth component={<MdArrowUpward className="mx-auto font-bold text-3xl text-light-primary"/>} className="mx-auto"/>
       <Routes>
         <Route path='' element={<HomePage />} />
         <Route path='About' element={<About />} />

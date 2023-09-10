@@ -22,7 +22,7 @@ export default function About() {
                 transition={{duration : 1}}
                 className="col-span-2"
                 >
-                    <p className='text-base sm:text-xl sm:mt-0 mt-10 text-light-fg dark:text-light-text text-justify '>
+                    <p className='text-base sm:text-xl sm:mt-0 mt-10 text-light-fg dark:text-light-text text-justify md:mr-5'>
                         Hi Everyone, I am Vilas Chavhan from Ahmedabad, Gujarat.I am a <span className='text-light-primary'>React Frontend Developer </span>
                         who is eager to learn New Technologies.I am a <span className='text-light-primary'>Bacholers Of Computer Application</span> Final Year student from <span className='text-light-primary'>Lokmanya College of Computer Application</span>(Gujarat University).
                     </p>

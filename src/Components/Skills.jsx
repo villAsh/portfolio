@@ -3,7 +3,7 @@ import { AiFillHtml5, AiFillGithub } from 'react-icons/ai'
 import { IoLogoCss3, IoLogoJavascript, IoLogoReact, } from 'react-icons/io5'
 import { BsFillBootstrapFill } from 'react-icons/bs'
 import { SiTailwindcss, SiDjango } from 'react-icons/si'
-import { TbBrandCpp,TbBrandRedux } from 'react-icons/tb'
+import { TbBrandCpp,TbBrandRedux, TbBrandNextjs, TbBrandReactNative} from 'react-icons/tb'
 export default function Skills() {
     return (
         <div className="font-poppins pt-10 dark:bg-dark-bg">
@@ -151,6 +151,28 @@ export default function Skills() {
                     whileTap={{ cursor: "grabbing" }}
                     className="hover:cursor-grab">
                     <TbBrandRedux color="#7E57C2" />
+                </motion.div>
+                <motion.div
+                    drag
+                    dragConstraints={{
+                        top: 0, right: 0, bottom: 0, left: 0
+                    }}
+                    dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                    dragElastic={0.5}
+                    whileTap={{ cursor: "grabbing" }}
+                    className="hover:cursor-grab">
+                    <TbBrandNextjs color="black" />
+                </motion.div>
+                <motion.div
+                    drag
+                    dragConstraints={{
+                        top: 0, right: 0, bottom: 0, left: 0
+                    }}
+                    dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+                    dragElastic={0.5}
+                    whileTap={{ cursor: "grabbing" }}
+                    className="hover:cursor-grab">
+                    <TbBrandReactNative color="#80DEEA" />
                 </motion.div>
 
             </motion.div>
