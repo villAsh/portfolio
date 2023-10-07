@@ -44,7 +44,7 @@ export default function Home() {
         <motion.div 
         initial={{scale : 0}} 
         animate={{scale : 1}} 
-        transition={{duration : 1}} 
+        transition={{duration : 1.6}} 
         className="h-screen flex flex-col items-center justify-center font-poppins dark:bg-dark-bg">
             <h1 className="text-4xl md:text-7xl text-light-fg dark:text-light-text my-5 text-center">Hi , I am <span className="text-light-primary">Vilas Chauvhan</span></h1>
             <h1 className="text-3xl md:text-5xl text-light-fg dark:text-light-text my-5 text-center">
@@ -53,13 +53,13 @@ export default function Home() {
                         strings: ['A Frontend Developer', 'A Web Developer', 'A Fitness Enthusiast', 'A Hardcore Gamer'],
                         autoStart: true,
                         loop: true,
-                        delay: 110,
+                        delay: 130,
                         pauseFor : 1000,
                     }}
                 />
             </h1>
             <p className="text-justify md:text-left  text-xl text-light-fg dark:text-light-text sm:w-[70vw] mx-5">
-                A self Taught Frontend Developer Who loves building <span className="text-light-primary">Web Apps</span> and <span className="text-light-primary">Solving Problems</span>.
+                A <span className="text-light-primary">Software Engineer</span> and <span className="text-light-primary">Computer Science Enthusiast</span> Who loves building <span className="text-light-primary">Web Apps</span> and <span className="text-light-primary">Solving Problems</span>.
                 During my College journey i have Learned various <span className="text-light-primary">Tools</span> and <span className="text-light-primary">Technologies</span>.
             </p>
             <ul className="flex flex-col space-y-5 sm:space-y-0 sm:flex-row sm:items-center sm:space-x-5 my-5  text-3xl">
