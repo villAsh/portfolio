@@ -17,22 +17,22 @@ export default function Home() {
       <section className="w-screen min-h-screen p-6">
         <div className="max-w-6xl h-screen mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 grid-rows-8">
           {/* Tech Stack - Large vertical card */}
-          <div className="md:col-span-1 lg:col-span-1 xl:col-span-1 md:row-span-7">
+          <div className="col-span-1 md:row-span-7">
             <TechStack />
           </div>
 
           {/* Profile Card - Medium horizontal card */}
-          <div className="md:col-span-1 lg:col-span-1 xl:col-span-2 row-span-3">
+          <div className="col-span-2 row-span-3">
             <GridAbout />
           </div>
 
           {/* Links Card - Small square card */}
-          <div className="md:col-span-1 lg:col-span-1 xl:col-span-1 row-span-2">
+          <div className="col-span-1 row-span-2">
             <GridTheme />
           </div>
 
           {/* Project Card - Medium square card */}
-          <div className="md:col-span-1 lg:col-span-1 xl:col-span-1 row-span-3">
+          <div className="col-span-1 row-span-3">
             <GridProject />
           </div>
 
@@ -42,12 +42,12 @@ export default function Home() {
           </div>
 
           {/* Social Card - Medium square card */}
-          <div className="md:col-span-1 lg:col-span-1 xl:col-span-1 row-span-2">
+          <div className="col-span-1 row-span-2">
             <GridSocial />
           </div>
 
           {/* Quote Card - Small square card */}
-          <div className="md:col-span-1 lg:col-span-1 xl:col-span-1"></div>
+          <div className="col-span-1"></div>
         </div>
       </section>
     </ThemeProvider>
