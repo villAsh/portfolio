@@ -6,7 +6,7 @@ import {
 } from "@/types/theme-animations";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useCallback } from "react";
+import { ReactNode, useCallback } from "react";
 import { Button } from "./button";
 
 interface ThemeToggleAnimationProps {
@@ -14,6 +14,7 @@ interface ThemeToggleAnimationProps {
   start?: AnimationStart;
   showLabel?: boolean;
   url?: string;
+  children: ReactNode;
 }
 
 export default function ThemeToggleButton({
@@ -21,6 +22,7 @@ export default function ThemeToggleButton({
   start = "top-left",
   showLabel = false,
   url = "",
+  children,
 }: ThemeToggleAnimationProps) {
   const { theme, setTheme } = useTheme();
 
@@ -69,24 +71,10 @@ export default function ThemeToggleButton({
       onClick={toggleTheme}
       variant="ghost"
       size="icon"
-      className="w-9 p-0 h-9 relative group"
+      className="w-full h-full relative group cursor-pointer"
       name="Theme Toggle Button"
     >
-      <SunIcon className="size-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <MoonIcon className="absolute size-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Theme Toggle </span>
-      {showLabel && (
-        <>
-          <span className="hidden group-hover:block border rounded-full px-2 absolute -top-10">
-            {" "}
-            variant = {variant}
-          </span>
-          <span className="hidden group-hover:block border rounded-full px-2 absolute -bottom-10">
-            {" "}
-            start = {start}
-          </span>
-        </>
-      )}
+      {children}
     </Button>
   );
 }

@@ -44,7 +44,6 @@ const SkillSection = ({ data, heading }: Props) => {
             variants={itemVariants}
           >
             {item}
-            <motion.span className="border-b bg-white blur-3xl absolute bottom-0 w-full" />
           </motion.span>
         ))}
       </div>
