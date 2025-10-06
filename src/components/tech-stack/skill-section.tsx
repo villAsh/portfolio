@@ -20,12 +20,11 @@ const variants = {
   },
 };
 
-// Define variants for the individual skill items (spans)
 const itemVariants = {
   hidden: { opacity: 0, scale: 0 },
   visible: {
     opacity: 1,
-    scale: [0.7, 1.1, 1], // Retain your scale animation
+    scale: [0.7, 1.1, 1],
     transition: { duration: 0.7 },
   },
 };
@@ -37,7 +36,10 @@ const SkillSection = ({ data, heading }: Props) => {
       <div className="flex flex-row flex-wrap gap-1 mt-2">
         {data.map((item) => (
           <motion.span
-            className="border-2 rounded-full px-4 py-1 text-xs inline-block relative font-medium"
+            drag
+            dragTransition={{ bounceDamping: 15 }}
+            dragSnapToOrigin
+            className="border-2 rounded-full px-4 py-1 text-xs inline-block relative font-medium hover:cursor-grab active:cursor-grabbing"
             key={item}
             variants={itemVariants}
           >
