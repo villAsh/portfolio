@@ -1,0 +1,53 @@
+"use client";
+import { VaultIcon } from "lucide-react";
+import { motion } from "motion/react";
+
+type Props = {
+  heading: string;
+  data: string[];
+};
+
+const variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+// Define variants for the individual skill items (spans)
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: [0.7, 1.1, 1], // Retain your scale animation
+    transition: { duration: 0.7 },
+  },
+};
+
+const SkillSection = ({ data, heading }: Props) => {
+  return (
+    <motion.div className="mt-5" variants={variants}>
+      <h6 className="text-base font-semibold">{heading}:</h6>
+      <div className="flex flex-row flex-wrap gap-1 mt-2">
+        {data.map((item) => (
+          <motion.span
+            className="border-2 rounded-full px-4 py-1 text-xs inline-block relative font-medium"
+            key={item}
+            variants={itemVariants}
+          >
+            {item}
+            <motion.span className="border-b bg-white blur-3xl absolute bottom-0 w-full" />
+          </motion.span>
+        ))}
+      </div>
+    </motion.div>
+  );
+};
+
+export default SkillSection;
