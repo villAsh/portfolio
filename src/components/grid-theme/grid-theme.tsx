@@ -4,7 +4,7 @@ import ThemeToggleButton from "../ui/theme-toggle";
 import { useTheme } from "next-themes";
 
 const GridTheme = () => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   return (
     <div className="border-4 w-full min-w-2xs rounded-xl h-full overflow-hidden">
       <ThemeToggleButton
@@ -16,7 +16,7 @@ const GridTheme = () => {
           width={1500}
           height={1500}
           alt="goku theme"
-          src={theme === "dark" ? "/goku-moon.gif" : "/goku-sunset.gif"}
+          src={resolvedTheme === "dark" ? "/goku-sunset.gif" : "/goku-moon.gif"}
           className="h-[25vh] w-[20vw] object-cover"
         />
       </ThemeToggleButton>
