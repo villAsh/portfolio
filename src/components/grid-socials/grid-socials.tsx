@@ -1,11 +1,12 @@
 "use client";
 import { motion, Variant, Variants } from "motion/react";
+import { Github, Gmail, LinkedIn } from "../ui/icons";
 
 const parentVariant: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.6 },
+    transition: { staggerChildren: 0.1 },
   },
 };
 
@@ -17,8 +18,8 @@ const childrenVariants: Variants = {
     rotateX: 0,
     transition: {
       type: "spring",
-      damping: 15,
-      stiffness: 100,
+      damping: 10,
+      stiffness: 300,
       duration: 0.5,
     },
   },
@@ -31,7 +32,7 @@ const GridSocial = () => {
         variants={parentVariant}
         initial="hidden"
         animate="visible"
-        className="flex space-x-2"
+        className="flex"
       >
         {["S", "O", "C", "I", "A", "L", "S"].map((item, i) => (
           <motion.h1
@@ -43,6 +44,11 @@ const GridSocial = () => {
           </motion.h1>
         ))}
       </motion.div>
+      <div className="flex flex-row items-center justify-start gap-5 mt-5">
+        <Github />
+        <Gmail />
+        <LinkedIn />
+      </div>
     </div>
   );
 };

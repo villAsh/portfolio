@@ -23,6 +23,9 @@
       },
       "correctness": {
         "useExhaustiveDependencies": "error"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
       }
     },
     "domains": {
