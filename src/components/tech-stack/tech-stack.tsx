@@ -29,7 +29,7 @@ const TechStack = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-3xl font-bold uppercase"
+            className="text-3xl font-bold uppercase bg-clip-text text-transparent bg-gradient-to-b from-gray-800 to-80% to-gray-300 dark:from-gray-100 dark:via-gray-300 dark:via-55% dark:to-gray-500"
           >
             SKILLS
           </motion.h1>
