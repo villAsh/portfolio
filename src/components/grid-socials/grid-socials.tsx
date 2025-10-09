@@ -54,7 +54,7 @@ const GridSocial = () => {
           <motion.h1
             variants={childrenVariants}
             key={item + i}
-            className="text-5xl font-extrabold uppercase inline-block"
+            className="text-5xl font-extrabold uppercase inline-block bg-clip-text bg-gradient-to-b from-gray-800 to-80% to-gray-300 dark:from-gray-100 dark:via-gray-300 dark:via-55% dark:to-gray-500 text-transparent"
           >
             {item}
           </motion.h1>
