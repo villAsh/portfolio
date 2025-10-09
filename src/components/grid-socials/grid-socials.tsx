@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence, motion, Variant, Variants } from "motion/react";
-import { Github, Gmail, LinkedIn } from "../ui/icons";
+import { Github, Gmail, LinkedIn, PeerList, XCOM } from "../ui/icons";
 import { useState } from "react";
 
 const parentVariant: Variants = {
@@ -60,7 +60,7 @@ const GridSocial = () => {
           </motion.h1>
         ))}
       </motion.div>
-      <div className="flex flex-row items-center justify-start gap-5 mt-5 relative">
+      <div className="grid grid-cols-3 gap-5 mt-5 relative">
         <motion.div
           onMouseEnter={() => setHover("Github")}
           onMouseLeave={() => setHover("")}
@@ -79,10 +79,22 @@ const GridSocial = () => {
         >
           <LinkedIn />
         </motion.div>
+        <motion.div
+          onMouseEnter={() => setHover("PeerList")}
+          onMouseLeave={() => setHover("")}
+        >
+          <PeerList />
+        </motion.div>
+        <motion.div
+          onMouseEnter={() => setHover("X")}
+          onMouseLeave={() => setHover("")}
+        >
+          <XCOM />
+        </motion.div>
         <AnimatePresence mode="wait">
           {hover && (
             <motion.div
-              className="absolute -right-16 top-5 rotate-90 bg-gray-100 px-6 py-1 rounded-md dark:bg-background border-2"
+              className="absolute -right-20 top-5 rotate-90 bg-gray-100 px-6 py-1 rounded-md dark:bg-background border-2"
               variants={tooltipVariants}
               initial="hidden"
               animate="visible"
