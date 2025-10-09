@@ -60,7 +60,7 @@ const GridSocial = () => {
           </motion.h1>
         ))}
       </motion.div>
-      <div className="grid grid-cols-3 gap-5 mt-5 relative">
+      <div className="grid grid-cols-3 gap-y-6 mt-3 relative">
         <motion.div
           onMouseEnter={() => setHover("Github")}
           onMouseLeave={() => setHover("")}
