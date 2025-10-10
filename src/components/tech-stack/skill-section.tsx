@@ -31,7 +31,7 @@ const itemVariants = {
 
 const SkillSection = ({ data, heading }: Props) => {
   return (
-    <motion.div className="mt-5" variants={variants}>
+    <motion.div className="mt-3" variants={variants}>
       <h6 className="text-base font-semibold">{heading}:</h6>
       <div className="flex flex-row flex-wrap gap-1 mt-2">
         {data.map((item) => (
