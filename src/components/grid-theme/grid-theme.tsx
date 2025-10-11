@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 const GridTheme = () => {
   const { resolvedTheme } = useTheme();
   return (
-    <div className="border-4 w-full min-w-2xs rounded-xl h-full overflow-hidden">
+    <div className="border-4 w-full min-w-2xs rounded-sm h-full overflow-hidden">
       <ThemeToggleButton
         variant="gif"
         start="top-right"
