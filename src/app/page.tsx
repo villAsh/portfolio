@@ -15,7 +15,7 @@ export default function Home() {
       disableTransitionOnChange
     >
       <section className="w-screen min-h-screen p-6 px-56">
-        <div className="max-w-6xl h-screen mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 grid-rows-8">
+        <div className="max-w-6xl h-screen mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 grid-rows-8">
           {/* Tech Stack - Large vertical card */}
           <div className="col-span-1 md:row-span-7">
             <TechStack />
