@@ -23,17 +23,19 @@ const GridAbout = () => {
             </h1>
           </div>
         </div>
-        <motion.div className="relative my-2 flex flex-row items-center gap-x-1.5">
+        <motion.div className="relative my-2 flex flex-row items-center gap-x-1.5 text-gray-600 dark:text-gray-300">
           <TextFlip
             text="I build"
             words={["Web apps", "Mobile apps", "Frontends"]}
           />
         </motion.div>
         <div className="mb-2">
-          <h1 className="font-medium text-sm tracking-wide">
+          <h1 className="font-medium text-sm tracking-wide dark:text-gray-300 text-gray-600">
             Hello, I am Vilas! a
             <LinkPreview url="https://www.seaflux.tech/" className="px-1">
-              Software Engineer
+              <span className="font-semibold dark:text-white text-gray-900">
+                Software Engineer
+              </span>
             </LinkPreview>
             based in Gujarat - India
           </h1>
