@@ -3,10 +3,11 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import TextFlip from "../ui/text-flip";
 import { LinkPreview } from "../ui/link-preview";
+import { Learn } from "../ui/icons";
 
 const GridAbout = () => {
   return (
-    <div className="border-4 min-w-2xs px-4 py-2 rounded-sm h-fit col-span-5 w-full">
+    <div className="border-4 min-w-2xs px-4 py-2 rounded-sm h-fit col-span-5 w-full relative">
       <div>
         <div className="flex flex-row items-start justify-start gap-x-4">
           <Image
@@ -36,6 +37,9 @@ const GridAbout = () => {
             </LinkPreview>
             based in Gujarat - India
           </h1>
+        </div>
+        <div className="absolute top-2 right-2">
+          <Learn />
         </div>
       </div>
     </div>
