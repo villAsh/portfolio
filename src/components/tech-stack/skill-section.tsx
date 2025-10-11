@@ -1,6 +1,6 @@
 "use client";
-import { VaultIcon } from "lucide-react";
 import { motion } from "motion/react";
+import { BottomGradient } from "../ui/bottom-gradient";
 
 type Props = {
   heading: string;
@@ -39,11 +39,12 @@ const SkillSection = ({ data, heading }: Props) => {
             drag
             dragTransition={{ bounceDamping: 15 }}
             dragSnapToOrigin
-            className="border-2 rounded-full px-4 py-1 text-xs inline-block relative font-medium hover:cursor-grab active:cursor-grabbing"
+            className="border-2 group/btn relative rounded-full px-4 py-1 text-xs inline-block font-medium hover:cursor-grab active:cursor-grabbing"
             key={item}
             variants={itemVariants}
           >
             {item}
+            <BottomGradient />
           </motion.span>
         ))}
       </div>
