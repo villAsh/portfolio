@@ -23,7 +23,7 @@ const TextFlip = ({ text, words, duration = 3000 }: Props) => {
     <>
       <motion.span
         layoutId="subText"
-        className="text-xl font-semibold tracking-tight"
+        className="text-xl font-bold tracking-tight"
       >
         {text}
       </motion.span>

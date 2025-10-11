@@ -13,7 +13,7 @@ const GridAbout = () => {
             width={200}
             height={200}
             src={"/goku-with-nimbus.png"}
-            className="rounded-md object-contain aspect-auto w-20 h-20"
+            className="rounded-md object-contain aspect-auto w-20 h-20 -mx-4"
             alt="profile img"
           />
           <div className="pt-4">
@@ -22,14 +22,14 @@ const GridAbout = () => {
             </h1>
           </div>
         </div>
-        <motion.div className="relative mx-1 my-4 flex flex-row items-center gap-x-1.5">
+        <motion.div className="relative my-2 flex flex-row items-center gap-x-1.5">
           <TextFlip
             text="I build"
             words={["Web apps", "Mobile apps", "Frontends"]}
           />
         </motion.div>
         <div className="mb-2">
-          <h1 className="font-semibold text-sm tracking-tight">
+          <h1 className="font-medium text-sm tracking-wide">
             Hello, I am Vilas! a
             <LinkPreview url="https://www.seaflux.tech/" className="px-1">
               Software Engineer
