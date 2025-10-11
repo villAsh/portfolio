@@ -32,14 +32,16 @@ const itemVariants = {
 const SkillSection = ({ data, heading }: Props) => {
   return (
     <motion.div className="mt-3" variants={variants}>
-      <h6 className="text-base font-semibold">{heading}:</h6>
+      <h6 className="text-base font-semibold dark:text-white text-gray-900">
+        {heading}:
+      </h6>
       <div className="flex flex-row flex-wrap gap-1 mt-2">
         {data.map((item) => (
           <motion.span
             drag
             dragTransition={{ bounceDamping: 15 }}
             dragSnapToOrigin
-            className="border-2 group/btn relative rounded-full px-4 py-1 text-xs inline-block font-medium hover:cursor-grab active:cursor-grabbing"
+            className="border-2 group/btn relative rounded-full px-4 py-1 text-xs inline-block font-medium hover:cursor-grab active:cursor-grabbing dark:text-gray-300 text-gray-600"
             key={item}
             variants={itemVariants}
           >
