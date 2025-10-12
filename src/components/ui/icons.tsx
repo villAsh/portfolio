@@ -1,6 +1,5 @@
 "use client";
 import { motion, type Variants } from "motion/react";
-import { ClassNameValue } from "tailwind-merge";
 
 const svgVariants: Variants = {
   hidden: { opacity: 1, scale: 0, rotateX: -90 },
@@ -328,6 +327,52 @@ export const Learn = () => {
           </motion.g>
         </motion.g>
       </motion.g>
+    </motion.svg>
+  );
+};
+
+export const Hat = () => {
+  return (
+    <motion.svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-graduation-cap-icon lucide-graduation-cap p-2.5 border rounded-[12px] hover:cursor-pointer"
+      variants={svgVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.path
+        variants={pathVariants}
+        animate="visible"
+        initial="hidden"
+        className={
+          "stroke-gray-700 dark:stroke-gray-200 fill-white dark:fill-black"
+        }
+        d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+      />
+      <motion.path
+        variants={pathVariants}
+        animate="visible"
+        initial="hidden"
+        className={
+          "stroke-gray-700 dark:stroke-gray-200 fill-white dark:fill-black"
+        }
+        d="M22 10v6"
+      />
+      <motion.path
+        variants={pathVariants}
+        animate="visible"
+        initial="hidden"
+        className={
+          "stroke-gray-700 dark:stroke-gray-200 fill-white dark:fill-black"
+        }
+        d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"
+      />
     </motion.svg>
   );
 };

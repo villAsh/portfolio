@@ -22,7 +22,7 @@ export default function Home() {
           </div>
 
           {/* Profile Card - Medium horizontal card */}
-          <div className="col-span-2 row-span-3">
+          <div className="col-span-2 row-span-2">
             <GridAbout />
           </div>
 
@@ -31,16 +31,15 @@ export default function Home() {
             <GridTheme />
           </div>
 
+          {/* Daily Tools - Large vertical card */}
+          <div className="col-span-5 col-start-2 col-end-4 row-span-4">
+            <GridExperience />
+          </div>
+
           {/* Project Card - Medium square card */}
           <div className="col-span-1 row-span-3">
             <GridProject />
           </div>
-
-          {/* Daily Tools - Large vertical card */}
-          <div className="col-span-5 col-start-2 col-end-4 row-span-3">
-            <GridExperience />
-          </div>
-
           {/* Social Card - Medium square card */}
           <div className="col-span-1 row-span-2">
             <GridSocial />
