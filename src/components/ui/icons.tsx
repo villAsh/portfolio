@@ -376,3 +376,53 @@ export const Hat = () => {
     </motion.svg>
   );
 };
+
+export const Briefcase = () => {
+  return (
+    <motion.svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-briefcase p-2.5 border rounded-[12px] hover:cursor-pointer"
+      variants={svgVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.path
+        variants={pathVariants}
+        initial="hidden"
+        animate="visible"
+        d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+        className={"stroke-gray-700 dark:stroke-gray-200"}
+      />
+      <motion.path
+        variants={pathVariants}
+        initial="hidden"
+        animate="visible"
+        d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"
+        className={"stroke-gray-700 dark:stroke-gray-200"}
+      />
+
+      <motion.path
+        variants={pathVariants}
+        initial="hidden"
+        animate="visible"
+        d="M12 12l0 .01"
+        className={"stroke-gray-700 dark:stroke-gray-200"}
+      />
+      <motion.path
+        variants={pathVariants}
+        initial="hidden"
+        animate="visible"
+        d="M3 13a20 20 0 0 0 18 0"
+        className={"stroke-gray-700 dark:stroke-gray-200"}
+      />
+    </motion.svg>
+  );
+};
