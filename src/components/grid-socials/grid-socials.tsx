@@ -27,7 +27,7 @@ const childrenVariants: Variants = {
 };
 
 const tooltipVariants: Variants = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: -25 },
   visible: {
     opacity: 1,
     y: 0,
@@ -35,7 +35,7 @@ const tooltipVariants: Variants = {
   },
   exit: {
     opacity: 0,
-    y: 10,
+    y: 25,
     transition: { type: "spring", damping: 18, stiffness: 250 },
   },
 };
@@ -91,7 +91,7 @@ const GridSocial = () => {
         >
           <XCOM />
         </motion.div>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="popLayout" initial={false}>
           {hover && (
             <motion.div
               className="absolute -right-20 top-5 rotate-90 bg-gray-100 px-6 py-1 rounded-md dark:bg-background border-2"
