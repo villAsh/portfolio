@@ -40,8 +40,20 @@ const tooltipVariants: Variants = {
   },
 };
 
+enum SOCIALS {
+  GMAIL = "gmail",
+  LINKEDIN = "linkedin",
+  GITHUB = "github",
+  PEERLIST = "peerlist",
+  X = "x",
+}
+
 const GridSocial = () => {
   const [hover, setHover] = useState("");
+
+  const debounceAnimation = (state: string) => {
+    setTimeout(() => setHover(state), 300);
+  };
   return (
     <div className="min-w-2xs px-4 py-2 rounded-xl p-1 h-full w-full">
       <motion.div
@@ -53,7 +65,7 @@ const GridSocial = () => {
         {["S", "O", "C", "I", "A", "L", "S"].map((item, i) => (
           <motion.h1
             variants={childrenVariants}
-            key={item + i}
+            key={`${item} + ${i + 1}`}
             className="text-5xl font-extrabold uppercase inline-block bg-clip-text bg-gradient-to-b from-gray-800 to-80% to-gray-300 dark:from-gray-100 dark:via-gray-300 dark:via-55% dark:to-gray-500 text-transparent"
           >
             {item}
@@ -62,31 +74,31 @@ const GridSocial = () => {
       </motion.div>
       <div className="grid grid-cols-3 gap-y-6 mt-3 relative">
         <motion.div
-          onMouseEnter={() => setHover("Github")}
+          onMouseEnter={() => debounceAnimation(SOCIALS.GITHUB)}
           onMouseLeave={() => setHover("")}
         >
           <Github />
         </motion.div>
         <motion.div
-          onMouseEnter={() => setHover("Gmail")}
+          onMouseEnter={() => debounceAnimation(SOCIALS.GMAIL)}
           onMouseLeave={() => setHover("")}
         >
           <Gmail />
         </motion.div>
         <motion.div
-          onMouseEnter={() => setHover("LinkedIn")}
+          onMouseEnter={() => debounceAnimation(SOCIALS.LINKEDIN)}
           onMouseLeave={() => setHover("")}
         >
           <LinkedIn />
         </motion.div>
         <motion.div
-          onMouseEnter={() => setHover("PeerList")}
+          onMouseEnter={() => debounceAnimation(SOCIALS.PEERLIST)}
           onMouseLeave={() => setHover("")}
         >
           <PeerList />
         </motion.div>
         <motion.div
-          onMouseEnter={() => setHover("X")}
+          onMouseEnter={() => debounceAnimation(SOCIALS.X)}
           onMouseLeave={() => setHover("")}
         >
           <XCOM />
@@ -101,7 +113,7 @@ const GridSocial = () => {
               exit="exit"
               key={hover}
             >
-              <motion.h1 className="text-sm font-semibold text-gray-600 dark:text-gray-300">
+              <motion.h1 className="text-sm font-semibold text-gray-600 dark:text-gray-300 !capitalize">
                 {hover}
               </motion.h1>
             </motion.div>
