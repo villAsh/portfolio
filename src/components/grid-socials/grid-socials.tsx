@@ -1,7 +1,9 @@
 "use client";
 import { AnimatePresence, motion, Variant, Variants } from "motion/react";
-import { Github, Gmail, LinkedIn, PeerList, XCOM } from "../ui/icons";
+import { Github, Gmail, LeetCode, LinkedIn, PeerList, XCOM } from "../ui/icons";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { TEXT_GRADIENT } from "@/lib/classes";
 
 const parentVariant: Variants = {
   hidden: { opacity: 0 },
@@ -46,6 +48,7 @@ enum SOCIALS {
   GITHUB = "github",
   PEERLIST = "peerlist",
   X = "x",
+  LEETCODE = "LeetCode"
 }
 
 const GridSocial = () => {
@@ -66,7 +69,7 @@ const GridSocial = () => {
           <motion.h1
             variants={childrenVariants}
             key={`${item} + ${i + 1}`}
-            className="text-5xl font-extrabold uppercase inline-block bg-clip-text bg-gradient-to-b from-gray-800 to-80% to-gray-300 dark:from-gray-100 dark:via-gray-300 dark:via-55% dark:to-gray-500 text-transparent"
+            className={cn("text-5xl font-extrabold uppercase inline-block", TEXT_GRADIENT)}
           >
             {item}
           </motion.h1>
@@ -102,6 +105,12 @@ const GridSocial = () => {
           onMouseLeave={() => setHover("")}
         >
           <XCOM />
+        </motion.div>
+        <motion.div
+          onMouseEnter={() => debounceAnimation(SOCIALS.LEETCODE)}
+          onMouseLeave={() => setHover("")}
+        >
+          <LeetCode />
         </motion.div>
         <AnimatePresence mode="popLayout" initial={false}>
           {hover && (
