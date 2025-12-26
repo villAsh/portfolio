@@ -32,7 +32,7 @@ const itemVariants = {
 const SkillSection = ({ data, heading }: Props) => {
   return (
     <motion.div className="mt-3" variants={variants}>
-      <h6 className="text-base font-semibold bg-clip-text bg-gradient-to-b from-gray-800 to-80% to-gray-300 dark:from-gray-100 dark:via-gray-300 dark:via-55% dark:to-gray-500 text-transparent">
+      <h6 className="text-base font-semibold bg-clip-text bg-linear-to-b from-gray-800 to-80% to-gray-300 dark:from-gray-100 dark:via-gray-300 dark:via-55% dark:to-gray-500 text-transparent">
         {heading}:
       </h6>
       <div className="flex flex-row flex-wrap gap-1 mt-2">

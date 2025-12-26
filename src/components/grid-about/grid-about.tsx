@@ -4,6 +4,8 @@ import Image from "next/image";
 import TextFlip from "../ui/text-flip";
 import { LinkPreview } from "../ui/link-preview";
 import { Learn } from "../ui/icons";
+import { cn } from "@/lib/utils";
+import { TEXT_GRADIENT } from "@/lib/classes";
 
 const GridAbout = () => {
   return (
@@ -18,7 +20,7 @@ const GridAbout = () => {
             alt="profile img"
           />
           <div className="pt-4">
-            <h1 className="text-3xl font-semibold bg-clip-text bg-gradient-to-b from-gray-800 to-80% to-gray-300 dark:from-gray-100 dark:via-gray-300 dark:via-55% dark:to-gray-500 text-transparent">
+            <h1 className={cn("text-3xl font-semibold", TEXT_GRADIENT)}>
               Vilas.
             </h1>
           </div>
@@ -26,7 +28,7 @@ const GridAbout = () => {
         <motion.div className="relative my-2 flex flex-row items-center gap-x-1.5 text-gray-600 dark:text-gray-300">
           <TextFlip
             text="I build"
-            words={["Web apps", "Mobile apps", "Frontends"]}
+            words={["Web apps", "Mobile apps", "Frontend"]}
           />
         </motion.div>
         <div className="mb-2">
