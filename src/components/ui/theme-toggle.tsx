@@ -4,9 +4,8 @@ import {
   type AnimationStart,
   createAnimation,
 } from "@/types/theme-animations";
-import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { ReactNode, useCallback } from "react";
+import { type ReactNode, useCallback } from "react";
 import { Button } from "./button";
 
 interface ThemeToggleAnimationProps {

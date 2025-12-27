@@ -34,7 +34,7 @@ const GridExperience = () => {
             icon={<Briefcase />}
             heading="Software Engineer"
             subHeading="Seaflux Technologies"
-            year="(Sept-2024 - Oct-2025)"
+            year="(Sept-2024 - current)"
           />
           <ExpCard
             icon={<Briefcase />}
