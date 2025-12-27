@@ -26,7 +26,7 @@ const GridAbout = () => {
             </h1>
           </div>
         </div>
-        <motion.div className="relative my-2 flex flex-row items-center gap-x-1.5 text-gray-600 dark:text-gray-300">
+        <motion.div className="relative my-2 mt-5 flex flex-row items-center gap-x-1.5 text-gray-600 dark:text-gray-300">
           <span className="text-gray-600 dark:text-gray-300 font-semibold text-lg">I Build</span>
           <TextLoop
             className="overflow-y-clip"
