@@ -9,6 +9,7 @@ export const FRONTEND = [
   "Figma",
   "Tanstack Eco System",
   "Shadcn",
+  "Framer motion"
 ];
 export const BACKEND = ["NodeJs", "ExpressJs", "TypeORM"];
-export const SERVICES = ["AWS", "MongoDB", "Postgress", "Postman", "Docker"];
+export const SERVICES = ["AWS", "Postgress", "Postman", "Docker"];
