@@ -53,7 +53,7 @@ const GridExperience = () => {
             heading="Graduation"
             course="Bachelors of Computer Application"
             subHeading="Gujarat University"
-            year="2020-2023)"
+            year="(2020-2023)"
           />
         </motion.div>
       </motion.div>

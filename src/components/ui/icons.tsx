@@ -342,32 +342,20 @@ export const Hat = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       className="lucide lucide-graduation-cap-icon lucide-graduation-cap p-2.5 border rounded-[12px] hover:cursor-pointer"
-      variants={svgVariants}
-      initial="hidden"
-      animate="visible"
     >
       <motion.path
-        variants={pathVariants}
-        animate="visible"
-        initial="hidden"
         className={
           "stroke-gray-700 dark:stroke-gray-200 fill-white dark:fill-black"
         }
         d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
       />
       <motion.path
-        variants={pathVariants}
-        animate="visible"
-        initial="hidden"
         className={
           "stroke-gray-700 dark:stroke-gray-200 fill-white dark:fill-black"
         }
         d="M22 10v6"
       />
       <motion.path
-        variants={pathVariants}
-        animate="visible"
-        initial="hidden"
         className={
           "stroke-gray-700 dark:stroke-gray-200 fill-white dark:fill-black"
         }
@@ -390,36 +378,21 @@ export const Briefcase = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       className="icon icon-tabler icons-tabler-outline icon-tabler-briefcase p-2.5 border rounded-[12px] hover:cursor-pointer"
-      variants={svgVariants}
-      initial="hidden"
-      animate="visible"
     >
       <motion.path
-        variants={pathVariants}
-        initial="hidden"
-        animate="visible"
         d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
         className={"stroke-gray-700 dark:stroke-gray-200"}
       />
       <motion.path
-        variants={pathVariants}
-        initial="hidden"
-        animate="visible"
         d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"
         className={"stroke-gray-700 dark:stroke-gray-200"}
       />
 
       <motion.path
-        variants={pathVariants}
-        initial="hidden"
-        animate="visible"
         d="M12 12l0 .01"
         className={"stroke-gray-700 dark:stroke-gray-200"}
       />
       <motion.path
-        variants={pathVariants}
-        initial="hidden"
-        animate="visible"
         d="M3 13a20 20 0 0 0 18 0"
         className={"stroke-gray-700 dark:stroke-gray-200"}
       />
