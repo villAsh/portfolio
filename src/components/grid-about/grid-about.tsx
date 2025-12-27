@@ -6,6 +6,7 @@ import { LinkPreview } from "../ui/link-preview";
 import { Learn } from "../ui/icons";
 import { cn } from "@/lib/utils";
 import { TEXT_GRADIENT } from "@/lib/classes";
+import { TextLoop } from "../ui/text-loop";
 
 const GridAbout = () => {
   return (
@@ -26,10 +27,40 @@ const GridAbout = () => {
           </div>
         </div>
         <motion.div className="relative my-2 flex flex-row items-center gap-x-1.5 text-gray-600 dark:text-gray-300">
-          <TextFlip
-            text="I build"
-            words={["Web apps", "Mobile apps", "Frontend"]}
-          />
+          <span className="text-gray-600 dark:text-gray-300 font-semibold text-lg">I Build</span>
+          <TextLoop
+            className="overflow-y-clip"
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 80,
+              mass: 10,
+            }}
+            variants={{
+              initial: {
+                y: 20,
+                rotateX: 90,
+                opacity: 0,
+                filter: "blur(4px)",
+              },
+              animate: {
+                y: 0,
+                rotateX: 0,
+                opacity: 1,
+                filter: "blur(0px)",
+              },
+              exit: {
+                y: -20,
+                rotateX: -90,
+                opacity: 0,
+                filter: "blur(4px)",
+              },
+            }}
+          >
+            <span className="text-gray-600 dark:text-gray-300 font-bold text-lg">Frontend</span>
+            <span className="text-gray-600 dark:text-gray-300 font-bold text-lg">Web Apps</span>
+            <span className="text-gray-600 dark:text-gray-300 font-bold text-lg">Mobile Apps</span>
+          </TextLoop>
         </motion.div>
         <div className="mb-2">
           <h1 className="font-medium text-sm tracking-wide dark:text-gray-300 text-gray-600">
