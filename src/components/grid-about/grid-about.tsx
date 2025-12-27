@@ -17,10 +17,10 @@ const GridAbout = () => {
             width={200}
             height={200}
             src={"/goku-with-nimbus.png"}
-            className="rounded-md object-contain aspect-auto w-20 h-20 -mx-4"
+            className="rounded-md object-contain aspect-auto w-16 h-16 -mx-4"
             alt="profile img"
           />
-          <div className="pt-4">
+          <div className="pt-2">
             <h1 className={cn("text-3xl font-semibold", TEXT_GRADIENT)}>
               Vilas.
             </h1>
