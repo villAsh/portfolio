@@ -20,8 +20,8 @@ const parentVariants: Variants = {
 const GridExperience = () => {
   return (
     <div className="min-w-2xs px-4 py-2 rounded-sm p-1 h-fit w-full relative">
-      <h1 className="text-2xl font-extrabold uppercase inline-block bg-clip-text bg-gradient-to-b from-gray-800 to-80% to-gray-300 dark:from-gray-100 dark:via-gray-300 dark:via-55% dark:to-gray-500 text-transparent">
-        Experience
+      <h1 className="text-2xl font-extrabold uppercase inline-block bg-clip-text bg-linear-to-b from-gray-800 to-80% to-gray-300 dark:from-gray-100 dark:via-gray-300 dark:via-55% dark:to-gray-500 text-transparent">
+        Journey
       </h1>
       <motion.div className="mt-5 relative">
         <motion.div
@@ -50,9 +50,9 @@ const GridExperience = () => {
           />
           <ExpCard
             icon={<Hat />}
-            heading="Graduation"
-            course="Bachelors of Computer Application"
-            subHeading="Gujarat University"
+            heading="Bachelors of Computer Application"
+            course="Gujarat University"
+            subHeading=" "
             year="(2020-2023)"
           />
         </motion.div>
