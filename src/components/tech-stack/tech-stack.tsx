@@ -21,7 +21,7 @@ const TechStack = () => {
   return (
     <AnimatePresence>
       <motion.div className="border-4 w-full px-4 rounded-xl h-full relative group">
-      <h1 className={cn("pt-2 text-2xl text-center font-bold", TEXT_GRADIENT)}>Tech-Stack</h1>
+      <h1 className={cn("pt-2 text-3xl text-center font-semibold", TEXT_GRADIENT)}>Tech-Stack</h1>
         <motion.div
           variants={skillContainer}
           initial="hidden"
