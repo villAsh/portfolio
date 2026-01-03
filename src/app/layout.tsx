@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
+import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Vilas - a Software Engineer.",
@@ -20,6 +21,7 @@ export default function RootLayout({
           attribute={"class"}
           enableSystem={false}
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
