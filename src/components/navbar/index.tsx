@@ -2,7 +2,7 @@ import Image from "next/image";
 import ThemeSwitch from "../system/theme-switch";
 const Navbar = () => {
   return (
-    <nav className="py-3">
+    <nav className="py-3 max-w-2xl mx-auto max-md:px-10">
       <div className="flex flex-row items-end justify-between gap-x-4">
         <div className="flex flex-row items-end justify-start gap-x-4">
           <div className="h-[50px] w-[50px] overflow-hidden rounded-[8px] transition-colors duration-500 bg-yellow-300 dark:bg-blue-300 flex items-center justify-center">
