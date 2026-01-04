@@ -25,7 +25,7 @@ export const TechIcon = ({ icon, text }: TTechIcon) => {
   const isMonochrome = text === "Framer Motion";
 
   return (
-    <span className="bg-inherit dark:bg-white/5 inline-flex flex-row items-center justify-center gap-x-2 rounded-[8px] w-fit px-2.5 py-1 border border-black/10 dark:border-white/10 shadow-sm transition-colors duration-200">
+    <span className="bg-white/5 dark:bg-white/5 inline-flex flex-row items-center justify-center gap-x-2 rounded-[8px] w-fit px-2.5 py-1 border  border-dashed border-black/10 dark:border-white/10 transition-colors duration-200 surface-inset">
       <Image
         src={icon}
         alt={text}
@@ -39,87 +39,112 @@ export const TechIcon = ({ icon, text }: TTechIcon) => {
     </span>
   );
 };
+
+const Socials = () => {
+  return (
+    <div>
+      <TooltipProvider>
+        <div className="flex flex-row items-center justify-start gap-x-2">
+          {SOCIALS.map((social) => (
+            <Tooltip key={social.id}>
+              <TooltipTrigger className="group">
+                <a href={social.link} target="_blank" rel="noopener">
+                  <Image
+                    src={social.src}
+                    width={28}
+                    height={28}
+                    alt={social.title}
+                    className="group-hover:scale-110 transition-transform duration-300 dark:invert"
+                  />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent className="rounded-[8px]">
+                {social.title}
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </div>
+      </TooltipProvider>
+    </div>
+  );
+};
+
+const Bio = () => {
+  return (
+    <div className="flex flex-col gap-y-6">
+      <div>
+        <h1 className="text-3xl font-semibold text-neutral-800 dark:text-neutral-100 tracking-wide transition-colors duration-100">
+          Hey, I am Vilas {" — "}
+          <span className="text-neutral-400">A Software Engineer.</span>
+        </h1>
+      </div>
+      <div>
+        <div className="flex flex-row flex-wrap items-center gap-1.5 text-lg font-medium text-neutral-600 tracking-wider leading-8 dark:text-neutral-400">
+          <span className="whitespace-pre-wrap">
+            I craft engaging web apps using
+          </span>
+          <TechIcon icon="/react.svg" text="React" />{" "}
+          <span className="whitespace-pre-wrap">, </span>
+          <TechIcon icon="/next.js.svg" text="Next.js" />{" "}
+          <span className="whitespace-pre-wrap">, </span>
+          <TechIcon icon="/node.js.svg" text="Node.js" />{" "}
+          <span className="whitespace-pre-wrap">, </span>
+          <TechIcon icon="/postgres.svg" text="PostgreSQL" /> . Focusing on{" "}
+          <span className="text-neutral-600 font-semibold dark:text-neutral-50">
+            UI/UX
+          </span>{" "}
+          <span>design. Enthusiastic about</span>
+          <TechIcon icon="/framer-black.svg" text="Framer Motion" /> and{" "}
+          <TechIcon icon="/gsap.svg" text="GSAP" /> .
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ResumeButton = () => {
+  return (
+    <div>
+      <Button
+        variant={"icon"}
+        className="shadow-[inset_0px_1px_2px_1px_rgb(0,0,0,0.18)]"
+      >
+        <CV
+          className={
+            "group-hover:rotate-22 transition-transform ease-in-out duration-500"
+          }
+        />{" "}
+        Resume / CV
+      </Button>
+    </div>
+  );
+};
+
+const ProfileImage = () => {
+  return (
+    <div className="w-[105px] h-[105px] relative">
+      <div className="h-[100px] w-[100px] overflow-hidden rounded-full transition-colors duration-500 bg-yellow-300 dark:bg-blue-300 flex items-center justify-center">
+        <Image
+          alt="profile icon"
+          src={"/goku.png"}
+          width={88}
+          height={88}
+          className="object-contain"
+        />
+      </div>
+      <ProfileBadge />
+    </div>
+  );
+};
+
 const HeroSection = () => {
   return (
     <section className="max-w-2xl w-full mx-auto mt-10">
       <div className="flex flex-col gap-y-6">
-        <div className="w-[105px] h-[105px] relative">
-          <div className="h-[100px] w-[100px] overflow-hidden rounded-full transition-colors duration-500 bg-yellow-300 dark:bg-blue-300 flex items-center justify-center">
-            <Image
-              alt="profile icon"
-              src={"/goku.png"}
-              width={88}
-              height={88}
-              className="object-contain"
-            />
-          </div>
-          <ProfileBadge />
-        </div>
-        <div className="flex flex-col gap-y-6">
-          <div>
-            <h1 className="text-3xl font-semibold text-neutral-800 dark:text-neutral-100 tracking-wide transition-colors duration-100">
-              Hey, I am Vilas {" — "}
-              <span className="text-neutral-400">A Software Engineer.</span>
-            </h1>
-          </div>
-          <div>
-            <div className="flex flex-row flex-wrap items-center gap-1.5 text-lg font-medium text-neutral-600 tracking-wider leading-8 dark:text-neutral-400">
-              <span className="whitespace-pre-wrap">
-                I craft engaging web apps using
-              </span>
-              <TechIcon icon="/react.svg" text="React" />{" "}
-              <span className="whitespace-pre-wrap">, </span>
-              <TechIcon icon="/next.js.svg" text="Next.js" />{" "}
-              <span className="whitespace-pre-wrap">, </span>
-              <TechIcon icon="/node.js.svg" text="Node.js" />{" "}
-              <span className="whitespace-pre-wrap">, </span>
-              <TechIcon icon="/postgres.svg" text="PostgreSQL" /> . Focusing on{" "}
-              <span className="text-neutral-600 font-semibold dark:text-neutral-50">
-                UI/UX
-              </span>{" "}
-              <span>design. Enthusiastic about</span>
-              <TechIcon icon="/framer-black.svg" text="Framer Motion" /> and{" "}
-              <TechIcon icon="/gsap.svg" text="GSAP" /> .
-            </div>
-          </div>
-        </div>
-        <div>
-          <Button
-            variant={"icon"}
-            className="shadow-[inset_0px_1px_2px_1px_rgb(0,0,0,0.18)]"
-          >
-            <CV
-              className={
-                "group-hover:rotate-22 transition-transform ease-in-out duration-500"
-              }
-            />{" "}
-            Resume / CV
-          </Button>
-        </div>
-        <div>
-          <TooltipProvider>
-            <div className="flex flex-row items-center justify-start gap-x-2">
-              {SOCIALS.map((social) => (
-                <Tooltip key={social.id}>
-                  <TooltipTrigger className="group">
-                    <a href={social.link} target="_blank" rel="noopener">
-                      <Image
-                        src={social.src}
-                        width={28}
-                        height={28}
-                        alt={social.title}
-                        className="group-hover:scale-110 transition-transform duration-300 dark:invert stroke-red-50"
-                      />
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent className="rounded-[8px]">
-                    {social.title}
-                  </TooltipContent>
-                </Tooltip>
-              ))}
-            </div>
-          </TooltipProvider>
-        </div>
+        <ProfileImage />
+        <Bio />
+        <ResumeButton />
+        <Socials />
       </div>
     </section>
   );
