@@ -27,7 +27,7 @@ export const TechIcon = ({ icon, text }: TTechIcon) => {
   const isMonochrome = text === "Framer Motion";
 
   return (
-    <span className="bg-white/5 dark:bg-white/5 inline-flex flex-row items-center justify-center gap-x-2 rounded-[8px] w-fit px-2.5 py-1 border  border-dashed border-black/10 dark:border-white/10 transition-colors duration-200 surface-inset">
+    <span className="bg-white/5 dark:bg-white/5 inline-flex flex-row items-center justify-center gap-x-2 rounded-[8px] w-fit px-2.5 py-1 border  border-dashed border-black/10 dark:border-white/10 transition-colors duration-200 surface-inset transform">
       <Image
         src={icon}
         alt={text}

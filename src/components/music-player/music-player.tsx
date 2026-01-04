@@ -45,7 +45,7 @@ const MusicPlayer = () => {
           />
           <div className="flex flex-col gap-y-0.5">
             <div className="flex flex-row items-center justify-start gap-x-2">
-              <div className="w-fit p-1 rounded-[4px] bg-green-100 dark:bg-green-950">
+              <div className="w-fit p-1 rounded-[4px] bg-green-100 dark:bg-green-950 transform transition-colors duration-500">
                 <Image
                   src={"/spotify.svg"}
                   width={12}
@@ -85,7 +85,7 @@ const MusicPlayer = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <hr className="border-neutral-200 dark:border-neutral-800 mt-2 transition-colors transform duration-500" />
+          <hr className="border-neutral-200 dark:border-neutral-800 transition-colors transform duration-500 my-2" />
           <div>
             <div className="flex flex-col">
               <h6 className="text-sm font-medium">Haseen</h6>
