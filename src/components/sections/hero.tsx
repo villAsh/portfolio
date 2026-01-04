@@ -45,19 +45,24 @@ const HeroSection = () => {
             </h1>
           </div>
           <div className="mt-6">
-            <p className="text-lg font-medium text-neutral-600 tracking-wider leading-8 dark:text-neutral-400">
-              I craft engaging web apps using{" "}
-              <TechIcon icon="/react.svg" text="React" /> ,{" "}
-              <TechIcon icon="/next.js.svg" text="Next.js" /> ,{" "}
-              <TechIcon icon="/node.js.svg" text="Node.js" /> , and{" "}
+            <div className="flex flex-row flex-wrap items-center gap-1.5 text-lg font-medium text-neutral-600 tracking-wider leading-8 dark:text-neutral-400">
+              <span className="whitespace-pre-wrap">
+                I craft engaging web apps using
+              </span>
+              <TechIcon icon="/react.svg" text="React" />{" "}
+              <span className="whitespace-pre-wrap">, </span>
+              <TechIcon icon="/next.js.svg" text="Next.js" />{" "}
+              <span className="whitespace-pre-wrap">, </span>
+              <TechIcon icon="/node.js.svg" text="Node.js" />{" "}
+              <span className="whitespace-pre-wrap">, </span>
               <TechIcon icon="/postgres.svg" text="PostgreSQL" /> . Focusing on{" "}
               <span className="text-neutral-600 font-semibold dark:text-neutral-50">
                 UI/UX
               </span>{" "}
-              design. Enthusiastic about{" "}
+              <span>design. Enthusiastic about</span>
               <TechIcon icon="/framer-motion.svg" text="Framer Motion" /> and{" "}
               <TechIcon icon="/gsap.svg" text="GSAP" /> .
-            </p>
+            </div>
           </div>
         </div>
       </div>

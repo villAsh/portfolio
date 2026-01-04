@@ -224,7 +224,7 @@
   } */
 
   .dark .surface-inset {
-    border: 1px solid rgb(255 255 255 / 0.1);
+    /* border: 1px solid rgb(255 255 255 / 0.1); */
     background-color: #0a0a0a;
     box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.1);
   }
