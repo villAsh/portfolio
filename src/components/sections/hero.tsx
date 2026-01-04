@@ -9,6 +9,8 @@ import {
   TooltipTrigger,
 } from "../ui/tooltip";
 import { SOCIALS } from "@/lib/data";
+import BounceMouse from "../bounce-mouse/bounce-mouse";
+import MusicPlayer from "../music-player/music-player";
 
 type TTechIcon = {
   icon: string;
@@ -139,13 +141,15 @@ const ProfileImage = () => {
 
 const HeroSection = () => {
   return (
-    <section className="max-w-2xl w-full mx-auto mt-10">
-      <div className="flex flex-col gap-y-6">
+    <section className="max-w-2xl w-full mx-auto mt-20 relative h-[calc(100vh-140px)]">
+      <div className="flex flex-col gap-y-8">
         <ProfileImage />
         <Bio />
         <ResumeButton />
         <Socials />
+        <MusicPlayer />
       </div>
+      <BounceMouse />
     </section>
   );
 };
