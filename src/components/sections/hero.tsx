@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Button } from "../ui/button";
+import { CV } from "../ui/icons";
 
 type TTechIcon = {
   icon: string;
@@ -23,8 +25,8 @@ export const TechIcon = ({ icon, text }: TTechIcon) => {
 };
 const HeroSection = () => {
   return (
-    <section className="max-w-2xl w-full mx-auto mt-20">
-      <div>
+    <section className="max-w-2xl w-full mx-auto mt-10">
+      <div className="flex flex-col gap-y-6">
         <div className="w-[105px] h-[105px] relative">
           <div className="h-[100px] w-[100px] overflow-hidden rounded-full transition-colors duration-500 bg-yellow-300 dark:bg-blue-300 flex items-center justify-center">
             <Image
@@ -37,14 +39,14 @@ const HeroSection = () => {
           </div>
           <ProfileBadge />
         </div>
-        <div>
-          <div className="mt-6">
+        <div className="flex flex-col gap-y-6">
+          <div>
             <h1 className="text-3xl font-semibold text-neutral-800 dark:text-neutral-100 tracking-wide transition-colors duration-100">
               Hey, I am Vilas {" — "}
               <span className="text-neutral-400">A Software Engineer.</span>
             </h1>
           </div>
-          <div className="mt-6">
+          <div>
             <div className="flex flex-row flex-wrap items-center gap-1.5 text-lg font-medium text-neutral-600 tracking-wider leading-8 dark:text-neutral-400">
               <span className="whitespace-pre-wrap">
                 I craft engaging web apps using
@@ -64,6 +66,19 @@ const HeroSection = () => {
               <TechIcon icon="/gsap.svg" text="GSAP" /> .
             </div>
           </div>
+        </div>
+        <div>
+          <Button
+            variant={"icon"}
+            className="shadow-[inset_0px_1px_2px_1px_rgb(0,0,0,0.18)] group"
+          >
+            <CV
+              className={
+                "group-hover:rotate-22 transition-transform ease-in-out duration-500"
+              }
+            />{" "}
+            Resume / CV
+          </Button>
         </div>
       </div>
     </section>

@@ -529,6 +529,7 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         stroke="none"
         d="M0 0h24v24H0z"
@@ -542,6 +543,7 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656"
       />
@@ -553,6 +555,7 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         d="M6.343 17.657l-1.414 1.414"
       />
@@ -564,6 +567,7 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         d="M6.343 6.343l-1.414 -1.414"
       />
@@ -575,6 +579,7 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         d="M17.657 6.343l1.414 -1.414"
       />
@@ -586,6 +591,7 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         d="M17.657 17.657l1.414 1.414"
       />
@@ -597,6 +603,7 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         d="M4 12h-2"
       />
@@ -608,6 +615,7 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         d="M12 4v-2"
       />
@@ -619,6 +627,7 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         d="M20 12h2"
       />
@@ -630,9 +639,34 @@ export const Sun = ({ ...props }: SVGMotionProps<SVGElement>) => {
         animate={{
           opacity: 1,
           pathLength: 1,
+          transition: { delay: 0.5 },
         }}
         d="M12 20v2"
       />
+    </motion.svg>
+  );
+};
+
+export const CV = ({ ...props }: SVGMotionProps<SVGElement>) => {
+  return (
+    <motion.svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-file-cv"
+      {...props}
+    >
+      <motion.path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <motion.path d="M14 3v4a1 1 0 0 0 1 1h4" />
+      <motion.path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+      <motion.path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
+      <motion.path d="M13 11l1.5 6l1.5 -6" />
     </motion.svg>
   );
 };
