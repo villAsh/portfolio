@@ -1,6 +1,14 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { CV } from "../ui/icons";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
+import { SOCIALS } from "@/lib/data";
 
 type TTechIcon = {
   icon: string;
@@ -9,14 +17,22 @@ type TTechIcon = {
 
 export const ProfileBadge = () => {
   return (
-    <div className="absolute h-5 w-5 transition-colors hover:transition-transform hover:duration-300 duration-500 bg-slate-300 outline-[1.5px] hover:scale-110 outline-slate-300 border-white border-6 rounded-full bottom-1 right-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:border-slate-950 dark:outline dark:outline-slate-500" />
+    <div className="absolute h-5 w-5 transition-colors hover:transition-transform hover:duration-300 duration-500 bg-slate-400 outline-[1.5px] hover:scale-110 outline-slate-300 border-white border-6 rounded-full bottom-1 right-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:border-slate-950 dark:outline dark:outline-slate-500" />
   );
 };
 
 export const TechIcon = ({ icon, text }: TTechIcon) => {
+  const isMonochrome = text === "Framer Motion";
+
   return (
-    <span className="bg-slate-50 inline-flex flex-row items-center justify-center gap-x-2 rounded-[8px] w-fit px-2 py-1 surface-inset outline-neutral-300 outline outline-dashed dark:outline dark:outline-neutral-600 dark:bg-neutral-700! transition-colors duration-500">
-      <Image src={icon} alt={text} width={18} height={18} />
+    <span className="bg-inherit dark:bg-white/5 inline-flex flex-row items-center justify-center gap-x-2 rounded-[8px] w-fit px-2.5 py-1 border border-black/10 dark:border-white/10 shadow-sm transition-colors duration-200">
+      <Image
+        src={icon}
+        alt={text}
+        width={18}
+        height={18}
+        className={cn(isMonochrome && "dark:invert")}
+      />
       <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">
         {text}
       </span>
@@ -62,7 +78,7 @@ const HeroSection = () => {
                 UI/UX
               </span>{" "}
               <span>design. Enthusiastic about</span>
-              <TechIcon icon="/framer-motion.svg" text="Framer Motion" /> and{" "}
+              <TechIcon icon="/framer-black.svg" text="Framer Motion" /> and{" "}
               <TechIcon icon="/gsap.svg" text="GSAP" /> .
             </div>
           </div>
@@ -70,7 +86,7 @@ const HeroSection = () => {
         <div>
           <Button
             variant={"icon"}
-            className="shadow-[inset_0px_1px_2px_1px_rgb(0,0,0,0.18)] group"
+            className="shadow-[inset_0px_1px_2px_1px_rgb(0,0,0,0.18)]"
           >
             <CV
               className={
@@ -79,6 +95,30 @@ const HeroSection = () => {
             />{" "}
             Resume / CV
           </Button>
+        </div>
+        <div>
+          <TooltipProvider>
+            <div className="flex flex-row items-center justify-start gap-x-2">
+              {SOCIALS.map((social) => (
+                <Tooltip key={social.id}>
+                  <TooltipTrigger className="group">
+                    <a href={social.link} target="_blank" rel="noopener">
+                      <Image
+                        src={social.src}
+                        width={28}
+                        height={28}
+                        alt={social.title}
+                        className="group-hover:scale-110 transition-transform duration-300 dark:invert stroke-red-50"
+                      />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent className="rounded-[8px]">
+                    {social.title}
+                  </TooltipContent>
+                </Tooltip>
+              ))}
+            </div>
+          </TooltipProvider>
         </div>
       </div>
     </section>
