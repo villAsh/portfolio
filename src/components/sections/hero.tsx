@@ -123,7 +123,7 @@ const ResumeButton = () => {
 const ProfileImage = () => {
   return (
     <div className="w-[105px] h-[105px] relative">
-      <div className="h-[100px] w-[100px] overflow-hidden rounded-full transition-colors duration-500 bg-yellow-300 dark:bg-blue-300 flex items-center justify-center">
+      <div className="h-[100px] w-[100px] overflow-hidden rounded-full transition-colors duration-500 bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center">
         <Image
           alt="profile icon"
           src={"/goku.png"}
