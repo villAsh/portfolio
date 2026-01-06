@@ -54,13 +54,32 @@ const ExperienceCard = ({
               <div className="flex flex-col">
                 <div className="flex flex-row items-center justify-start gap-x-2">
                   <h1 className="text-lg text-neutral-700 font-semibold dark:text-neutral-200">
-                    <LinkPreview url={url}>{organization}</LinkPreview>
+                    {organization}
                   </h1>
                   {isWorking && <WorkingBadge />}
                 </div>
-                <span className="text-[14px] text-neutral-400 font-medium dark:text-neutral-500">
-                  <AccordionTrigger>{position}</AccordionTrigger>
-                </span>
+                <div className="flex flex-row items-center justify-start gap-x-2">
+                  <span className="text-[14px] text-neutral-400 font-medium dark:text-neutral-500">
+                    {position}
+                  </span>
+                  <Image
+                    src={"/instagram.svg"}
+                    width={20}
+                    height={20}
+                    alt="instagram"
+                    className="dark:invert"
+                  />
+                  <LinkPreview url={url}>
+                    <Image
+                      src={"/web.svg"}
+                      width={18}
+                      height={18}
+                      alt="website"
+                      className="dark:invert"
+                    />
+                  </LinkPreview>
+                  <AccordionTrigger className="p-0" />
+                </div>
               </div>
             </div>
             <div className="flex flex-col gap-y-0 text-neutral-400 text-base font-normal">
@@ -94,7 +113,7 @@ const Experience = () => {
       <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-200">
         Experience
       </h1>
-      <div className="my-3 flex flex-col gap-y-6">
+      <div className="my-3 flex flex-col gap-y-8">
         {/* <div className="flex flex-col gap-y-6">
           <div className="flex flex-row items-start justify-between">
             <div className="flex flex-row items-center justify-start gap-x-2">
