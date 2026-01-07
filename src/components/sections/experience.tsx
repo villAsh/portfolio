@@ -18,6 +18,8 @@ export type TExperienceCard = {
   location: string;
   description: string[];
   isWorking?: boolean;
+  linkedIn: string;
+  instagram: string;
 };
 
 const WorkingBadge = () => {
@@ -40,6 +42,8 @@ const ExperienceCard = ({
   description,
   img,
   url,
+  instagram,
+  linkedIn,
   isWorking = false,
 }: TExperienceCard) => {
   return (
@@ -62,13 +66,24 @@ const ExperienceCard = ({
                   <span className="text-[14px] text-neutral-400 font-medium dark:text-neutral-500">
                     {position}
                   </span>
-                  <Image
-                    src={"/instagram.svg"}
-                    width={20}
-                    height={20}
-                    alt="instagram"
-                    className="dark:invert"
-                  />
+                  <a href={instagram}>
+                    <Image
+                      src={"/instagram.svg"}
+                      width={20}
+                      height={20}
+                      alt="instagram"
+                      className="dark:invert"
+                    />
+                  </a>
+                  <a href={linkedIn}>
+                    <Image
+                      src={"/linkedin.svg"}
+                      width={20}
+                      height={20}
+                      alt="linkedin"
+                      className="dark:invert"
+                    />
+                  </a>
                   <LinkPreview url={url}>
                     <Image
                       src={"/web.svg"}

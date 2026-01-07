@@ -54,6 +54,8 @@ export const EXPERIENCE: TExperienceCard[] = [
     organization: "Seaflux Technologies",
     img: "/seaflux.svg",
     url: "https://www.seaflux.tech/",
+    linkedIn: "https://www.linkedin.com/company/seaflux-tech/",
+    instagram: "https://www.instagram.com/seaflux.tech/",
     position: "Software Engineer",
     start: "Sept 2024",
     end: "Present",
@@ -70,6 +72,8 @@ export const EXPERIENCE: TExperienceCard[] = [
   {
     organization: "Seaflux Technologies",
     url: "https://www.seaflux.tech/",
+    linkedIn: "https://www.linkedin.com/company/seaflux-tech/",
+    instagram: "https://www.instagram.com/seaflux.tech/",
     img: "/seaflux.svg",
     position: "Junior Software Engineer",
     start: "Sept 2023",
@@ -86,6 +90,8 @@ export const EXPERIENCE: TExperienceCard[] = [
   {
     organization: "Seaflux Technologies",
     url: "https://www.seaflux.tech/",
+    linkedIn: "https://www.linkedin.com/company/seaflux-tech/",
+    instagram: "https://www.instagram.com/seaflux.tech/",
     img: "/seaflux.svg",
     position: "Software Engineering Intern",
     start: "Jun 2023",
