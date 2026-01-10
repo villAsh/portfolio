@@ -71,7 +71,11 @@ const ExperienceCard = ({
                     {position}
                   </span>
                   <div className="flex flex-row items-center justify-center gap-x-2">
-                    <a href={instagram} target="_blank">
+                    <a
+                      href={instagram}
+                      target="_blank"
+                      className="cursor-pointer"
+                    >
                       <Image
                         src={"/instagram.svg"}
                         width={20}
@@ -80,7 +84,11 @@ const ExperienceCard = ({
                         className="dark:invert"
                       />
                     </a>
-                    <a href={linkedIn} target="_blank">
+                    <a
+                      href={linkedIn}
+                      target="_blank"
+                      className="cursor-pointer"
+                    >
                       <Image
                         src={"/linkedin.svg"}
                         width={18}
@@ -89,7 +97,7 @@ const ExperienceCard = ({
                         className="dark:invert"
                       />
                     </a>
-                    <LinkPreview url={url}>
+                    <LinkPreview url={url} className="cursor-pointer">
                       <Image
                         src={"/web.svg"}
                         width={18}
@@ -98,7 +106,7 @@ const ExperienceCard = ({
                         className="dark:invert"
                       />
                     </LinkPreview>
-                    <AccordionTrigger className="p-0" />
+                    <AccordionTrigger className="p-0 cursor-pointer" />
                   </div>
                 </div>
               </div>
