@@ -1,20 +1,4 @@
-import { TExperienceCard } from "@/components/sections/experience";
-
-export const FRONTEND = [
-  "React",
-  "React Native",
-  "Expo",
-  "Tailwind",
-  "NextJs",
-  "Redux toolkit",
-  "Zustand",
-  "Figma",
-  "Tanstack Eco System",
-  "Shadcn",
-  "Framer motion",
-];
-export const BACKEND = ["NodeJs", "ExpressJs", "TypeORM"];
-export const SERVICES = ["AWS", "Postgress", "Postman", "Docker"];
+import type { TExperienceCard } from "@/components/sections/experience";
 
 export const SOCIALS = [
   {
@@ -105,3 +89,48 @@ export const EXPERIENCE: TExperienceCard[] = [
     ],
   },
 ];
+
+export const TECH_DATA = {
+  frontend: [
+    { name: "HTML5", slug: "html5", color: "#E34F26" },
+    { name: "CSS", slug: "css", color: "#1572B6" },
+    { name: "JavaScript", slug: "javascript", color: "#F7DF1E" },
+    { name: "Tailwind CSS", slug: "tailwindcss", color: "#06B6D4" },
+    { name: "React", slug: "react", color: "#61DAFB" },
+    { name: "Next.js", slug: "nextdotjs", color: "#000000" },
+    { name: "TanStack Query", slug: "reactquery", color: "#FF4154" },
+    {
+      name: "TanStack Router",
+      slug: "tanstack",
+      color: "#FF4154",
+    },
+    { name: "motion dev", slug: "/framer-motion.svg", color: "#FFF312" },
+    { name: "GSAP", slug: "gsap", color: "#88CE02" },
+  ],
+  app: [
+    { name: "React Native", slug: "react", color: "#61DAFB" },
+    { name: "Expo", slug: "expo", color: "#000020" },
+    { name: "Xcode", slug: "xcode", color: "#147EFB" },
+    { name: "Android Studio", slug: "androidstudio", color: "#3DDC84" },
+  ],
+  backend: [
+    { name: "Node.js", slug: "nodedotjs", color: "#339933" },
+    { name: "Express.js", slug: "express", color: "#000000" },
+    { name: "PostgreSQL", slug: "postgresql", color: "#4169E1" },
+    { name: "Docker", slug: "docker", color: "#2496ED" },
+    { name: "AWS", slug: "/aws.svg", color: "#FF9900" },
+  ],
+  tools: [
+    { name: "Git", slug: "git", color: "#F05032" },
+    { name: "GitHub", slug: "github", color: "#181717" },
+    { name: "GitLab", slug: "gitlab", color: "#FC6D26" },
+    { name: "Cursor", slug: "cursor", color: "#51A1FF" },
+    { name: "Figma", slug: "figma", color: "#F24E1E" },
+  ],
+};
+
+export const FRONTEND = TECH_DATA.frontend.map((t) => t.name);
+export const APP = TECH_DATA.app.map((t) => t.name);
+export const BACKEND = TECH_DATA.backend.map((t) => t.name);
+export const SERVICES = TECH_DATA.tools.map((t) => t.name);
+export const TOOLS = TECH_DATA.tools.map((t) => t.name);
