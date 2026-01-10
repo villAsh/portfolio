@@ -1,4 +1,7 @@
+"use client";
+
 import { EXPERIENCE } from "@/lib/data";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { LinkPreview } from "../ui/link-preview";
 import {
@@ -7,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import { INITIAL, TRANSITION, WHILE_IN_VIEW } from "@/lib/framerConfig";
 
 export type TExperienceCard = {
   organization: string;
@@ -126,13 +130,40 @@ const ExperienceCard = ({
 
 const Experience = () => {
   return (
-    <section className="mt-10 max-w-2xl mx-auto w-full">
-      <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-200">
-        Experience
-      </h1>
-      <div className="mt-5 flex flex-col gap-y-8">
+    <section className="mt-32 max-w-2xl mx-auto w-full px-4">
+      <motion.div
+        initial={INITIAL}
+        whileInView={WHILE_IN_VIEW}
+        viewport={{ once: true }}
+        transition={TRANSITION}
+        className="space-y-4"
+      >
+        <div className="flex items-center gap-x-2">
+          <div className="h-px w-8 bg-neutral-300 dark:bg-neutral-700" />
+          <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
+            Professional Journey
+          </span>
+        </div>
+        <h2 className="text-4xl font-bold text-neutral-900 dark:text-neutral-100 tracking-tight">
+          Experience
+        </h2>
+        <p className="text-neutral-500 dark:text-neutral-400 text-lg max-w-lg leading-relaxed">
+          My professional background and the impact I've made in the companies
+          I've worked with.
+        </p>
+      </motion.div>
+
+      <div className="mt-16 flex flex-col gap-y-12">
         {EXPERIENCE.map((exp, index) => (
-          <ExperienceCard key={`${exp.organization}-${index + 1}`} {...exp} />
+          <motion.div
+            key={`${exp.organization}-${index + 1}`}
+            initial={INITIAL}
+            whileInView={WHILE_IN_VIEW}
+            viewport={{ once: true }}
+            transition={{ ...TRANSITION, delay: index * 0.1 }}
+          >
+            <ExperienceCard {...exp} />
+          </motion.div>
         ))}
       </div>
     </section>
