@@ -77,7 +77,6 @@ const TechItem = ({
                     width={24}
                     height={24}
                     alt={name}
-                    unoptimized
                     className={cn(
                       "w-full h-full object-contain transition-all duration-300",
                       "brightness-0 dark:invert group-hover:brightness-100 dark:group-hover:invert-0 opacity-100",
