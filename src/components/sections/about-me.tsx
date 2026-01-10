@@ -6,7 +6,7 @@ import { INITIAL, TRANSITION, WHILE_IN_VIEW } from "@/lib/framerConfig";
 
 const AboutMe = () => {
   return (
-    <section className="mt-32 max-w-2xl mx-auto w-full px-4">
+    <section className="mt-32 max-w-2xl mx-auto w-full">
       <motion.div
         initial={INITIAL}
         whileInView={WHILE_IN_VIEW}

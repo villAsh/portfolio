@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const Projects = () => {
   return (
-    <section className="mt-32 max-w-2xl mx-auto w-full px-4">
+    <section className="mt-32 max-w-2xl mx-auto w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,8 @@ const Projects = () => {
           Projects
         </h2>
         <p className="text-neutral-500 dark:text-neutral-400 text-lg max-w-lg leading-relaxed">
-          A selection of projects where I've applied my technical skills to solve real-world problems.
+          A selection of projects where I've applied my technical skills to
+          solve real-world problems.
         </p>
       </motion.div>
 
@@ -36,4 +37,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

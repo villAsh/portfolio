@@ -131,7 +131,7 @@ const TechCategory = ({
 
 const TechStack = () => {
   return (
-    <section className="mt-32 max-w-2xl mx-auto w-full px-4 mb-20">
+    <section className="mt-32 max-w-2xl mx-auto w-full mb-20">
       <motion.div
         initial={INITIAL}
         whileInView={WHILE_IN_VIEW}
