@@ -71,7 +71,7 @@ const ExperienceCard = ({
                     {position}
                   </span>
                   <div className="flex flex-row items-center justify-center gap-x-2">
-                    <a href={instagram}>
+                    <a href={instagram} target="_blank">
                       <Image
                         src={"/instagram.svg"}
                         width={20}
@@ -80,7 +80,7 @@ const ExperienceCard = ({
                         className="dark:invert"
                       />
                     </a>
-                    <a href={linkedIn}>
+                    <a href={linkedIn} target="_blank">
                       <Image
                         src={"/linkedin.svg"}
                         width={18}
