@@ -17,6 +17,8 @@ const grotesk = Schibsted_Grotesk({
   weight: ["400", "500", "600", "700"],
 });
 
+import { SmoothScroll } from "@/providers/smooth-scroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,8 +34,10 @@ export default function RootLayout({
           attribute={"class"}
           enableSystem={false}
         >
-          <Navbar />
-          {children}
+          <SmoothScroll>
+            <Navbar />
+            {children}
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>

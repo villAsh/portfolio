@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const Projects = () => {
   return (
-    <section className="mt-32 max-w-2xl mx-auto w-full">
+    <section id="projects" className="mt-32 max-w-2xl mx-auto w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
