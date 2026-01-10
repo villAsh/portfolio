@@ -3,6 +3,7 @@ import AboutMe from "@/components/sections/about-me";
 import Experience from "@/components/sections/experience";
 import HeroSection from "@/components/sections/hero";
 import Projects from "@/components/sections/projects";
+import TechStack from "@/components/sections/tech-stack";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <AboutMe />
+      <TechStack />
       <BottomFade />
     </main>
   );
