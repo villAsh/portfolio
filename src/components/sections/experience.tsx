@@ -50,7 +50,7 @@ const ExperienceCard = ({
     <Accordion type="multiple">
       <AccordionItem value={position}>
         <div className="flex flex-col gap-y-6">
-          <div className="flex flex-row items-start justify-between">
+          <div className="flex flex-row items-start justify-between max-md:flex-col max-md:gap-y-2">
             <div className="flex flex-row items-center justify-start gap-x-2">
               <div className="p-1 w-14 h-14 flex items-center rounded-[8px] justify-center bg-[#01848A]">
                 <Image src={img} alt={organization} width={100} height={100} />
@@ -62,42 +62,44 @@ const ExperienceCard = ({
                   </h1>
                   {isWorking && <WorkingBadge />}
                 </div>
-                <div className="flex flex-row items-center justify-start gap-x-2">
+                <div className="flex flex-row items-center justify-start gap-x-2 max-md:items-start">
                   <span className="text-[14px] text-neutral-400 font-medium dark:text-neutral-500">
                     {position}
                   </span>
-                  <a href={instagram}>
-                    <Image
-                      src={"/instagram.svg"}
-                      width={20}
-                      height={20}
-                      alt="instagram"
-                      className="dark:invert"
-                    />
-                  </a>
-                  <a href={linkedIn}>
-                    <Image
-                      src={"/linkedin.svg"}
-                      width={20}
-                      height={20}
-                      alt="linkedin"
-                      className="dark:invert"
-                    />
-                  </a>
-                  <LinkPreview url={url}>
-                    <Image
-                      src={"/web.svg"}
-                      width={18}
-                      height={18}
-                      alt="website"
-                      className="dark:invert"
-                    />
-                  </LinkPreview>
-                  <AccordionTrigger className="p-0" />
+                  <div className="flex flex-row items-center justify-center gap-x-2">
+                    <a href={instagram}>
+                      <Image
+                        src={"/instagram.svg"}
+                        width={20}
+                        height={20}
+                        alt="instagram"
+                        className="dark:invert"
+                      />
+                    </a>
+                    <a href={linkedIn}>
+                      <Image
+                        src={"/linkedin.svg"}
+                        width={18}
+                        height={18}
+                        alt="linkedin"
+                        className="dark:invert"
+                      />
+                    </a>
+                    <LinkPreview url={url}>
+                      <Image
+                        src={"/web.svg"}
+                        width={18}
+                        height={18}
+                        alt="website"
+                        className="dark:invert"
+                      />
+                    </LinkPreview>
+                    <AccordionTrigger className="p-0" />
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-y-0 text-neutral-400 text-base font-normal">
+            <div className="flex flex-col gap-y-0 text-neutral-400 text-base font-normal text-right max-md:text-left">
               <span>
                 {start} {"－"} {end}
               </span>
@@ -128,7 +130,7 @@ const Experience = () => {
       <h1 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-200">
         Experience
       </h1>
-      <div className="my-3 flex flex-col gap-y-8">
+      <div className="mt-5 flex flex-col gap-y-8">
         {EXPERIENCE.map((exp, index) => (
           <ExperienceCard key={`${exp.organization}-${index + 1}`} {...exp} />
         ))}
