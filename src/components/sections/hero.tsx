@@ -60,7 +60,7 @@ const Socials = () => {
                   />
                 </a>
               </TooltipTrigger>
-              <TooltipContent className="rounded-[8px]">
+              <TooltipContent className="rounded-[8px] text-neutral-300 dark:text-neutral-600">
                 {social.title}
               </TooltipContent>
             </Tooltip>
