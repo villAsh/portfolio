@@ -75,6 +75,7 @@ const TechItem = ({
                         : `https://cdn.simpleicons.org/${slug}`
                     }
                     width={24}
+                    unoptimized
                     height={24}
                     alt={name}
                     className={cn(
