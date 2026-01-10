@@ -246,20 +246,20 @@ export const QUOTES = [
   },
   {
     text: "Stay steady in success and failure – that is Yoga.",
-    author: "Krishna",
+    author: "Shri Krishna",
     source: "Bhagavad Gita 2.48",
     mood: "philosophical",
   },
 
   {
     text: "For one who has conquered the mind, the mind is the best of friends; but for one who has failed to do so, his very mind will be the greatest enemy.",
-    author: "Krishna",
+    author: "Shri Krishna",
     source: "Bhagavad Gita 6.35",
     mood: "dark",
   },
   {
     text: "When meditation is mastered, the mind is unwavering like the flame of a lamp in a windless place.",
-    author: "Krishna",
+    author: "Shri Krishna",
     source: "Bhagavad Gita 6.19",
     mood: "dark",
   },
