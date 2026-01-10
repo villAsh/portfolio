@@ -129,6 +129,245 @@ export const TECH_DATA = {
   ],
 };
 
+export const QUOTES = [
+  {
+    text: "Don’t be sorry. Be better.",
+    author: "Kratos",
+    source: "God of War",
+    mood: "dark",
+  },
+  {
+    text: "No matter how weak you feel, set your heart ablaze.",
+    author: "Rengoku",
+    source: "Demon Slayer",
+    mood: "motivational",
+  },
+  {
+    text: "The world is cruel, but also very beautiful.",
+    author: "Mikasa Ackerman",
+    source: "Attack on Titan",
+    mood: "philosophical",
+  },
+  {
+    text: "Wake up to reality. Nothing ever goes as planned.",
+    author: "Madara",
+    source: "Naruto",
+    mood: "dark",
+  },
+  {
+    text: "Hatred is where a man who can’t stand sadness goes.",
+    author: "Godot",
+    source: "Berserk",
+    mood: "dark",
+  },
+  {
+    text: "If you don’t fight, you can’t win.",
+    author: "Eren Yeager",
+    source: "Attack on Titan",
+    mood: "motivational",
+  },
+  {
+    text: "Struggle. Endure. Contend.",
+    author: "Berserk",
+    source: "Berserk",
+    mood: "motivational",
+  },
+  {
+    text: "The moment people come to know love, they run the risk of carrying hate.",
+    author: "Obito",
+    source: "Naruto",
+    mood: "philosophical",
+  },
+  {
+    text: "Love is the most twisted curse of all.",
+    author: "Suguru Geto",
+    source: "JJK",
+    mood: "philosophical",
+  },
+  {
+    text: "A man must live true to himself.",
+    author: "Kratos",
+    source: "God of War",
+    mood: "philosophical",
+  },
+  {
+    text: "If you’re always worried about crushing ants, you won’t be able to walk.",
+    author: "Guts",
+    source: "Berserk",
+    mood: "dark",
+  },
+  {
+    text: "Stand up and walk. Keep moving forward.",
+    author: "Kratos",
+    source: "God of War",
+    mood: "motivational",
+  },
+  {
+    text: "If you don’t take risks, you can’t create a future.",
+    author: "Monkey D. Luffy",
+    source: "One Piece",
+    mood: "philosophical",
+  },
+  {
+    text: "A sword wields no strength unless the hand that holds it has courage.",
+    author: "Kratos",
+    source: "God of War",
+    mood: "philosophical",
+  },
+  {
+    text: "The quieter you become, the more you can hear.",
+    author: "Unknown",
+    source: "Zen",
+    mood: "philosophical",
+  },
+  {
+    text: "You have the right to work, but never to the fruit of work.",
+    author: "Shri Krishna",
+    source: "Bhagavad Gita 2.47",
+    mood: "motivational",
+  },
+  {
+    text: "Perform your duty and abandon all attachment to success or failure.",
+    author: "Shri Krishna",
+    source: "Bhagavad Gita 2.48",
+    mood: "motivational",
+  },
+  {
+    text: "A man is made by his belief. As he believes, so he becomes.",
+    author: "Shri Krishna",
+    source: "Bhagavad Gita 17.3",
+    mood: "motivational",
+  },
+  {
+    text: "Let a man lift himself by himself; let him not degrade himself.",
+    author: "Shri Krishna",
+    source: "Bhagavad Gita 6.5",
+    mood: "motivational",
+  },
+  {
+    text: "Stay steady in success and failure – that is Yoga.",
+    author: "Krishna",
+    source: "Bhagavad Gita 2.48",
+    mood: "philosophical",
+  },
+
+  {
+    text: "For one who has conquered the mind, the mind is the best of friends; but for one who has failed to do so, his very mind will be the greatest enemy.",
+    author: "Krishna",
+    source: "Bhagavad Gita 6.35",
+    mood: "dark",
+  },
+  {
+    text: "When meditation is mastered, the mind is unwavering like the flame of a lamp in a windless place.",
+    author: "Krishna",
+    source: "Bhagavad Gita 6.19",
+    mood: "dark",
+  },
+  {
+    text: "For one who has conquered the mind, the mind is the best of friends.",
+    author: "Shri Krishna",
+    source: "Bhagavad Gita 6.6",
+    mood: "philosophical",
+  },
+  {
+    text: "Do your duty, for action is better than inaction.",
+    author: "Shri Krishna",
+    source: "Bhagavad Gita 3.8",
+    mood: "dark",
+  },
+
+  {
+    text: "Love is the one thing we're capable of perceiving that transcends time and space.",
+    author: "Brand",
+    source: "Interstellar",
+    mood: "philosophical",
+  },
+  {
+    text: "Get busy living, or get busy dying.",
+    author: "Andy Dufresne",
+    source: "The Shawshank Redemption",
+    mood: "motivational",
+  },
+  {
+    text: "Hope is a good thing, maybe the best of things.",
+    author: "Andy Dufresne",
+    source: "The Shawshank Redemption",
+    mood: "philosophical",
+  },
+  {
+    text: "Fear can hold you prisoner. Hope can set you free.",
+    author: "Narrator",
+    source: "The Shawshank Redemption",
+    mood: "philosophical",
+  },
+  {
+    text: "If you’re going to push a machine to its limits, you better know where those limits are.",
+    author: "Carroll Shelby",
+    source: "Ford v Ferrari",
+    mood: "philosophical",
+  },
+  {
+    text: "Why do we fall? So we can learn to pick ourselves up.",
+    author: "Alfred",
+    source: "Batman Begins",
+    mood: "motivational",
+  },
+  {
+    text: "You either die a hero, or you live long enough to see yourself become the villain.",
+    author: "Harvey Dent",
+    source: "The Dark Knight",
+    mood: "dark",
+  },
+  {
+    text: "It’s not who I am underneath, but what I do that defines me.",
+    author: "Batman",
+    source: "Batman Begins",
+    mood: "philosophical",
+  },
+  {
+    text: "Blessed are the forgetful, for they get the better even of their blunders.",
+    author: "Mary",
+    source: "Eternal Sunshine of the Spotless Mind",
+    mood: "philosophical",
+  },
+  {
+    text: "What a loss to spend that much time with someone, only to find out that she’s a stranger.",
+    author: "Joel",
+    source: "Eternal Sunshine of the Spotless Mind",
+    mood: "dark",
+  },
+  {
+    text: "Just because she likes the same bizarro crap you do doesn’t mean she’s your soulmate.",
+    author: "Narrator",
+    source: "500 Days of Summer",
+    mood: "philosophical",
+  },
+  {
+    text: "Despite knowing the journey and where it leads, I embrace it.",
+    author: "Louise",
+    source: "Arrival",
+    mood: "philosophical",
+  },
+  {
+    text: "Fate rarely calls upon us at a moment of our choosing.",
+    author: "Optimus Prime",
+    source: "Transformers",
+    mood: "dark",
+  },
+  {
+    text: "Honor to the end.",
+    author: "Optimus Prime",
+    source: "Transformers",
+    mood: "dark",
+  },
+  {
+    text: "One shall stand. One shall fall.",
+    author: "Optimus Prime",
+    source: "Transformers",
+    mood: "dark",
+  },
+];
+
 export const FRONTEND = TECH_DATA.frontend.map((t) => t.name);
 export const APP = TECH_DATA.app.map((t) => t.name);
 export const BACKEND = TECH_DATA.backend.map((t) => t.name);

@@ -4,6 +4,7 @@ import Experience from "@/components/sections/experience";
 import HeroSection from "@/components/sections/hero";
 import Projects from "@/components/sections/projects";
 import TechStack from "@/components/sections/tech-stack";
+import Quote from "@/components/sections/quote";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Projects />
       <AboutMe />
       <TechStack />
+      <Quote />
       <BottomFade />
     </main>
   );
