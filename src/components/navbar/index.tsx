@@ -40,7 +40,7 @@ const Navbar = () => {
           <button
             onClick={handleLogoClick}
             type="button"
-            className="h-[50px] w-[50px] overflow-hidden rounded-[8px] transition-colors duration-500 bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center active:scale-95 cursor-pointer"
+            className="h-[50px] w-[50px] overflow-hidden rounded-[8px] bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center active:scale-95 cursor-pointer"
           >
             <Image
               alt="profile icon"
@@ -54,7 +54,7 @@ const Navbar = () => {
             <ul className="flex flex-row items-center gap-x-4 text-sm font-medium text-neutral-500 dark:text-neutral-400">
               <li
                 onClick={() => scrollToSection("experience")}
-                className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
+                className="hover:text-neutral-900 dark:hover:text-neutral-100 cursor-pointer"
               >
                 Work
               </li>

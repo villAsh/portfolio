@@ -10,9 +10,7 @@ const ThemeSwitch = () => {
     <div className="flex items-center">
       <Button
         variant={"icon"}
-        onClick={() =>
-          setTimeout(() => setTheme(theme === "light" ? "dark" : "light"), 150)
-        }
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
         {theme === "light" ? (
           <Sun className="h-4 w-4 stroke-black" />

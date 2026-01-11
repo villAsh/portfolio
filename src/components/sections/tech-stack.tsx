@@ -65,7 +65,7 @@ const TechItem = ({
 
             <div className="relative z-10 flex items-center justify-center">
               {FallbackIcon ? (
-                <FallbackIcon className="w-6 h-6 text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors" />
+                <FallbackIcon className="w-6 h-6 text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100" />
               ) : (
                 <div className="w-6 h-6 flex items-center justify-center">
                   <Image

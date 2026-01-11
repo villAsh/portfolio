@@ -19,7 +19,7 @@ type TTechIcon = {
 
 export const ProfileBadge = () => {
   return (
-    <div className="absolute h-5 w-5 transition-colors hover:transition-transform hover:duration-300 duration-500 bg-slate-400 outline-[1.5px] hover:scale-110 outline-slate-300 border-white border-6 rounded-full bottom-1 right-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:border-slate-950 dark:outline dark:outline-slate-500" />
+    <div className="absolute h-5 w-5 hover:transition-transform hover:duration-300 bg-slate-400 outline-[1.5px] hover:scale-110 outline-slate-300 border-white border-6 rounded-full bottom-1 right-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:border-slate-950 dark:outline dark:outline-slate-500" />
   );
 };
 
@@ -27,7 +27,7 @@ export const TechIcon = ({ icon, text }: TTechIcon) => {
   const isMonochrome = text === "Framer Motion";
 
   return (
-    <span className="bg-white/5 dark:bg-white/5 inline-flex flex-row items-center justify-center gap-x-2 rounded-[8px] w-fit px-2.5 py-1 border  border-dashed border-black/10 dark:border-white/10 transition-colors duration-200 surface-inset transform">
+    <span className="bg-white/5 dark:bg-white/5 inline-flex flex-row items-center justify-center gap-x-2 rounded-[8px] w-fit px-2.5 py-1 border  border-dashed border-black/10 dark:border-white/10 surface-inset transform">
       <Image
         src={icon}
         alt={text}
@@ -75,7 +75,7 @@ const Bio = () => {
   return (
     <div className="flex flex-col gap-y-6">
       <div>
-        <h1 className="text-3xl font-semibold text-neutral-800 dark:text-neutral-100 tracking-wide transition-colors duration-100">
+        <h1 className="text-3xl font-semibold text-neutral-800 dark:text-neutral-100 tracking-wide">
           Hey, I am Vilas {" — "}
           <span className="text-neutral-400">A Software Engineer.</span>
         </h1>
@@ -125,7 +125,7 @@ const ResumeButton = () => {
 const ProfileImage = () => {
   return (
     <div className="w-[105px] h-[105px] relative">
-      <div className="h-[100px] w-[100px] overflow-hidden rounded-full transition-colors duration-500 bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center">
+      <div className="h-[100px] w-[100px] overflow-hidden rounded-full bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center">
         <Image
           alt="profile icon"
           src={"/goku.png"}

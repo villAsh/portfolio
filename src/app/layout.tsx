@@ -7,7 +7,7 @@ import { Schibsted_Grotesk } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Vilas - a Software Engineer.",
-  description: "Home page of Vilas Chauvhan Portfolio",
+  description: "Vilas Chauvhan Portfolio",
 };
 
 const grotesk = Schibsted_Grotesk({
@@ -26,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={grotesk.variable}>
-      <body
-        className={`antialiased transition-colors duration-500 ${grotesk.className}`}
-      >
+      <body className={`antialiased ${grotesk.className}`}>
         <ThemeProvider
           defaultTheme="light"
           attribute={"class"}

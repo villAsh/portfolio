@@ -115,7 +115,7 @@ const page = () => {
       <div className="absolute bottom-10 left-0 w-full overflow-hidden pointer-events-none whitespace-nowrap opacity-10 select-none">
         <motion.div
           animate={{
-            x: [0, -10000],
+            x: [0, -8500],
           }}
           transition={{
             duration: 50,

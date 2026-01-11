@@ -32,7 +32,7 @@ const AboutMe = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-yellow-300 px-4 pt-4 rounded-[12px] dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm transition-colors duration-500"
+            className="bg-yellow-300 px-4 pt-4 rounded-[12px] dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm"
           >
             <Image
               src={"/goku.png"}
