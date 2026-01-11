@@ -368,6 +368,15 @@ export const QUOTES = [
   },
 ];
 
+export const LABS_PARALLAX = [
+  "Experimentation",
+  "Innovation",
+  "Creativity",
+  "Prototypes",
+  "Experimentation",
+  "Innovation",
+];
+
 export const FRONTEND = TECH_DATA.frontend.map((t) => t.name);
 export const APP = TECH_DATA.app.map((t) => t.name);
 export const BACKEND = TECH_DATA.backend.map((t) => t.name);
