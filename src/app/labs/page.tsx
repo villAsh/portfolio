@@ -46,7 +46,7 @@ const page = () => {
       {ICONS.map(({ Icon, delay, left, size, top }, i) => (
         <motion.div
           key={delay}
-          className="absolute text-neutral-200 dark:text-neutral-800"
+          className="absolute text-neutral-200 dark:text-neutral-700"
           style={{ top, left, x: iconX, y: iconY }}
           animate={{
             rotate: [0, 5, 0],
@@ -115,14 +115,14 @@ const page = () => {
       <div className="absolute bottom-10 left-0 w-full overflow-hidden pointer-events-none whitespace-nowrap opacity-10 select-none">
         <motion.div
           animate={{
-            x: [0, -1000],
+            x: [0, -10000],
           }}
           transition={{
-            duration: 20,
+            duration: 50,
             repeat: Infinity,
             ease: "linear",
           }}
-          className="text-[12rem] font-black text-neutral-800 tracking-tighter uppercase flex gap-x-20"
+          className="text-[12rem] font-black text-neutral-800 dark:text-neutral-300 tracking-tighter uppercase flex gap-x-20"
         >
           {LABS_PARALLAX.map((item) => (
             <span key={"item"}>{item}</span>
