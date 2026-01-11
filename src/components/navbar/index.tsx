@@ -3,8 +3,11 @@
 
 import Image from "next/image";
 import ThemeSwitch from "../system/theme-switch";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const navigation = useRouter();
+  const path = usePathname();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -19,11 +22,26 @@ const Navbar = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    if (path === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      navigation.replace("/");
+    }
+  };
+
   return (
     <nav className="w-full max-md:px-10 backdrop-blur-xs sticky top-0 z-50 h-[60px] py-2">
       <div className="flex flex-row items-end justify-between gap-x-4 max-w-2xl mx-auto">
         <div className="flex flex-row items-end justify-start gap-x-4">
-          <div className="h-[50px] w-[50px] overflow-hidden rounded-[8px] transition-colors duration-500 bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center">
+          <button
+            onClick={handleLogoClick}
+            type="button"
+            className="h-[50px] w-[50px] overflow-hidden rounded-[8px] transition-colors duration-500 bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center active:scale-95 cursor-pointer"
+          >
             <Image
               alt="profile icon"
               src={"/goku.png"}
@@ -31,7 +49,7 @@ const Navbar = () => {
               height={45}
               className="object-contain"
             />
-          </div>
+          </button>
           <div className="-mb-1">
             <ul className="flex flex-row items-center gap-x-4 text-sm font-medium text-neutral-500 dark:text-neutral-400">
               <li
@@ -50,7 +68,13 @@ const Navbar = () => {
                 onClick={() => scrollToSection("tech-stack")}
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
               >
-                Lab
+                Stack
+              </li>
+              <li
+                onClick={() => navigation.push("/labs")}
+                className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
+              >
+                Labs
               </li>
             </ul>
           </div>
