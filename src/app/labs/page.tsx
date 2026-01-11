@@ -124,8 +124,8 @@ const page = () => {
           }}
           className="text-[12rem] font-black text-neutral-800 dark:text-neutral-300 tracking-tighter uppercase flex gap-x-20"
         >
-          {LABS_PARALLAX.map((item) => (
-            <span key={"item"}>{item}</span>
+          {LABS_PARALLAX.map((item, i) => (
+            <span key={item + (i + 1)}>{item}</span>
           ))}
         </motion.div>
       </div>
