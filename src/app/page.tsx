@@ -6,6 +6,7 @@ import Projects from "@/components/sections/projects";
 import TechStack from "@/components/sections/tech-stack";
 import Quote from "@/components/sections/quote";
 import type { Metadata } from "next";
+import PersonalLife from "@/components/sections/personal-life";
 
 export const metadata: Metadata = {
   title: "Vilas Chauvhan | Full-Stack Developer & Software Engineer",
@@ -71,6 +72,7 @@ export default function Home() {
       <Projects />
       <AboutMe />
       <TechStack />
+      <PersonalLife />
       <Quote />
       <BottomFade />
     </main>
