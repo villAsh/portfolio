@@ -4,21 +4,36 @@
 import Image from "next/image";
 import ThemeSwitch from "../system/theme-switch";
 import { usePathname, useRouter } from "next/navigation";
+import { Navbar as ENavbar } from "@/types/utils";
 
 const Navbar = () => {
   const navigation = useRouter();
   const path = usePathname();
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+  const scrollToSection = (id: keyof typeof ENavbar) => {
+    console.log("id", id);
+    if (path === "/") {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      switch (id) {
+        case "experience":
+          navigation.push("work-experience");
+          return;
+        case "projects":
+          navigation.push("project");
+          return;
+        case "tech-tack":
+          navigation.push("tech-stack");
+      }
     }
   };
 
@@ -53,19 +68,21 @@ const Navbar = () => {
           <div className="-mb-1">
             <ul className="flex flex-row items-center gap-x-4 text-sm font-medium text-neutral-500 dark:text-neutral-400">
               <li
-                onClick={() => scrollToSection("experience")}
+                onClick={() => scrollToSection(ENavbar.experience)}
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 cursor-pointer"
               >
                 Work
               </li>
               <li
-                onClick={() => scrollToSection("projects")}
+                onClick={() => scrollToSection(ENavbar.projects)}
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
               >
                 Projects
               </li>
               <li
-                onClick={() => scrollToSection("tech-stack")}
+                onClick={() =>
+                  scrollToSection(ENavbar["tech-tack"] as keyof typeof ENavbar)
+                }
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
               >
                 Stack
