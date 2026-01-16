@@ -28,7 +28,7 @@ export type TExperienceCard = {
   collapsible?: boolean;
 };
 
-const WorkingBadge = () => {
+export const WorkingBadge = () => {
   return (
     <div className="bg-green-100/60 w-fit px-3 py-1 rounded-[8px] flex flex-row items-center justify-center gap-x-1 dark:bg-green-950 transform">
       <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse dark:bg-green-600 transform" />
