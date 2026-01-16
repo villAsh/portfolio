@@ -24,6 +24,8 @@ export type TExperienceCard = {
   isWorking?: boolean;
   linkedIn: string;
   instagram: string;
+  type?: "single" | "multiple";
+  collapsible?: boolean;
 };
 
 const WorkingBadge = () => {
@@ -49,9 +51,11 @@ const ExperienceCard = ({
   instagram,
   linkedIn,
   isWorking = false,
+  type = "multiple",
+  collapsible = true,
 }: TExperienceCard) => {
   return (
-    <Accordion type="multiple">
+    <Accordion type={type} collapsible={collapsible}>
       <AccordionItem value={position}>
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-row items-start justify-between max-md:flex-col max-md:gap-y-2">
@@ -106,7 +110,9 @@ const ExperienceCard = ({
                         className="dark:invert"
                       />
                     </LinkPreview>
-                    <AccordionTrigger className="p-0 cursor-pointer" />
+                    {collapsible && (
+                      <AccordionTrigger className="p-0 cursor-pointer" />
+                    )}
                   </div>
                 </div>
               </div>
