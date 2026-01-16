@@ -28,7 +28,7 @@ const Quote = () => {
   if (!dailyQuote) return null;
 
   return (
-    <section className="mt-24 max-w-2xl mx-auto w-full mb-24 px-4">
+    <section className="mt-24 max-w-3xl mx-auto w-full mb-24 px-4">
       <motion.div
         initial={INITIAL}
         whileInView={WHILE_IN_VIEW}

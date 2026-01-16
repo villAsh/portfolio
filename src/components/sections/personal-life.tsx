@@ -27,7 +27,7 @@ const LifeCard = ({ Icon, title, subTitle }: TLifeCard) => {
 };
 const PersonalLife = () => {
   return (
-    <section className="mt-32 max-w-2xl mx-auto w-full mb-20">
+    <section className="mt-32 max-w-3xl mx-auto w-full mb-20">
       <motion.div
         initial={INITIAL}
         whileInView={WHILE_IN_VIEW}

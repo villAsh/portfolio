@@ -142,7 +142,7 @@ const ExperienceCard = ({
 
 const Experience = () => {
   return (
-    <section id="experience" className="mt-32 max-w-2xl mx-auto w-full">
+    <section id="experience" className="mt-32 max-w-3xl mx-auto w-full">
       <motion.div
         initial={INITIAL}
         whileInView={WHILE_IN_VIEW}

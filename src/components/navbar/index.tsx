@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full max-md:px-10 backdrop-blur-xs sticky top-0 z-50 h-[60px] py-2">
-      <div className="flex flex-row items-end justify-between gap-x-4 max-w-2xl mx-auto">
+      <div className="flex flex-row items-end justify-between gap-x-4 max-w-3xl mx-auto">
         <div className="flex flex-row items-end justify-start gap-x-4">
           <button
             onClick={handleLogoClick}

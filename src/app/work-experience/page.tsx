@@ -5,7 +5,7 @@ const page = () => {
   return (
     <section
       id="experience-page"
-      className="mt-20 max-w-2xl mx-auto w-full pb-16 max-md:px-10"
+      className="mt-20 max-w-3xl mx-auto w-full pb-16 max-md:px-10"
     >
       <Header
         subTitle="Professional Journey"
