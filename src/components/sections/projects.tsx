@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
+import { ProjectCard } from "./project-card";
 
 const Projects = () => {
   return (
-    <section id="projects" className="mt-32 max-w-2xl mx-auto w-full">
+    <section id="projects" className="mt-32 max-w-3xl mx-auto w-full px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -13,7 +14,7 @@ const Projects = () => {
         className="space-y-4"
       >
         <div className="flex items-center gap-x-2">
-          <div className="h-[1px] w-8 bg-neutral-300 dark:bg-neutral-700" />
+          <div className="h-px w-8 bg-neutral-300 dark:bg-neutral-700" />
           <span className="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
             Featured Work
           </span>
@@ -27,10 +28,45 @@ const Projects = () => {
         </p>
       </motion.div>
 
-      <div className="mt-16 flex flex-col items-center justify-center py-20 border-2 border-dashed border-neutral-200 dark:border-neutral-800 rounded-2xl">
-        <p className="text-neutral-400 dark:text-neutral-500 font-medium italic">
-          Project showcase coming soon...
-        </p>
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <ProjectCard
+          title="Crypto Trading App"
+          description="A multi-exchange crypto trading platform which supports 4+ exchanges, spot & futures trading and advanced trading bots."
+          image="/projects/crypto-web-app.png"
+          category={"pro"}
+          org="seaflux"
+          status="All Systems Operational"
+          tags={[
+            {
+              name: "React",
+              value: "react",
+            },
+            {
+              name: "Tailwind",
+              value: "tailwindcss",
+            },
+            {
+              name: "TypeScript",
+              value: "typescript",
+            },
+            {
+              name: "Socket.IO",
+              value: "socketdotio",
+            },
+            {
+              name: "Vite",
+              value: "vite",
+            },
+            {
+              name: "Tanstack Query",
+              value: "reactquery",
+            },
+            {
+              name: "Tanstack Router",
+              value: "tanstack",
+            },
+          ]}
+        />
       </div>
     </section>
   );

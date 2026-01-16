@@ -59,7 +59,7 @@ const ExperienceCard = ({
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-row items-start justify-between max-md:flex-col max-md:gap-y-2">
             <div className="flex flex-row items-center justify-start gap-x-2">
-              <div className="p-1 w-14 h-14 flex items-center rounded-[8px] justify-center bg-[#01848A]">
+              <div className="p-1 w-14 h-14 flex items-center rounded-[8px] justify-center bg-seaflux">
                 <Image src={img} alt={organization} width={100} height={100} />
               </div>
               <div className="flex flex-col">
