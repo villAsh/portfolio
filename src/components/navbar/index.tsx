@@ -1,28 +1,19 @@
-/** biome-ignore-all lint/a11y/useKeyWithClickEvents: <explanation> */
 "use client";
 
 import Image from "next/image";
 import ThemeSwitch from "../system/theme-switch";
 import { usePathname, useRouter } from "next/navigation";
-import { Navbar as ENavbar } from "@/types/utils";
+import { Navbar as ENavbar, NAV_MAPPER } from "@/types/utils";
 
 const Navbar = () => {
   const navigation = useRouter();
   const path = usePathname();
   const scrollToSection = (id: keyof typeof ENavbar) => {
-    console.log("id", id);
-    if (path === "/") {
-      const element = document.getElementById(id);
-      if (element) {
-        const offset = 80;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
+    if (path === NAV_MAPPER[id]) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     } else {
       switch (id) {
         case "experience":
@@ -31,8 +22,6 @@ const Navbar = () => {
         case "projects":
           navigation.push("project");
           return;
-        case "tech-tack":
-          navigation.push("tech-stack");
       }
     }
   };
@@ -70,26 +59,33 @@ const Navbar = () => {
               <li
                 onClick={() => scrollToSection(ENavbar.experience)}
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 cursor-pointer"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    navigation.push("/work-experience");
+                  }
+                }}
               >
                 Work
               </li>
               <li
                 onClick={() => scrollToSection(ENavbar.projects)}
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    navigation.push("/projects");
+                  }
+                }}
               >
                 Projects
               </li>
               <li
-                onClick={() =>
-                  scrollToSection(ENavbar["tech-tack"] as keyof typeof ENavbar)
-                }
-                className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
-              >
-                Stack
-              </li>
-              <li
                 onClick={() => navigation.push("/labs")}
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    navigation.push("/labs");
+                  }
+                }}
               >
                 Labs
               </li>
