@@ -52,10 +52,9 @@ const ExperienceCard = ({
   linkedIn,
   isWorking = false,
   type = "multiple",
-  collapsible = true,
 }: TExperienceCard) => {
   return (
-    <Accordion type={type} collapsible={collapsible}>
+    <Accordion type={type}>
       <AccordionItem value={position}>
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-row items-start justify-between max-md:flex-col max-md:gap-y-2">
@@ -110,9 +109,8 @@ const ExperienceCard = ({
                         className="dark:invert"
                       />
                     </LinkPreview>
-                    {collapsible && (
-                      <AccordionTrigger className="p-0 cursor-pointer" />
-                    )}
+
+                    <AccordionTrigger className="p-0 cursor-pointer" />
                   </div>
                 </div>
               </div>
