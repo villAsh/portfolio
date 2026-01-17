@@ -20,7 +20,7 @@ const Navbar = () => {
           navigation.push("work-experience");
           return;
         case "projects":
-          navigation.push("project");
+          navigation.push("projects");
           return;
       }
     }
