@@ -59,9 +59,11 @@ const GithubGraph = () => {
         <ActivityCalendar
           username="villAsh"
           blockSize={10}
+          year={2026}
           blockMargin={4}
           fontSize={12}
           maxLevel={4}
+          showTotalCount
           colorScheme={theme === "dark" ? "dark" : "light"}
           theme={{
             dark: [
@@ -85,7 +87,7 @@ const GithubGraph = () => {
           labels={{
             months: githubConfig.months,
             weekdays: githubConfig.weekdays,
-            totalCount: githubConfig.totalCountLabel,
+            totalCount: "{{count}} contributions in the current year",
           }}
         />
       </div>
