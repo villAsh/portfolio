@@ -1,73 +1,94 @@
-<h1>Portfolio website</h1>
-<p>This is my Portfolio which i have created using React and Tailwind along with Framer Motion</p>
+# Premium Developer Portfolio
 
-# Getting Started with Create React App
+A high-performance, aesthetically pleasing portfolio built for **Vilas Chauvhan**, a Software Engineer specializing in high-frequency trading platforms, cross-platform mobile apps, and open-source contributions. This project showcases a commitment to "Premium UI" and "Technical Excellence."
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ✨ Highlights
 
-## Available Scripts
+- **Modern Tech Stack**: Built with [Next.js 15](https://nextjs.org/) and [React 19](https://react.dev/).
+- **Cutting-edge Styling**: Utilizing [Tailwind CSS 4](https://tailwindcss.com/) for lightning-fast, utility-first styling.
+- **Fluid Animations**: High-fidelity micro-interactions powered by [Motion (Framer Motion)](https://motion.dev/).
+- **Premium Components**: Custom-designed project cards with dynamic gradients, status badges, and interactive tech icons.
+- **Open Source Showcase**: A dedicated, GitHub-styled section for tracking contributions, pull requests, and issues.
+- **Theme-Ready**: Full support for Dark/Light modes with smooth transitions.
+- **Typed to the Core**: 100% TypeScript for robust, maintainable code.
 
-In the project directory, you can run:
+## 🛠️ Built With
 
-### `npm start`
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **CSS**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Motion](https://motion.dev/)
+- **Icons**: [Lucide React](https://lucide.dev/) & [Simple Icons](https://simpleicons.org/)
+- **Components**: [Radix UI](https://www.radix-ui.com/) (Primitives)
+- **Deployment**: [Vercel](https://vercel.com/)
+- **Development Tooling**: [Turbopack](https://nextjs.org/docs/app/api-reference/turbopack), [Biome](https://biomejs.dev/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- [Node.js](https://nodejs.org/) (Latest LTS)
+- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/villAsh/portfolio.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   bun dev
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### `npm run eject`
+## 📁 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```text
+src/
+├── app/            # Next.js App Router (Page & Layouts)
+├── components/     # UI Components & Sections
+│   ├── page/       # Shared page components (Header, etc.)
+│   ├── sections/   # Major homepage sections (Projects, Experience)
+│   └── ui/         # Base UI primitives (Radix-based)
+├── lib/            # Utilities, data, and type definitions
+└── public/         # Static assets & images
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📈 Featured Projects
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Crypto Trading App**: Multi-exchange platform with advanced bots.
+- **NotesBuddy**: Study platform with AI-powered learning tools.
+- **Nearby Doctor Finder**: Global healthcare discovery app.
+- **Appwrite MCP Server**: Futuristic developer tool for database operations.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🤝 Open Source Contributions
 
-## Learn More
+Actively contributing to industry-leading projects including:
+- `shadcn-ui/ui`
+- `TanStack (com, ranger)`
+- `heroui-inc/heroui`
+- `event-catalog/eventcatalog`
+- `nativeui-org/ui`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📬 Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Vilas Chauvhan** — Software Engineer
+- **GitHub**: [@villAsh](https://github.com/villAsh)
+- **LinkedIn**: [Vilas Chauvhan](https://www.linkedin.com/in/vilas-chauvhan-4609391aa/)
+- **Twitter/X**: [@vilas_dev_x](https://x.com/vilas_dev_x)
+- **Email**: [chavhanvilas02@gmail.com](mailto:chavhanvilas02@gmail.com)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed with ❤️ by [villAsh](https://github.com/villAsh)
