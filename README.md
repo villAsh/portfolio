@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Premium Developer Portfolio
 
-## Getting Started
+A high-performance, aesthetically pleasing portfolio built for **Vilas Chauvhan**, a Software Engineer specializing in high-frequency trading platforms, cross-platform mobile apps, and open-source contributions. This project showcases a commitment to "Premium UI" and "Technical Excellence."
 
-First, run the development server:
+## ✨ Highlights
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Modern Tech Stack**: Built with [Next.js 15](https://nextjs.org/) and [React 19](https://react.dev/).
+- **Cutting-edge Styling**: Utilizing [Tailwind CSS 4](https://tailwindcss.com/) for lightning-fast, utility-first styling.
+- **Fluid Animations**: High-fidelity micro-interactions powered by [Motion (Framer Motion)](https://motion.dev/).
+- **Premium Components**: Custom-designed project cards with dynamic gradients, status badges, and interactive tech icons.
+- **Open Source Showcase**: A dedicated, GitHub-styled section for tracking contributions, pull requests, and issues.
+- **Theme-Ready**: Full support for Dark/Light modes with smooth transitions.
+- **Typed to the Core**: 100% TypeScript for robust, maintainable code.
+
+## 🛠️ Built With
+
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **CSS**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Motion](https://motion.dev/)
+- **Icons**: [Lucide React](https://lucide.dev/) & [Simple Icons](https://simpleicons.org/)
+- **Components**: [Radix UI](https://www.radix-ui.com/) (Primitives)
+- **Deployment**: [Vercel](https://vercel.com/)
+- **Development Tooling**: [Turbopack](https://nextjs.org/docs/app/api-reference/turbopack), [Biome](https://biomejs.dev/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (Latest LTS)
+- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/villAsh/portfolio.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   bun dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/            # Next.js App Router (Page & Layouts)
+├── components/     # UI Components & Sections
+│   ├── page/       # Shared page components (Header, etc.)
+│   ├── sections/   # Major homepage sections (Projects, Experience)
+│   └── ui/         # Base UI primitives (Radix-based)
+├── lib/            # Utilities, data, and type definitions
+└── public/         # Static assets & images
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📈 Featured Projects
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Crypto Trading App**: Multi-exchange platform with advanced bots.
+- **NotesBuddy**: Study platform with AI-powered learning tools.
+- **Nearby Doctor Finder**: Global healthcare discovery app.
+- **Appwrite MCP Server**: Futuristic developer tool for database operations.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Open Source Contributions
 
-## Learn More
+Actively contributing to industry-leading projects including:
+- `shadcn-ui/ui`
+- `TanStack (com, ranger)`
+- `heroui-inc/heroui`
+- `event-catalog/eventcatalog`
+- `nativeui-org/ui`
 
-To learn more about Next.js, take a look at the following resources:
+## 📬 Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Vilas Chauvhan** — Software Engineer
+- **GitHub**: [@villAsh](https://github.com/villAsh)
+- **LinkedIn**: [Vilas Chauvhan](https://www.linkedin.com/in/vilas-chauvhan-4609391aa/)
+- **Twitter/X**: [@vilas_dev_x](https://x.com/vilas_dev_x)
+- **Email**: [chavhanvilas02@gmail.com](mailto:chavhanvilas02@gmail.com)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Developed with ❤️ by [villAsh](https://github.com/villAsh)
