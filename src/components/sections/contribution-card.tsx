@@ -1,7 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
-import { GitPullRequest, CircleDot, ExternalLink, GitMerge, GitBranch } from "lucide-react";
+import {
+  GitPullRequest,
+  CircleDot,
+  ExternalLink,
+  GitMerge,
+  GitBranch,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export type ContributionProps = {
@@ -49,11 +55,13 @@ export const ContributionCard = ({
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 space-y-2">
-          <div className="flex items-center gap-2 text-xs font-medium text-neutral-500 dark:text-neutral-400">
-            <GitBranch className="w-3 h-3" />
-            <span className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
-              {repo}
-            </span>
+          <div className="flex items-center justify-between w-full gap-2 text-xs font-medium text-neutral-500 dark:text-neutral-400">
+            <div>
+              <GitBranch className="w-3 h-3" />
+              <span className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
+                {repo}
+              </span>
+            </div>
             <span className="text-neutral-300 dark:text-neutral-700">•</span>
             <span>{date}</span>
           </div>
@@ -69,21 +77,27 @@ export const ContributionCard = ({
           )}
 
           <div className="flex items-center gap-3 pt-1">
-            <div className={cn(
-              "flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border",
-              statusStyles[status]
-            )}>
-              {status === "merged" ? <GitMerge className="w-3 h-3" /> : <Icon className="w-3 h-3" />}
+            <div
+              className={cn(
+                "flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider border",
+                statusStyles[status],
+              )}
+            >
+              {status === "merged" ? (
+                <GitMerge className="w-3 h-3" />
+              ) : (
+                <Icon className="w-3 h-3" />
+              )}
               {status}
             </div>
-            
+
             <div className="text-[11px] font-medium text-neutral-400 dark:text-neutral-500 flex items-center gap-1">
-              {type === 'pr' ? 'Pull Request' : 'Issue'}
+              {type === "pr" ? "Pull Request" : "Issue"}
             </div>
           </div>
         </div>
 
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity p-2">
+        <div className="opacity-0 group-hover:opacity-100 transition-opacity p-2 max-md:hidden">
           <ExternalLink className="w-4 h-4 text-neutral-400" />
         </div>
       </div>
