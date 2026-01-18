@@ -4,10 +4,17 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { Globe, Github, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 type Technology = {
   name: string;
   value: string;
+  invert?: boolean;
 };
 
 export type ProjectCardProps = {
@@ -119,24 +126,35 @@ export const ProjectCard = ({
             <span className="text-[13px] font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-widest">
               Technologies
             </span>
-            <div className="flex flex-wrap gap-3 mt-2">
-              {tags.map((tag, index) => (
-                <div
-                  key={tag.value}
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 shadow-sm"
-                  title={tag.name}
-                >
-                  <Image
-                    src={`https://cdn.simpleicons.org/${tag.value}`}
-                    width={20}
-                    unoptimized
-                    height={20}
-                    alt={tag.name}
-                    className="p-0.5"
-                  />
-                </div>
-              ))}
-            </div>
+            <TooltipProvider>
+              <div className="flex flex-wrap gap-3 mt-2">
+                {tags.map((tag, index) => (
+                  <>
+                    <Tooltip>
+                      <TooltipTrigger value={tag.value}>
+                        <div
+                          key={tag.value}
+                          className="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 shadow-sm"
+                          title={tag.name}
+                        >
+                          <Image
+                            src={`https://cdn.simpleicons.org/${tag.value}`}
+                            width={20}
+                            unoptimized
+                            height={20}
+                            alt={tag.name}
+                            className={`p-0.5 ${tag.invert ? "dark:invert" : ""}`}
+                          />
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent className="rounded-[8px]">
+                        {tag.name}
+                      </TooltipContent>
+                    </Tooltip>
+                  </>
+                ))}
+              </div>
+            </TooltipProvider>
           </div>
 
           <div className="flex items-center justify-between pt-6 border-t border-neutral-100 dark:border-neutral-800">
