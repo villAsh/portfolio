@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/navbar";
 
 import { Schibsted_Grotesk } from "next/font/google";
@@ -36,6 +36,7 @@ export default function RootLayout({
             {children}
           </SmoothScroll>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
