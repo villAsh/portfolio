@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { CV } from "../ui/icons";
@@ -106,7 +107,7 @@ const Bio = () => {
 
 const ResumeButton = () => {
   return (
-    <div>
+    <Link href="/resume" className="w-fit">
       <Button
         variant={"icon"}
         className="shadow-[inset_0px_1px_2px_1px_rgb(0,0,0,0.18)]"
@@ -118,7 +119,7 @@ const ResumeButton = () => {
         />{" "}
         Resume / CV
       </Button>
-    </div>
+    </Link>
   );
 };
 
