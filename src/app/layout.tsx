@@ -5,10 +5,9 @@ import Navbar from "@/components/navbar";
 
 import { Schibsted_Grotesk } from "next/font/google";
 
-export const metadata: Metadata = {
-  title: "Vilas - a Software Engineer.",
-  description: "Vilas Chauvhan Portfolio",
-};
+import { seoMetadata } from "@/lib/seo";
+
+export const metadata = seoMetadata;
 
 const grotesk = Schibsted_Grotesk({
   variable: "--grotesk",

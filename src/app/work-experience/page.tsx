@@ -1,5 +1,11 @@
 import Experience from "@/components/page/experience";
 import Header from "@/components/page/header";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Work Experience",
+  description: "Explore my professional journey as a Software Engineer, including roles, key responsibilities, and major achievements.",
+};
 
 const page = () => {
   return (

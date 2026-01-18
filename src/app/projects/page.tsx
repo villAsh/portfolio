@@ -2,6 +2,12 @@ import Header from "@/components/page/header";
 import { ProjectCard } from "@/components/sections/project-card";
 import { ContributionCard } from "@/components/sections/contribution-card";
 import { CONTRIBUTIONS, PROJECTS } from "@/lib/data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "A showcase of my recent work, including web applications, mobile apps, and open-source contributions.",
+};
 
 const page = () => {
   return (

@@ -1,4 +1,10 @@
 import Header from "@/components/page/header";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resume",
+  description: "View and download my professional resume, detailing my experience as a Software Engineer.",
+};
 
 export default function ResumePage() {
   return (
