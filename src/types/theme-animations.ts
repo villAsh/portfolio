@@ -6,10 +6,10 @@ export type AnimationStart =
   | "bottom-right"
   | "center";
 
-interface Animation {
+type Animation = {
   name: string;
   css: string;
-}
+};
 
 const getPositionCoords = (position: AnimationStart) => {
   switch (position) {
@@ -60,7 +60,7 @@ const getTransformOrigin = (start: AnimationStart) => {
 export const createAnimation = (
   variant: AnimationVariant,
   start: AnimationStart,
-  url?: string
+  url?: string,
 ): Animation => {
   const svg = generateSVG(variant, start);
   const transformOrigin = getTransformOrigin(start);

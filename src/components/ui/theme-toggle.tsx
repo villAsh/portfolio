@@ -8,13 +8,13 @@ import { useTheme } from "next-themes";
 import { type ReactNode, useCallback } from "react";
 import { Button } from "./button";
 
-interface ThemeToggleAnimationProps {
+type ThemeToggleAnimationProps = {
   variant?: AnimationVariant;
   start?: AnimationStart;
   showLabel?: boolean;
   url?: string;
   children: ReactNode;
-}
+};
 
 export default function ThemeToggleButton({
   variant = "circle-blur",

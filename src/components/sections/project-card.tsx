@@ -5,12 +5,12 @@ import Image from "next/image";
 import { Globe, Github, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-interface Technology {
+type Technology = {
   name: string;
   value: string;
-}
+};
 
-interface ProjectCardProps {
+export type ProjectCardProps = {
   title: string;
   description: string;
   image: string;
@@ -21,7 +21,7 @@ interface ProjectCardProps {
   gradient?: string;
   category?: "pro" | "personal" | "open-source";
   org?: "seaflux";
-}
+};
 
 export const Category = ({
   org,
