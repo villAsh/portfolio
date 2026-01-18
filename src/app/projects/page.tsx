@@ -1,6 +1,7 @@
 import Header from "@/components/page/header";
 import { ProjectCard } from "@/components/sections/project-card";
-import { PROJECTS } from "@/lib/data";
+import { ContributionCard } from "@/components/sections/contribution-card";
+import { CONTRIBUTIONS, PROJECTS } from "@/lib/data";
 
 const page = () => {
   return (
@@ -20,6 +21,18 @@ const page = () => {
         {PROJECTS.map((item) => (
           <ProjectCard key={item.id} {...item} />
         ))}
+      </section>
+      <section className="mt-20">
+        <Header
+          subTitle="Featured work"
+          title="Open Source Contributions"
+          description="A collection of open-source projects where I’ve contributed features, fixed bugs, and enhanced performance in production-grade software."
+        />
+        <div className="mt-12 space-y-4">
+          {CONTRIBUTIONS.map((item) => (
+            <ContributionCard key={item.id} {...item} />
+          ))}
+        </div>
       </section>
     </main>
   );

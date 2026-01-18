@@ -1,5 +1,6 @@
 import type { TExperienceCard } from "@/components/sections/experience";
 import type { ProjectCardProps } from "@/components/sections/project-card";
+import type { ContributionProps } from "@/components/sections/contribution-card";
 
 export const SOCIALS = [
   {
@@ -468,3 +469,106 @@ export const APP = TECH_DATA.app.map((t) => t.name);
 export const BACKEND = TECH_DATA.backend.map((t) => t.name);
 export const SERVICES = TECH_DATA.tools.map((t) => t.name);
 export const TOOLS = TECH_DATA.tools.map((t) => t.name);
+
+export const CONTRIBUTIONS: ContributionProps[] = [
+  {
+    id: "c9",
+    repo: "heroui-inc/heroui",
+    title: "fix: codeblock flickering issue",
+    url: "https://github.com/heroui-inc/heroui/pull/5849",
+    type: "pr",
+    status: "merged",
+    date: "Nov 1, 2025",
+    description:
+      "Fixed a flickering issue in the HeroUI CodeBlock component that occurred during horizontal scrolling due to layout reflows.",
+  },
+  {
+    id: "c8",
+    repo: "TanStack/tanstack.com",
+    title:
+      "fix: copy markdown component for success and fallback toast notification",
+    url: "https://github.com/TanStack/tanstack.com/pull/515",
+    type: "pr",
+    status: "merged",
+    date: "Oct 21, 2025",
+    description:
+      "Fixed an issue where clicking the copy markdown button triggered two toast notifications by correcting the success and fallback logic.",
+  },
+  {
+    id: "c7",
+    repo: "TanStack/tanstack.com",
+    title: "bug: copy mardown button initially shows 2 toast notification",
+    url: "https://github.com/TanStack/tanstack.com/issues/514",
+    type: "issue",
+    status: "closed",
+    date: "Oct 21, 2025",
+    description:
+      "Reported a bug where the copy markdown button showed two toast notifications on the first click instead of one.",
+  },
+  {
+    id: "c6",
+    repo: "heroui-inc/heroui",
+    title: "bug: homepage still shows @NextUI",
+    url: "https://github.com/heroui-inc/heroui/issues/5801",
+    type: "issue",
+    status: "closed",
+    date: "Oct 11, 2025",
+    description:
+      "Reported an outdated branding issue where the HeroUI homepage was still displaying the old @NextUI name.",
+  },
+  {
+    id: "c5",
+    repo: "TanStack/ranger",
+    title: "fix: example link navigation not",
+    url: "https://github.com/TanStack/ranger/pull/97",
+    type: "pr",
+    status: "open",
+    date: "Oct 1, 2025",
+    description:
+      "Fixed a bug where the provided example link navigation is not working.",
+  },
+  {
+    id: "c4",
+    repo: "TanStack/ranger",
+    title: "bug: example link navigation not",
+    url: "https://github.com/TanStack/ranger/issues/96",
+    type: "issue",
+    status: "open",
+    date: "Oct 1, 2025",
+    description:
+      "Reported a bug where the provided example link navigation is not working.",
+  },
+  {
+    id: "c3",
+    repo: "imskyleen/animate-ui",
+    title: "bug: copy markdown api fails in the background",
+    url: "https://github.com/imskyleen/animate-ui/issues/121",
+    type: "issue",
+    status: "closed",
+    date: "Sep 18, 2025",
+    description:
+      "Reported an issue where the copy markdown API failed silently when executed in the background without showing any error feedback.",
+  },
+  {
+    id: "c2",
+    repo: "nativeui-org/ui",
+    title: "feat: migrate the whole website to lucide icons",
+    url: "https://github.com/nativeui-org/ui/issues/103",
+    type: "pr",
+    status: "open",
+    date: "Sep 9, 2025",
+    description:
+      "Proposed and implemented a migration of the entire website icon system from expo-icons to lucide-icons for consistency and performance.",
+  },
+  {
+    id: "c1",
+    repo: "event-catalog/eventcatalog",
+    title: "feat: custom sidebar badge for services",
+    url: "https://github.com/event-catalog/eventcatalog/pull/1706",
+    type: "pr",
+    status: "merged",
+    date: "Sep 9, 2025",
+    description:
+      "Added support for custom sidebar badges for services, replacing fixed badges to improve flexibility and visual consistency.",
+  },
+];
