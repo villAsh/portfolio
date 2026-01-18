@@ -7,6 +7,7 @@ import TechStack from "@/components/sections/tech-stack";
 import Quote from "@/components/sections/quote";
 import type { Metadata } from "next";
 import PersonalLife from "@/components/sections/personal-life";
+import GithubGraph from "@/components/sections/github-graph";
 
 export const metadata: Metadata = {
   title: "Vilas Chauvhan | Full-Stack Developer & Software Engineer",
@@ -71,6 +72,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <AboutMe />
+      <GithubGraph />
       <TechStack />
       <PersonalLife />
       <Quote />
