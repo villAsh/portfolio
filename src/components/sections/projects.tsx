@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { ProjectCard } from "./project-card";
+import { PROJECTS } from "@/lib/data";
 
 const Projects = () => {
   return (
@@ -29,44 +30,9 @@ const Projects = () => {
       </motion.div>
 
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <ProjectCard
-          title="Crypto Trading App"
-          description="A multi-exchange crypto trading platform which supports 4+ exchanges, spot & futures trading and advanced trading bots."
-          image="/projects/crypto-web-app.png"
-          category={"pro"}
-          org="seaflux"
-          status="All Systems Operational"
-          tags={[
-            {
-              name: "React",
-              value: "react",
-            },
-            {
-              name: "Tailwind",
-              value: "tailwindcss",
-            },
-            {
-              name: "TypeScript",
-              value: "typescript",
-            },
-            {
-              name: "Socket.IO",
-              value: "socketdotio",
-            },
-            {
-              name: "Vite",
-              value: "vite",
-            },
-            {
-              name: "Tanstack Query",
-              value: "reactquery",
-            },
-            {
-              name: "Tanstack Router",
-              value: "tanstack",
-            },
-          ]}
-        />
+        {PROJECTS.map((item) => (
+          <ProjectCard key={item.id} {...item} />
+        ))}
       </div>
     </section>
   );

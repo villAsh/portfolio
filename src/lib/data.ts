@@ -1,4 +1,5 @@
 import type { TExperienceCard } from "@/components/sections/experience";
+import type { ProjectCardProps } from "@/components/sections/project-card";
 
 export const SOCIALS = [
   {
@@ -377,6 +378,89 @@ export const LABS_PARALLAX = [
   "Prototypes",
   "Experimentation",
   "Innovation",
+];
+
+export const PROJECTS: ({ id: string } & ProjectCardProps)[] = [
+  {
+    id: "project-1",
+    title: "Crypto Trading App",
+    description:
+      "A multi-exchange crypto trading platform which supports 4+ exchanges, spot & futures trading and advanced trading bots.",
+    image: "/projects/crypto-web-app.png",
+    category: "pro",
+    org: "seaflux",
+    status: "All Systems Operational",
+    tags: [
+      {
+        name: "React",
+        value: "react",
+      },
+      {
+        name: "Tailwind",
+        value: "tailwindcss",
+      },
+      {
+        name: "TypeScript",
+        value: "typescript",
+      },
+      {
+        name: "Socket.IO",
+        value: "socketdotio",
+        invert: true,
+      },
+      {
+        name: "Vite",
+        value: "vite",
+      },
+      {
+        name: "Tanstack Query",
+        value: "reactquery",
+      },
+      {
+        name: "Tanstack Router",
+        value: "tanstack",
+        invert: true,
+      },
+    ],
+  },
+  {
+    id: "project-2",
+    title: "Nearby Doctor Finder",
+    description:
+      "A comprehensive healthcare discovery platform enabling users to find doctors worldwide using interactive maps, advanced filtering, and a network of over 1Lac+ doctors globally.",
+    image: "/projects/doctor-finder.jpg",
+    category: "pro",
+    org: "seaflux",
+    status: "All Systems Operational",
+    tags: [
+      {
+        name: "React Native",
+        value: "react",
+      },
+      {
+        name: "NativeWind",
+        value: "tailwindcss",
+      },
+      {
+        name: "TypeScript",
+        value: "typescript",
+      },
+      {
+        name: "Mapbox",
+        value: "mapbox",
+        invert: true,
+      },
+      {
+        name: "Expo",
+        value: "expo",
+        invert: true,
+      },
+      {
+        name: "Tanstack Query",
+        value: "reactquery",
+      },
+    ],
+  },
 ];
 
 export const FRONTEND = TECH_DATA.frontend.map((t) => t.name);
