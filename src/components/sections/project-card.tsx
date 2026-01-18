@@ -129,7 +129,7 @@ export const ProjectCard = ({
             <TooltipProvider>
               <div className="flex flex-wrap gap-3 mt-2">
                 {tags.map((tag, index) => (
-                  <>
+                  <div key={tag.value}>
                     <Tooltip>
                       <TooltipTrigger value={tag.value}>
                         <div
@@ -151,7 +151,7 @@ export const ProjectCard = ({
                         {tag.name}
                       </TooltipContent>
                     </Tooltip>
-                  </>
+                  </div>
                 ))}
               </div>
             </TooltipProvider>

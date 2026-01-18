@@ -74,7 +74,7 @@ export default function Home() {
       <AboutMe />
       <GithubGraph />
       <TechStack />
-      <PersonalLife />
+      {/* <PersonalLife /> */}
       <Quote />
       <BottomFade />
     </main>
