@@ -207,9 +207,9 @@
     @apply border-border outline-ring/50;
     transition-property:
       color, background-color, border-color, text-decoration-color, fill, stroke,
-      outline-color;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 700ms;
+      outline-color !important;
+    transition-timing-function: cubic-bezier(0.4, 1) !important;
+    transition-duration: 700ms !important;
   }
 
   body {
