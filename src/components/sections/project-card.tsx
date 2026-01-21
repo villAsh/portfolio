@@ -160,14 +160,14 @@ export const ProjectCard = ({
           <div className="flex items-center justify-between pt-6 border-t border-neutral-100 dark:border-neutral-800">
             <Category category={category} org={org} />
 
-            <motion.a
+            {category !== "pro" && <motion.a
               href={liveUrl}
               className="flex items-center gap-2 text-[15px] font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
               whileHover={{ x: 5 }}
             >
               View Details
               <ArrowRight className="w-4 h-4" />
-            </motion.a>
+            </motion.a>}
           </div>
         </div>
       </div>
