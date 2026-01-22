@@ -1,8 +1,8 @@
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Navbar from "@/components/navbar";
-
 import { Schibsted_Grotesk } from "next/font/google";
 
 import { seoMetadata } from "@/lib/seo";
@@ -37,6 +37,7 @@ export default function RootLayout({
           </SmoothScroll>
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
