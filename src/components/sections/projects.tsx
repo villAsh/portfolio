@@ -36,7 +36,7 @@ const Projects = () => {
           <ProjectCard key={item.id} {...item} />
         ))}
       </div>
-      <Button className="inset-shadow-2xs bg-slate-50 text-neutral-800 mt-10 flex items-center justify-center mx-auto hover:inset-shadow-xs hover:bg-slate-100">
+      <Button className=" bg-background border text-neutral-800 mt-10 flex items-center justify-center mx-auto  hover:bg-background/05 active:scale-95 transition-transform surface-inset dark:text-neutral-300 dark:border-neutral-400 dark:border-1px">
         <Link prefetch href={"/projects"}>View all projects and OS Contributions</Link>
       </Button>
     </section>
