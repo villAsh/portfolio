@@ -3,6 +3,8 @@
 import { motion } from "motion/react";
 import { ProjectCard } from "./project-card";
 import { PROJECTS } from "@/lib/data";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -34,6 +36,9 @@ const Projects = () => {
           <ProjectCard key={item.id} {...item} />
         ))}
       </div>
+      <Button className="inset-shadow-2xs bg-slate-50 text-neutral-800 mt-10 flex items-center justify-center mx-auto hover:inset-shadow-xs hover:bg-slate-100">
+        <Link prefetch href={"/projects"}>View all projects and OS Contributions</Link>
+      </Button>
     </section>
   );
 };
