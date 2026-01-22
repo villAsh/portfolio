@@ -207,34 +207,23 @@
     @apply border-border outline-ring/50;
   }
 
-  /* Disable CSS transitions during View Transitions API for better performance */
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation-duration: 0.5s;
-  }
-
-  /* When view transition is running, disable element transitions */
-  html:has(::view-transition-group(root)) * {
-    transition: none !important;
-  }
-
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
     letter-spacing: var(--tracking-normal);
-    /* Only apply transition to body for theme changes */
-    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    transition:
+      background-color 0.3s ease-out,
+      color 0.3s ease-out;
     /* Enable GPU acceleration */
     transform: translateZ(0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Apply color-scheme for native dark mode optimizations */
   :root {
     color-scheme: light;
   }
-  
+
   .dark {
     color-scheme: dark;
   }
