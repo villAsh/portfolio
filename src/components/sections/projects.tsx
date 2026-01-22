@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <section id="projects" className="mt-32 max-w-3xl mx-auto w-full px-4">
+    <section id="projects" className="mt-32 max-w-3xl mx-auto w-full">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
