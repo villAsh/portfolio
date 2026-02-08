@@ -19,7 +19,7 @@ export default function ResumePage() {
 
       <div className="flex-1 w-full bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-2xl">
         <iframe
-          src="/vilas-chauvhan-resume.pdf#toolbar=0"
+          src="/pdf/vilas-chauvhan-resume.pdf#toolbar=0"
           className="w-full h-full border-none p-5"
           title="Resume PDF"
         />
