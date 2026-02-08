@@ -114,8 +114,6 @@ export const TECH_DATA = {
   app: [
     { name: "React Native", slug: "react", color: "#61DAFB" },
     { name: "Expo", slug: "expo", color: "#000020" },
-    { name: "Xcode", slug: "xcode", color: "#147EFB" },
-    { name: "Android Studio", slug: "androidstudio", color: "#3DDC84" },
   ],
   backend: [
     { name: "Node.js", slug: "nodedotjs", color: "#339933" },
