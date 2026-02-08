@@ -13,7 +13,7 @@ const page = () => {
   return (
     <main
       id="experience-page"
-      className="mt-20 max-w-3xl mx-auto w-full pb-16 max-md:px-10"
+      className="mt-20 max-w-3xl mx-auto w-full pb-10 max-md:px-5"
     >
       <section>
         <Header

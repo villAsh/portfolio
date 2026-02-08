@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <main className="mt-20 max-w-4xl mx-auto w-full pb-16 px-4 md:px-10 h-screen flex flex-col">
+    <main className="mt-20 max-w-4xl mx-auto w-full pb-10 px-4 md:px-5 h-screen flex flex-col">
       <section className="mb-8">
         <Header
           subTitle="Professional Profile"
