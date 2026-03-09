@@ -17,10 +17,10 @@ const Navbar = () => {
     } else {
       switch (id) {
         case "experience":
-          navigation.push("work-experience");
+          navigation.replace("/work-experience");
           return;
         case "projects":
-          navigation.push("projects");
+          navigation.replace("/projects");
           return;
       }
     }
@@ -61,7 +61,7 @@ const Navbar = () => {
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 cursor-pointer"
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
-                    navigation.push("/work-experience");
+                    navigation.replace("/work-experience");
                   }
                 }}
               >
@@ -72,7 +72,7 @@ const Navbar = () => {
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
-                    navigation.push("/projects");
+                    navigation.replace("/projects");
                   }
                 }}
               >
@@ -83,7 +83,7 @@ const Navbar = () => {
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
-                    navigation.push("/labs");
+                    navigation.replace("/labs");
                   }
                 }}
               >
@@ -93,7 +93,6 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex items-center gap-x-2">
-          {/* <SearchButton /> */}
           <ThemeSwitch />
         </div>
       </div>
