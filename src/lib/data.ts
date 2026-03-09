@@ -460,6 +460,41 @@ export const PROJECTS: ({ id: string } & ProjectCardProps)[] = [
       },
     ],
   },
+  {
+    id: "project-3",
+    title: "Void Icons",
+    description:
+      "A library of high-quality, personality-driven animated icons for React, built on top of Lucide and Framer Motion for seamless integration and performance.",
+    image: "/projects/void-icons-dark.png",
+    category: "personal",
+    status: "Active Development",
+    liveUrl: "https://void-icons.vercel.app",
+    githubUrl: "https://github.com/villAsh/void-icons",
+    tags: [
+      {
+        name: "NextJs",
+        value: "next.js",
+      },
+      {
+        name: "Framer Motion",
+        value: "framer",
+        invert: true,
+      },
+      {
+        name: "Tailwind",
+        value: "tailwindcss",
+      },
+      {
+        name: "TypeScript",
+        value: "typescript",
+      },
+      {
+        name: "Lucide",
+        value: "lucide",
+        invert: true,
+      },
+    ],
+  },
 ];
 
 export const FRONTEND = TECH_DATA.frontend.map((t) => t.name);
