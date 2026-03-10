@@ -129,24 +129,24 @@ export const ProjectCard = ({
             </h3>
             <div className="flex gap-3" onClick={(e) => e.stopPropagation()}>
               {category !== "pro" && liveUrl && !liveUrl.startsWith("/") && (
-                <a
+                <Link  
                   href={liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
                 >
                   <Globe className="w-5 h-5" />
-                </a>
+                </Link>
               )}
               {category !== "pro" && githubUrl && (
-                <a
+                <Link
                   href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
                 >
                   <Github className="w-5 h-5" />
-                </a>
+                </Link>
               )}
             </div>
           </div>
