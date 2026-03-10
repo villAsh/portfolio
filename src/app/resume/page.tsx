@@ -19,19 +19,21 @@ export default function ResumePage() {
 
       <div className="flex-1 w-full bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-2xl">
         <iframe
-          src="/pdf/vilas-chauvhan-resume.pdf#toolbar=0"
+          src="https://drive.google.com/file/d/172rbHFTFBiGN8ytu9_UX7Sq-AanFkFjd/preview"
           className="w-full h-full border-none p-5"
-          title="Resume PDF"
+          title="Resume"
+          allow="autoplay"
         />
       </div>
 
       <div className="mt-6 flex justify-center">
         <a
-          href="/vilas-chauvhan-resume.pdf"
-          download
+          href="https://drive.google.com/file/d/172rbHFTFBiGN8ytu9_UX7Sq-AanFkFjd/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-6 py-2.5 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-lg"
         >
-          Download PDF
+          View / Download
         </a>
       </div>
     </main>
