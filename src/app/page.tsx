@@ -14,9 +14,8 @@ export default function Home() {
       <Experience />
       <Projects />
       <AboutMe />
-      <GithubGraph />
+      {/* <GithubGraph /> */}
       <TechStack />
-      {/* <PersonalLife /> */}
       <Quote />
       <BottomFade />
     </main>
