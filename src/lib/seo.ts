@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "Vilas Chauvhan",
   title: "Vilas Chauvhan | Software Engineer",
-  description: "Software Engineer specializing in building premium web applications, high-frequency trading platforms, and high-quality mobile experiences.",
-  url: "https://vilaschauvhan.dev", // Replace with your actual domain
-  ogImage: "https://vilaschauvhan.dev/og-image.png",
+  description:
+    "Software Engineer specializing in building premium web applications, high-frequency trading platforms, and high-quality mobile experiences.",
+  url: "https://vilaschauvhan.dev",
+  ogImage: "https://vilaschauvhan.dev/goku.png",
   links: {
     twitter: "https://x.com/vilas_dev_x",
     github: "https://github.com/villAsh",
