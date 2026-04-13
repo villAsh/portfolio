@@ -1,7 +1,7 @@
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/navbar";
 import { Schibsted_Grotesk } from "next/font/google";
 
@@ -17,6 +17,7 @@ const grotesk = Schibsted_Grotesk({
 });
 
 import { SmoothScroll } from "@/providers/smooth-scroll";
+import Oneko from "@/components/oneko/oneko";
 
 export default function RootLayout({
   children,
@@ -33,6 +34,7 @@ export default function RootLayout({
         >
           <SmoothScroll>
             <Navbar />
+            <Oneko />
             {children}
           </SmoothScroll>
         </ThemeProvider>
