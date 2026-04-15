@@ -34,12 +34,12 @@ export default function RootLayout({
         >
           <SmoothScroll>
             <Navbar />
-            <Oneko />
             {children}
           </SmoothScroll>
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
+        <Oneko />
       </body>
     </html>
   );
