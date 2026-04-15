@@ -142,7 +142,7 @@ const ProfileImage = () => {
 
 const HeroSection = () => {
   return (
-    <section className="max-w-3xl w-full mx-auto mt-20 relative h-[calc(100vh-140px)]">
+    <section className="max-w-3xl w-full mx-auto mt-20 relative">
       <div className="flex flex-col gap-y-8">
         <ProfileImage />
         <Bio />

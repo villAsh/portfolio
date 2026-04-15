@@ -21,7 +21,7 @@ const BounceMouse = () => {
   return (
     <div
       className={cn(
-        "mx-auto w-full flex items-center justify-center absolute bottom-4 transition-all duration-300",
+        "mx-auto w-full flex items-center justify-center absolute -bottom-8 transition-all duration-300",
         show
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-4 pointer-events-none",
