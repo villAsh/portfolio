@@ -505,6 +505,17 @@ export const TOOLS = TECH_DATA.tools.map((t) => t.name);
 
 export const CONTRIBUTIONS: ContributionProps[] = [
   {
+    id: "c10",
+    repo: "heroui-inc/heroui-native",
+    title: "Android dynamic variant style issue",
+    url: "https://github.com/heroui-inc/heroui-native/pull/370",
+    type: "pr",
+    status: "merged",
+    date: "Apr 10, 2025",
+    description:
+      "Fixed a bug in heroui-native where the button outline persisted on Android when switching between variants.",
+  },
+  {
     id: "c9",
     repo: "heroui-inc/heroui",
     title: "fix: codeblock flickering issue",
