@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "motion/react";
-import { Star } from "lucide-react";
+import { useState, useMemo, useCallback } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Star, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface StarRatingProps {
@@ -16,12 +16,20 @@ interface StarRatingProps {
   onChange?: (value: number) => void;
   /** If true, the rating cannot be changed */
   readOnly?: boolean;
-  /** Size of the star icons in pixels */
+  /** If true, allows half-star ratings */
+  allowHalf?: boolean;
+  /** Size of the icons in pixels */
   size?: number;
-  /** Additional classes for the star icons */
+  /** Custom icon component */
+  icon?: LucideIcon;
+  /** Additional classes for the icons */
   iconClassName?: string;
   /** Additional classes for the container */
   className?: string;
+  /** Custom color for active stars (Tailwind class) */
+  activeColor?: string;
+  /** Label for accessibility */
+  label?: string;
 }
 
 export default function StarRating({
@@ -30,9 +38,13 @@ export default function StarRating({
   defaultValue = 0,
   onChange,
   readOnly = false,
+  allowHalf = false,
   size = 28,
+  icon: Icon = Star,
   iconClassName,
   className,
+  activeColor = "text-amber-400 dark:text-amber-500",
+  label = "Rating",
 }: StarRatingProps) {
   const [internalValue, setInternalValue] = useState(defaultValue);
   const [hoverValue, setHoverValue] = useState<number | null>(null);
@@ -40,65 +52,139 @@ export default function StarRating({
   const currentValue = value !== undefined ? value : internalValue;
   const displayValue = hoverValue !== null ? hoverValue : currentValue;
 
-  const handleRate = (newValue: number) => {
-    if (readOnly) return;
-    if (value === undefined) {
-      setInternalValue(newValue);
-    }
-    onChange?.(newValue);
-  };
+  const handleRate = useCallback(
+    (newValue: number) => {
+      if (readOnly) return;
+      if (value === undefined) {
+        setInternalValue(newValue);
+      }
+      onChange?.(newValue);
+    },
+    [readOnly, value, onChange],
+  );
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>, index: number) => {
+      if (readOnly || !allowHalf) return;
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const isHalf = x < rect.width / 2;
+      setHoverValue(index + (isHalf ? 0.5 : 1));
+    },
+    [readOnly, allowHalf],
+  );
+
+  const handleClick = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>, index: number) => {
+      if (readOnly) return;
+      if (allowHalf) {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const newValue = index + (x < rect.width / 2 ? 0.5 : 1);
+        handleRate(newValue);
+      } else {
+        handleRate(index + 1);
+      }
+    },
+    [readOnly, allowHalf, handleRate],
+  );
+
+  const starNodes = useMemo(() => {
+    return Array.from({ length: maxStars }).map((_, index) => {
+      const starValue = index + 1;
+      const isFull = starValue <= displayValue;
+      const isHalf = !isFull && starValue - 0.5 <= displayValue;
+      const isActive = isFull || isHalf;
+
+      return (
+        <motion.button
+          key={starValue}
+          type="button"
+          aria-label={`Rate ${starValue} ${starValue === 1 ? "star" : "stars"}`}
+          aria-pressed={currentValue >= starValue}
+          className={cn(
+            "relative outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-sm transition-shadow",
+            readOnly ? "cursor-default" : "cursor-pointer",
+          )}
+          onMouseMove={(e) => handleMouseMove(e, index)}
+          onMouseEnter={() =>
+            !readOnly && !allowHalf && setHoverValue(starValue)
+          }
+          onClick={(e) => handleClick(e, index)}
+          whileHover={!readOnly ? { scale: 1.1 } : {}}
+          whileTap={!readOnly ? { scale: 0.95 } : {}}
+        >
+          <div className="relative">
+            {/* Background (Empty) */}
+            <Icon
+              size={size}
+              strokeWidth={1.5}
+              className={cn(
+                "text-neutral-300 dark:text-neutral-700 transition-colors",
+                iconClassName,
+              )}
+            />
+
+            {/* Foreground (Active) */}
+            <AnimatePresence>
+              {isActive && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  className={cn(
+                    "absolute inset-0 flex items-center justify-center overflow-hidden",
+                    activeColor,
+                  )}
+                  style={{
+                    clipPath: isHalf ? "inset(0 50% 0 0)" : "none",
+                  }}
+                >
+                  <Icon
+                    size={size}
+                    fill="currentColor"
+                    stroke="currentColor"
+                    strokeWidth={0}
+                    className={iconClassName}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </motion.button>
+      );
+    });
+  }, [
+    maxStars,
+    displayValue,
+    currentValue,
+    readOnly,
+    allowHalf,
+    size,
+    Icon,
+    iconClassName,
+    activeColor,
+    handleMouseMove,
+    handleClick,
+  ]);
 
   return (
     <div
-      className={cn("flex items-center gap-1", className)}
+      className={cn("flex flex-col items-center gap-2", className)}
       onMouseLeave={() => !readOnly && setHoverValue(null)}
+      role="radiogroup"
+      aria-label={label}
     >
-      {Array.from({ length: maxStars }).map((_, index) => {
-        const starValue = index + 1;
-        const isActive = starValue <= displayValue;
-        const isHovered = starValue <= (hoverValue || 0);
-
-        return (
-          <motion.button
-            key={index}
-            type="button"
-            className={cn(
-              "relative outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm transition-all duration-200",
-              readOnly ? "cursor-default" : "cursor-pointer"
-            )}
-            onClick={() => handleRate(starValue)}
-            onMouseEnter={() => !readOnly && setHoverValue(starValue)}
-            whileHover={!readOnly ? { scale: 1.15 } : {}}
-            whileTap={!readOnly ? { scale: 0.9 } : {}}
-          >
-            <motion.div
-              initial={false}
-              animate={{
-                scale: isActive ? 1 : 0.9,
-                rotate: isActive ? 0 : -5,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 20,
-              }}
-            >
-              <Star
-                size={size}
-                strokeWidth={isActive ? 0 : 1.5}
-                className={cn(
-                  "transition-all duration-300",
-                  isActive
-                    ? "fill-amber-400 stroke-amber-400 dark:fill-amber-500 dark:stroke-amber-500 hover:fill-amber-300 dark:hover:fill-amber-400"
-                    : "fill-transparent stroke-neutral-400 dark:stroke-neutral-500",
-                  isHovered && !isActive && "fill-amber-200 stroke-amber-200 dark:fill-amber-900/50 dark:stroke-amber-700",
-                  iconClassName
-                )}
-              />
-            </motion.div>
-          </motion.button>
-        );
-      })}
+      <div className="flex items-center gap-1">{starNodes}</div>
+      {!readOnly && (
+        <motion.span
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-xs font-medium text-neutral-500 dark:text-neutral-400 tabular-nums h-4"
+        >
+          {displayValue > 0 ? displayValue.toFixed(allowHalf ? 1 : 0) : ""}
+        </motion.span>
+      )}
     </div>
   );
 }
