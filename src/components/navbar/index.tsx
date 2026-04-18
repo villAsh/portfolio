@@ -3,46 +3,16 @@
 import Image from "next/image";
 import ThemeSwitch from "../system/theme-switch";
 import { usePathname, useRouter } from "next/navigation";
-import { Navbar as ENavbar, NAV_MAPPER } from "@/types/utils";
+import Link from "next/link";
 
 const Navbar = () => {
-  const navigation = useRouter();
-  const path = usePathname();
-  const scrollToSection = (id: keyof typeof ENavbar) => {
-    if (path === NAV_MAPPER[id]) {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    } else {
-      switch (id) {
-        case "experience":
-          navigation.replace("/work-experience");
-          return;
-        case "projects":
-          navigation.replace("/projects");
-          return;
-      }
-    }
-  };
-
-  const handleLogoClick = () => {
-    if (path === "/") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    } else {
-      navigation.replace("/");
-    }
-  };
-
   return (
-    <nav className="w-full max-md:px-10 backdrop-blur-xs sticky top-0 z-50 h-[60px] py-2">
+    <nav className="w-full max-md:px-6 backdrop-blur-xs sticky top-0 z-50 h-[60px] py-2">
       <div className="flex flex-row items-end justify-between gap-x-4 max-w-3xl mx-auto">
         <div className="flex flex-row items-end justify-start gap-x-4">
-          <button
-            onClick={handleLogoClick}
+          <Link
+            href={"/"}
+            prefetch
             type="button"
             className="h-[50px] w-[50px] overflow-hidden rounded-[8px] bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center active:scale-95 cursor-pointer"
           >
@@ -53,42 +23,30 @@ const Navbar = () => {
               height={45}
               className="object-contain"
             />
-          </button>
+          </Link>
           <div className="-mb-1">
             <ul className="flex flex-row items-center gap-x-4 text-sm font-medium text-neutral-500 dark:text-neutral-400">
-              <li
-                onClick={() => scrollToSection(ENavbar.experience)}
+              <Link
+                prefetch
+                href={"work-experience"}
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 cursor-pointer"
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    navigation.replace("/work-experience");
-                  }
-                }}
               >
                 Work
-              </li>
-              <li
-                onClick={() => scrollToSection(ENavbar.projects)}
+              </Link>
+              <Link
+                prefetch
+                href={"projects"}
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    navigation.replace("/projects");
-                  }
-                }}
               >
                 Projects
-              </li>
-              <li
-                onClick={() => navigation.push("/labs")}
+              </Link>
+              <Link
+                prefetch
                 className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer"
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    navigation.replace("/labs");
-                  }
-                }}
+                href={"labs"}
               >
                 Labs
-              </li>
+              </Link>
             </ul>
           </div>
         </div>
