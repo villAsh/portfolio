@@ -79,7 +79,7 @@ export const EXPERIENCE: TExperienceCard[] = [
     linkedIn: "https://www.linkedin.com/company/seaflux-tech/",
     instagram: "https://www.instagram.com/seaflux.tech/",
     img: "/seaflux.svg",
-    position: "Software Engineering Intern",
+    position: "Software Intern",
     start: "Jun 2023",
     end: "Sept 2023",
     location: "Ahmedabad, India",
