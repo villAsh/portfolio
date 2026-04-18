@@ -58,21 +58,21 @@ const ExperienceCard = ({
       <AccordionItem value={position}>
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-row items-start justify-between max-md:flex-col max-md:gap-y-2">
-            <div className="flex flex-row items-center justify-start gap-x-2">
+            <div className="flex flex-row items-center justify-start gap-x-2 w-full">
               <div className="p-1 w-14 h-14 flex items-center rounded-[8px] justify-center bg-seaflux">
                 <Image src={img} alt={organization} width={100} height={100} />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col w-full">
                 <div className="flex flex-row items-center justify-start gap-x-2">
                   <h1 className="text-lg text-neutral-700 font-semibold dark:text-neutral-200">
                     {organization}
                   </h1>
                   {isWorking && <WorkingBadge />}
                 </div>
-                <div className="flex flex-row items-center justify-start gap-x-2 max-md:items-start">
-                  <span className="text-[14px] text-neutral-400 font-medium dark:text-neutral-500">
+                <div className="flex flex-row items-center w-full justify-start gap-x-2 max-md:items-start max-md:justify-between">
+                  <h6 className="text-[14px] text-neutral-400 font-medium dark:text-neutral-500">
                     {position}
-                  </span>
+                  </h6>
                   <div className="flex flex-row items-center justify-center gap-x-2">
                     <a
                       href={instagram}
