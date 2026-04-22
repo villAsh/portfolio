@@ -1,6 +1,7 @@
 "use client";
 import { LABS_PARALLAX } from "@/lib/data";
 import {
+  ArrowLeft,
   ArrowRight,
   Atom,
   Beaker,
@@ -100,14 +101,14 @@ const page = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link
-            href="/labs/explore"
+            href="/"
             className="group flex items-center gap-x-2 bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform duration-300"
           >
-            Explore Components
-            <ArrowRight
+            <ArrowLeft
               size={18}
-              className="group-hover:translate-x-1 transition-transform"
+              className="group-hover:-translate-x-1 transition-transform"
             />
+            Back to base
           </Link>
         </motion.div>
       </motion.div>
