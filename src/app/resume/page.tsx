@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "View and download my professional resume, detailing my experience as a Software Engineer.",
+  description:
+    "View and download my professional resume, detailing my experience as a Software Engineer.",
 };
 
 export default function ResumePage() {
@@ -19,7 +20,7 @@ export default function ResumePage() {
 
       <div className="flex-1 w-full bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-2xl">
         <iframe
-          src="https://drive.google.com/file/d/172rbHFTFBiGN8ytu9_UX7Sq-AanFkFjd/preview"
+          src="https://drive.google.com/file/d/17-BTGRJrzGqiguvHJSHeEMwjCY-6PoRY/preview"
           className="w-full h-full border-none p-5"
           title="Resume"
           allow="autoplay"
@@ -28,7 +29,7 @@ export default function ResumePage() {
 
       <div className="mt-6 flex justify-center">
         <a
-          href="https://drive.google.com/file/d/172rbHFTFBiGN8ytu9_UX7Sq-AanFkFjd/view?usp=drive_link"
+          href="https://drive.google.com/file/d/17-BTGRJrzGqiguvHJSHeEMwjCY-6PoRY/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-2.5 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-lg"
