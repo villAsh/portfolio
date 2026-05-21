@@ -115,7 +115,7 @@ const ExperienceCard = ({
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-y-0 text-neutral-400 text-base font-normal text-right max-md:text-left">
+            <div className="flex flex-col gap-y-0 text-neutral-400 text-base font-normal text-right max-md:text-left w-full">
               <span>
                 {start} {"－"} {end}
               </span>
