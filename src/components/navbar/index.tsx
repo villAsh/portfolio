@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import ThemeSwitch from "../system/theme-switch";
-import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 const Navbar = () => {
