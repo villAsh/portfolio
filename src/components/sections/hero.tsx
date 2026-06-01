@@ -20,7 +20,7 @@ type TTechIcon = {
 
 export const ProfileBadge = () => {
   return (
-    <div className="absolute h-5 w-5 hover:transition-transform hover:duration-300 bg-slate-400 outline-[1.5px] hover:scale-110 outline-slate-300 border-white border-6 rounded-full bottom-1 right-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:border-slate-950 dark:outline dark:outline-slate-500" />
+    <div className="absolute h-5 w-5 hover:transition-transform hover:duration-300 bg-green-400 outline-[1.5px] hover:scale-110 outline-green-400 border-white border-6 rounded-full bottom-0 right-1 shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:border-slate-950 dark:outline dark:outline-green-500" />
   );
 };
 
@@ -126,12 +126,12 @@ const ResumeButton = () => {
 const ProfileImage = () => {
   return (
     <div className="w-[105px] h-[105px] relative">
-      <div className="h-[100px] w-[100px] overflow-hidden rounded-full bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center">
+      <div className="h-[110px] w-[110px] overflow-hidden rounded-full bg-yellow-300 dark:bg-neutral-500 flex items-center justify-center">
         <Image
           alt="profile icon"
-          src={"/goku.png"}
-          width={88}
-          height={88}
+          src={"/profile.jpeg"}
+          width={420}
+          height={420}
           className="object-contain"
         />
       </div>

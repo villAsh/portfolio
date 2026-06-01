@@ -32,14 +32,14 @@ const AboutMe = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-yellow-300 px-4 pt-4 rounded-[12px] dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm"
+            className="bg-yellow-300 p-1 rounded-[12px] dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm"
           >
             <Image
-              src={"/goku.png"}
+              src={"/profile.jpeg"}
               width={1080}
               height={800}
               alt="profile"
-              className="object-contain w-[60vw] h-fit max-md:w-[30vw] max-md:h-1/2"
+              className="object-contain w-[60vw] rounded-[8px] h-full max-md:w-[30vw] max-md:h-1/2"
             />
           </motion.div>
           <motion.div
@@ -49,7 +49,7 @@ const AboutMe = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col gap-y-6"
           >
-            <h3 className="pt-3 text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 max-md:pt-6">
+            <h3 className="pt-3 text-3xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100 max-md:pt-6">
               Vilas Chauvhan
             </h3>
             <p className="text-lg font-medium leading-relaxed text-neutral-500 dark:text-neutral-400">

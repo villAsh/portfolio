@@ -72,7 +72,7 @@ export const ProjectCard = ({
   gradient = "from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900",
   category = "pro",
   org,
-}: ({ id: string } & ProjectCardProps)) => {
+}: { id: string } & ProjectCardProps) => {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -81,14 +81,15 @@ export const ProjectCard = ({
   }, []);
 
   const detailsUrl = `/projects/${id.replace("project-", "void-icons")}`;
-  const projectDetailsPath = id === "project-3" ? "/projects/void-icons" : liveUrl;
+  const projectDetailsPath =
+    id === "project-3" ? "/projects/void-icons" : liveUrl;
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group relative flex flex-col bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 rounded-[2rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-neutral-200/50 dark:hover:shadow-neutral-900/50"
+      className="group relative flex flex-col bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 rounded-[12px] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-neutral-200/50 dark:hover:shadow-neutral-900/50"
     >
       <Link href={projectDetailsPath || "#"} className="flex flex-col flex-1">
         <div className="relative aspect-[16/10] overflow-hidden">
@@ -113,8 +114,9 @@ export const ProjectCard = ({
                       : image
                   }
                   alt={title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  height={1280}
+                  width={1280}
+                  className="object-top h-full transition-transform duration-700 group-hover:scale-105"
                 />
               </motion.div>
             </AnimatePresence>
@@ -129,7 +131,7 @@ export const ProjectCard = ({
             </h3>
             <div className="flex gap-3" onClick={(e) => e.stopPropagation()}>
               {category !== "pro" && liveUrl && !liveUrl.startsWith("/") && (
-                <Link  
+                <Link
                   href={liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -161,7 +163,10 @@ export const ProjectCard = ({
                 Technologies
               </span>
               <TooltipProvider>
-                <div className="flex flex-wrap gap-3 mt-2" onClick={(e) => e.stopPropagation()}>
+                <div
+                  className="flex flex-wrap gap-3 mt-2"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   {tags.map((tag, index) => (
                     <div key={tag.value}>
                       <Tooltip>
