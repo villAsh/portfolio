@@ -94,7 +94,7 @@ export const ProjectCard = ({
       <Link href={projectDetailsPath || "#"} className="flex flex-col flex-1">
         <div className="relative aspect-[16/10] overflow-hidden">
           <div
-            className={`relative w-full h-full rounded-t-2xl overflow-hidden bg-gradient-to-br ${gradient}`}
+            className={`relative w-full h-full rounded-t-base overflow-hidden bg-gradient-to-br ${gradient}`}
           >
             <AnimatePresence mode="wait">
               <motion.div
