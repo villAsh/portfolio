@@ -42,9 +42,24 @@ export const EXPERIENCE: TExperienceCard[] = [
     url: "https://www.seaflux.tech/",
     linkedIn: "https://www.linkedin.com/company/seaflux-tech/",
     instagram: "https://www.instagram.com/seaflux.tech/",
+    position: "Senior Software Engineer",
+    start: "Sept 2026",
+    end: "Current",
+    location: "Ahmedabad, India",
+    description: [
+      `Promoted to Senior Software Engineer.`
+    ],
+    isWorking: true,
+  },
+  {
+    organization: "Seaflux Technologies",
+    img: "/seaflux.svg",
+    url: "https://www.seaflux.tech/",
+    linkedIn: "https://www.linkedin.com/company/seaflux-tech/",
+    instagram: "https://www.instagram.com/seaflux.tech/",
     position: "Software Engineer",
     start: "Sept 2024",
-    end: "Present",
+    end: "Sept 2026",
     location: "Ahmedabad, India",
     description: [
       `Owned the end-to-end frontend architecture for a high-frequency crypto trading platform, building the system from scratch with a strong focus on performance and scalability enabling multi-exchange real-time trading.`,
@@ -53,7 +68,7 @@ export const EXPERIENCE: TExperienceCard[] = [
       `Contributed to an open-source microservices platform, building and maintaining features in a distributed system.`,
       `Mentored interns, conducting code reviews, improving training plans with the current frontend technologies and patterns.`,
     ],
-    isWorking: true,
+    isWorking: false,
   },
   {
     organization: "Seaflux Technologies",
