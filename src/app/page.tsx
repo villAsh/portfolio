@@ -1,4 +1,3 @@
-import BottomFade from "@/components/bottom-fade/bottom-fade";
 import AboutMe from "@/components/sections/about-me";
 import Experience from "@/components/sections/experience";
 import HeroSection from "@/components/sections/hero";
@@ -17,7 +16,6 @@ export default function Home() {
       {/* <GithubGraph /> */}
       <TechStack />
       <Quote />
-      <BottomFade />
     </main>
   );
 }
