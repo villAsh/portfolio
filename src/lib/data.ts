@@ -135,14 +135,17 @@ export const TECH_DATA = {
     { name: "Express.js", slug: "express", color: "#000000" },
     { name: "PostgreSQL", slug: "postgresql", color: "#4169E1" },
     { name: "Docker", slug: "docker", color: "#2496ED" },
-    { name: "AWS", slug: "/aws.svg", color: "#FF9900" },
+    { name: "AWS", slug: "/aws.svg", dark: "/aws-light.svg", color: "#FF9900" },
   ],
   tools: [
     { name: "Git", slug: "git", color: "#F05032" },
     { name: "GitHub", slug: "github", color: "#181717" },
     { name: "GitLab", slug: "gitlab", color: "#FC6D26" },
-    { name: "Cursor", slug: "cursor", color: "#51A1FF" },
+    { name: "Cursor", slug: "cursor", dark: "cursor-light", color: "#51A1FF" },
     { name: "Figma", slug: "figma", color: "#F24E1E" },
+    { name: "Codex", slug: "codex", color: "#0A0A0A" },
+    { name: "Claude", slug: "claude", color: "#D97757" },
+    { name: "Playwright", slug: "playwright", color: "#2EAD33" },
   ],
 };
 
@@ -488,7 +491,7 @@ export const PROJECTS: ({ id: string } & ProjectCardProps)[] = [
     tags: [
       {
         name: "NextJs",
-        value: "next.js",
+        value: "nextdotjs",
       },
       {
         name: "Framer Motion",

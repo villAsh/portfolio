@@ -13,40 +13,31 @@ import { TECH_DATA } from "@/lib/data";
 import { INITIAL, TRANSITION, WHILE_IN_VIEW } from "@/lib/framerConfig";
 import Image from "next/image";
 
+// near-black brand colors vanish on the dark card, so flip them
+const isDark = (hex: string) => {
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
+  return 0.299 * r + 0.587 * g + 0.114 * b < 60;
+};
+
 const TechItem = ({
   name,
   slug,
+  dark,
   color,
   fallback: FallbackIcon,
-  index,
 }: {
   name: string;
   slug: string;
+  dark?: string;
   color: string;
   fallback?: any;
-  index: number;
 }) => {
   return (
     <TooltipProvider delayDuration={100}>
       <Tooltip>
         <TooltipTrigger asChild>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              type: "spring",
-              stiffness: 120,
-              damping: 10,
-              delay: index * 0.01,
-            }}
-            whileHover={{
-              scale: 1.15,
-              y: -5,
-              transition: { duration: 0.032 },
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="group relative flex items-center justify-center w-12 h-12 rounded-[8px] bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-[0_2px_10px_rgba(0,0,0,0.05)] dark:shadow-[0_2px_10px_rgba(0,0,0,0.2)] hover:border-transparent dark:hover:border-transparent transition-all duration-300 cursor-default"
+          <div
+            className="group relative flex items-center justify-center w-10 h-10 rounded-[8px] bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-transparent dark:hover:border-transparent transition-all duration-300 cursor-default"
           >
             <div
               className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity blur-xl rounded-full"
@@ -65,28 +56,30 @@ const TechItem = ({
 
             <div className="relative z-10 flex items-center justify-center">
               {FallbackIcon ? (
-                <FallbackIcon className="w-6 h-6 text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100" />
+                <FallbackIcon className="w-5 h-5 text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100" />
               ) : (
                 <div className="w-6 h-6 flex items-center justify-center">
-                  <Image
-                    src={
-                      slug.startsWith("/")
-                        ? slug
-                        : `https://cdn.simpleicons.org/${slug}`
-                    }
-                    width={24}
-                    unoptimized
-                    height={24}
-                    alt={name}
-                    className={cn(
-                      "w-full h-full object-contain transition-all duration-300",
-                      "brightness-0 dark:invert group-hover:brightness-100 dark:group-hover:invert-0 opacity-100",
-                    )}
-                  />
+                  {[slug, dark].map((s, i) =>
+                    s && (
+                      <Image
+                        key={s}
+                        src={s.startsWith("/") ? s : `/tech/${s}.svg`}
+                        width={24}
+                        unoptimized
+                        height={24}
+                        alt={name}
+                        className={cn(
+                          "w-full h-full object-contain transition-all duration-300",
+                          dark && (i ? "hidden dark:block" : "dark:hidden"),
+                          !dark && isDark(color) && "dark:invert",
+                        )}
+                      />
+                    ),
+                  )}
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         </TooltipTrigger>
         <TooltipContent
           side="top"
@@ -121,8 +114,8 @@ const TechCategory = ({
         </h3>
       </div>
       <div className="flex flex-wrap gap-4">
-        {items.map((item, idx) => (
-          <TechItem key={item.name} {...item} index={idx} />
+        {items.map((item) => (
+          <TechItem key={item.name} {...item} />
         ))}
       </div>
     </div>

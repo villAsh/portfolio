@@ -176,7 +176,7 @@ export const ProjectCard = ({
                             title={tag.name}
                           >
                             <Image
-                              src={`https://cdn.simpleicons.org/${tag.value}`}
+                              src={`/tech/${tag.value}.svg`}
                               width={20}
                               unoptimized
                               height={20}
